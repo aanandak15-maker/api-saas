@@ -27,18 +27,25 @@ export default function Login() {
                 if (authError) throw authError
 
                 if (authData.user) {
-                    // Create client record directly (in a real app, use triggers)
-                    // Ideally we check if it exists first or rely on unique email constraint
-                    const { error: clientError } = await supabase
-                        .from('clients')
-                        .insert([{
-                            company_name: companyName || email.split('@')[0],
-                            email: email
-                        }])
+                    // Call Python API to create client and generate keys
+                    try {
+                        const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'
+                        const response = await fetch(`${API_URL}/dashboard/signup`, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                email: email,
+                                company_name: companyName || email.split('@')[0]
+                            })
+                        })
 
-                    if (clientError) {
-                        // duplicate email handled by constraint, but good to catch
-                        if (clientError.code !== '23505') console.error(clientError)
+                        if (!response.ok) {
+                            const err = await response.json()
+                            console.error('API Signup Error:', err)
+                            // Optional: Delete supabase user if API fails to keep sync
+                        }
+                    } catch (apiError) {
+                        console.error('API Connection Error:', apiError)
                     }
                 }
                 setMsg('Account created! Please check your email to verify (or sign in if testing without verification).')

@@ -249,3 +249,22 @@ CREATE TABLE transactions (
 );
 
 CREATE INDEX idx_transactions_client ON transactions(client_id);
+
+-- ============================================
+-- TABLE 8: AI KEYS (Platform Administration)
+-- ============================================
+CREATE TABLE ai_keys (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  
+  provider VARCHAR(50) DEFAULT 'gemini',
+  api_key TEXT NOT NULL, -- Encrypted
+  status VARCHAR(20) DEFAULT 'active', -- active, inactive
+  
+  -- Metadata
+  usage_count INTEGER DEFAULT 0,
+  last_used_at TIMESTAMP,
+  created_at TIMESTAMP DEFAULT NOW(),
+  updated_at TIMESTAMP DEFAULT NOW()
+);
+
+CREATE INDEX idx_ai_keys_status ON ai_keys(status);
