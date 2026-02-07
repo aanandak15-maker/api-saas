@@ -1,10 +1,11 @@
 from antigravity import Router, Request, Response
 from services.supabase_client import supabase_admin
 from middleware.auth_middleware import require_api_key, CorsResponse
+from api_schemas import MappingListResponse, GenericResponse
 
 router = Router()
 
-@router.post("/mappings")
+@router.post("/mappings", response_model=GenericResponse, status_code=201)
 @require_api_key
 async def create_mapping(request: Request):
     """Map a client's product to a disease"""
@@ -52,10 +53,10 @@ async def create_mapping(request: Request):
             "product": product["product_name"],
             "treatment_type": data.get("treatment_type")
         }
-    }, status=201)
+    })
 
 
-@router.get("/mappings")
+@router.get("/mappings", response_model=MappingListResponse)
 @require_api_key
 async def list_mappings(request: Request):
     """List all disease-product mappings for the client"""
@@ -73,7 +74,7 @@ async def list_mappings(request: Request):
     })
 
 
-@router.delete("/mappings/{mapping_id}")
+@router.delete("/mappings/{mapping_id}", response_model=GenericResponse)
 @require_api_key
 async def delete_mapping(request: Request):
     """Remove a disease-product mapping"""
@@ -86,4 +87,7 @@ async def delete_mapping(request: Request):
         .eq("client_id", client_id) \
         .execute()
     
+    if not result.data:
+        return CorsResponse({"error": "Mapping not found or access denied"}, status=404)
+        
     return CorsResponse({"success": True})

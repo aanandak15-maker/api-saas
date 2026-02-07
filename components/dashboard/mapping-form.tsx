@@ -39,6 +39,7 @@ export function MappingForm({ diseases, products, onSuccess }: MappingFormProps)
             setDiseaseId('')
             setProductId('')
             onSuccess()
+            alert("Mapping created successfully!")
         } catch (error) {
             console.error("Mapping failed", error)
             alert("Failed to create mapping.")

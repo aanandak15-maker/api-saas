@@ -1,7 +1,8 @@
 from antigravity import Router, Request, Response
 from services.supabase_client import supabase_admin
 from services.key_management import add_gemini_key, get_active_gemini_key
-from middleware.auth_middleware import CorsResponse
+from middleware.auth_middleware import CorsResponse, require_admin_key, require_api_key
+from api_schemas import KeyListResponse, GenericResponse, BillingStats
 import uuid
 import csv
 import io
@@ -13,14 +14,16 @@ router = Router()
 # KEY MANAGEMENT (Admin)
 # =======================
 
-@router.get("/admin/keys")
+@router.get("/admin/keys", response_model=KeyListResponse)
+@require_admin_key
 async def list_keys(request: Request):
     """List all AI keys (Masked)"""
     # In prod, add Admin Auth Middleware here
     result = supabase_admin.table("ai_keys").select("id, provider, status, created_at, usage_count").order("created_at").execute()
     return CorsResponse({"keys": result.data})
 
-@router.post("/admin/keys")
+@router.post("/admin/keys", response_model=GenericResponse)
+@require_admin_key
 async def create_key(request: Request):
     """Add new Gemini Key"""
     data = await request.json()
@@ -31,7 +34,8 @@ async def create_key(request: Request):
     add_gemini_key(raw_key)
     return CorsResponse({"success": True, "message": "Key encrypted and stored"})
 
-@router.post("/admin/keys/rotate")
+@router.post("/admin/keys/rotate", response_model=GenericResponse)
+@require_admin_key
 async def rotate_key(request: Request):
     """Deactivate old keys, Activate specific key"""
     data = await request.json()
@@ -49,7 +53,8 @@ async def rotate_key(request: Request):
 # BILLING EXPORT
 # =======================
 
-@router.get("/client/billing-stats")
+@router.get("/client/billing-stats", response_model=BillingStats)
+@require_api_key
 async def get_billing_stats(request: Request):
     """Get simple usage stats for the dashboard billing tab"""
     # For now, we mock the billing aggregation or query logs
@@ -65,6 +70,7 @@ async def get_billing_stats(request: Request):
     })
 
 @router.get("/client/export-usage")
+@require_api_key
 async def export_usage_csv(request: Request):
     """Generate CSV of usage"""
     # Create CSV in memory

@@ -1,10 +1,11 @@
 from antigravity import Router, Request, Response
 from services.supabase_client import supabase_admin
 from middleware.auth_middleware import require_api_key, CorsResponse
+from api_schemas import DiseaseListResponse, DiseaseDetailResponse
 
 router = Router()
 
-@router.get("/diseases/list")
+@router.get("/diseases/list", response_model=DiseaseListResponse)
 @require_api_key
 async def list_diseases(request: Request):
     """List all diseases for dropdown"""
@@ -18,7 +19,7 @@ async def list_diseases(request: Request):
         "total": len(result.data)
     })
 
-@router.get("/disease/{disease_id}")
+@router.get("/disease/{disease_id}", response_model=DiseaseDetailResponse)
 @require_api_key
 async def get_disease(request: Request):
     """

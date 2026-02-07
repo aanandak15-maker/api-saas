@@ -3,6 +3,7 @@
 import { LayoutDashboard, Sprout, Settings, BarChart3, User, LogOut } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import Image from 'next/image'
 import { cn } from '@/lib/utils'
 
 const navItems = [
@@ -51,9 +52,14 @@ export function Sidebar() {
                 <button className="p-3 text-gray-400 hover:text-red-400 transition-colors">
                     <LogOut className="w-6 h-6" />
                 </button>
-                <div className="w-10 h-10 rounded-full bg-gray-700 overflow-hidden border-2 border-white/10 hover:border-[#00ff9d] transition-colors cursor-pointer">
+                <div className="w-10 h-10 rounded-full bg-gray-700 overflow-hidden border-2 border-white/10 hover:border-[#00ff9d] transition-colors cursor-pointer relative">
                     {/* Placeholder Avatar */}
-                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=AgriFa" alt="User" />
+                    <Image
+                        src="https://api.dicebear.com/7.x/avataaars/svg?seed=AgriFa"
+                        alt="User"
+                        fill
+                        className="object-cover"
+                    />
                 </div>
             </div>
         </aside>

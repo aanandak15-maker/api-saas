@@ -92,12 +92,28 @@ export default function Login() {
                         </div>
 
                         <div className="flex justify-end">
-                            <button type="button" className="text-xs font-medium text-gray-600 hover:text-gray-900 transition-colors">
+                            <button
+                                type="button"
+                                onClick={async () => {
+                                    if (!email) {
+                                        setMsg("Please enter your email address first.")
+                                        return
+                                    }
+                                    setLoading(true)
+                                    const { error } = await supabase.auth.resetPasswordForEmail(email, {
+                                        redirectTo: `${window.location.origin}/dashboard/reset-password`,
+                                    })
+                                    setLoading(false)
+                                    if (error) setMsg(error.message)
+                                    else setMsg("Password reset email sent (check spam too).")
+                                }}
+                                className="text-xs font-medium text-gray-600 hover:text-gray-900 transition-colors"
+                            >
                                 Forgot password?
                             </button>
                         </div>
 
-                        {msg && <p className="text-red-500 text-xs text-center">{msg}</p>}
+                        {msg && <p className={`text-xs text-center ${msg.includes('sent') ? 'text-green-600' : 'text-red-500'}`}>{msg}</p>}
 
                         <button
                             type="submit"
@@ -131,7 +147,7 @@ export default function Login() {
 
                 <div className="bg-gray-50 py-4 text-center border-t border-gray-100">
                     <p className="text-xs text-gray-500">
-                        Don&apos;t have an account? <button onClick={() => setMsg('Contact support to request access.')} className="font-semibold text-green-600 hover:text-green-500 ml-1">Contact Support</button>
+                        Don&apos;t have an account? <Link href="/signup" className="font-semibold text-green-600 hover:text-green-500 ml-1">Sign up</Link>
                     </p>
                 </div>
             </div>

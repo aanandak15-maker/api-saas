@@ -3,7 +3,8 @@
 import { useEffect, useState } from 'react'
 import { APIKeyCard } from '@/components/dashboard/api-key-card'
 import { APIDocs } from '@/components/dashboard/api-docs'
-import { api } from '@/lib/api-client'
+import { api, setCachedApiKey } from '@/lib/api-client'
+import { supabase } from '@/lib/supabase'
 
 export default function APIKeysPage() {
     const [apiKey, setApiKey] = useState('')
@@ -11,7 +12,11 @@ export default function APIKeysPage() {
 
     const loadProfile = async () => {
         try {
-            const data = await api.get('/client/profile')
+            // Get current user email from Supabase session
+            const { data: { session } } = await supabase.auth.getSession()
+            if (!session?.user?.email) return
+
+            const data = await api.get(`/client/profile?email=${session.user.email}`)
             setApiKey(data.api_key)
         } catch (error) {
             console.error("Failed to load profile", error)
@@ -29,6 +34,7 @@ export default function APIKeysPage() {
         try {
             const data = await api.post('/client/regenerate-key', {})
             setApiKey(data.api_key)
+            setCachedApiKey(data.api_key)
             alert("New API Key generated successfully.")
         } catch (err) {
             console.error("Regeneration failed", err)

@@ -59,7 +59,7 @@ export default function MappingPage() {
                     <span>/</span>
                     <span className="text-[var(--text-primary)] font-medium">Disease Mapping</span>
                 </div>
-                <h2 className="text-3xl font-bold tracking-tight text-[var(--text-primary)]">Pathegon Response Mapping</h2>
+                <h2 className="text-3xl font-bold tracking-tight text-[var(--text-primary)]">Pathogen Response Mapping</h2>
                 <p className="text-[var(--text-secondary)] text-sm">Target specific diseases with your product kits for precise diagnosis results.</p>
             </div>
 

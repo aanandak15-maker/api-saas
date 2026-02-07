@@ -3,12 +3,13 @@ from services.supabase_client import supabase_admin
 from services.storage_service import upload_detection_image
 from services.detection_service import detect_disease_from_image
 from middleware.auth_middleware import require_api_key, CorsResponse
+from api_schemas import DetectionResponse, GenericResponse
 import uuid
 
 router = Router()
 
-@router.post("/detect")
 @require_api_key
+@router.post("/detect", response_model=GenericResponse)
 async def detect_disease(request: Request):
     """
     Upload image, detect disease (GEMINI), store record
@@ -97,11 +98,10 @@ async def detect_disease(request: Request):
 
     except Exception as e:
         import traceback
-        traceback.print_exc()
-        return CorsResponse({"error": str(e), "trace": traceback.format_exc()}, status=500)
+        return CorsResponse({"error": str(e)}, status=500)
 
 
-@router.get("/detections")
+@router.get("/detections", response_model=GenericResponse)
 @require_api_key
 async def get_detection_history(request: Request):
     """Get detection history for a client"""
@@ -126,7 +126,7 @@ async def get_detection_history(request: Request):
         return CorsResponse({"error": str(e)}, status=500)
 
 
-@router.post("/detect-result")
+@router.post("/detect-result", response_model=DetectionResponse)
 @require_api_key
 async def process_detection_result(request: Request):
     """

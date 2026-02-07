@@ -90,13 +90,54 @@ def require_api_key(func):
                 }, status=429)
 
         except Exception as e:
-            # Don't block request if rate limit check fails (fail open)
+            # Fail closed - deny request if rate limit cannot be verified
             print(f"Rate limit check failed: {e}")
+            return CorsResponse({"error": "Service temporarily unavailable (Rate Limit Check Failed)"}, status=503)
 
         
         # Attach client_id to request state
         request.state.client_id = client["id"]
         
+        # Execute Request
+        response = await func(request, *args, **kwargs)
+        
+        # --- LOGGING (Step 5) ---
+        # Record the call for billing and analytics
+        try:
+             # Extract status code safely
+            status_code = getattr(response, "status_code", 200)
+            
+            # Use execute() and check result
+            log_entry = {
+                "client_id": client["id"],
+                "endpoint": request.url.path,
+                "method": request.method,
+                "status_code": status_code,
+                "user_agent": request.headers.get("user-agent"),
+            }
+            supabase_admin.table("api_logs").insert(log_entry).execute()
+        except Exception as e:
+            print(f"Logging Failed: {e}")
+            
+        return response
+    
+    return wrapper
+
+
+def require_admin_key(func):
+    """Middleware to validate Admin API key"""
+    @wraps(func)
+    async def wrapper(request: Request, *args, **kwargs):
+        admin_key = request.headers.get("X-Admin-Key")
+        
+        # In production, store this in env var
+        expected_key = os.environ.get("ADMIN_API_KEY", "admin-secret-key-123")
+        
+        if not admin_key or admin_key != expected_key:
+            return CorsResponse({
+                "error": "Admin access required."
+            }, status=401)
+            
         return await func(request, *args, **kwargs)
     
     return wrapper

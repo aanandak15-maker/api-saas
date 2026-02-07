@@ -7,13 +7,13 @@ export function APIDocs() {
     const [tab, setTab] = useState('curl')
 
     const snippets: any = {
-        curl: `curl -X POST "http://localhost:8000/v1/diagnose/crop" \\
+        curl: `curl -X POST "${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/v1/diagnose/crop" \\
   -H "X-API-Key: YOUR_API_KEY" \\
   -F "image=@leaf.jpg"`,
         js: `const formData = new FormData();
 formData.append('image', file);
 
-const response = await fetch('http://localhost:8000/v1/diagnose/crop', {
+const response = await fetch('${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/v1/diagnose/crop', {
   method: 'POST',
   headers: { 'X-API-Key': 'YOUR_API_KEY' },
   body: formData
@@ -23,7 +23,7 @@ const result = await response.json();
 console.log(result.detected_disease);`,
         python: `import requests
 
-url = "http://localhost:8000/v1/diagnose/crop"
+url = "${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/v1/diagnose/crop"
 files = {"image": open("leaf.jpg", "rb")}
 headers = {"X-API-Key": "YOUR_API_KEY"}
 

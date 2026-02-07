@@ -8,13 +8,23 @@ import { api } from '@/lib/api-client'
 
 export default function AnalyticsPage() {
     const [stats, setStats] = useState({ total_calls: 0, calls_today: 0 })
+    const [history, setHistory] = useState([])
+    const [logs, setLogs] = useState([])
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         async function loadData() {
             try {
-                const usageData = await api.get('/client/usage-stats').catch(() => ({ total_calls: 0, calls_today: 0 }))
+                // Parallel fetch for all data
+                const [usageData, historyData, logsData] = await Promise.all([
+                    api.get('/client/usage-stats').catch(() => ({ total_calls: 0, calls_today: 0 })),
+                    api.get('/client/usage-history').catch(() => ({ history: [] })),
+                    api.get('/client/recent-logs').catch(() => ({ logs: [] }))
+                ])
+
                 setStats(usageData)
+                setHistory(historyData.history || [])
+                setLogs(logsData.logs || [])
             } catch (error) {
                 console.error("Failed to load analytics data", error)
             } finally {
@@ -39,7 +49,7 @@ export default function AnalyticsPage() {
             <UsageStats totalCalls={stats.total_calls} limit={10000} />
 
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-8">
-                <UsageChart />
+                <UsageChart data={history} />
                 <div className="space-y-6">
                     <div className="bg-[var(--bg-card)] p-8 rounded-2xl border border-[var(--border-light)] shadow-sm h-full flex flex-col justify-center text-center">
                         <div className="w-16 h-16 bg-blue-50 text-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -52,7 +62,7 @@ export default function AnalyticsPage() {
                 </div>
             </div>
 
-            <RecentActivity logs={[]} />
+            <RecentActivity logs={logs} />
         </div>
     )
 }

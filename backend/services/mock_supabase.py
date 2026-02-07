@@ -147,9 +147,31 @@ class MockStorage:
         return self._buckets[bucket_name]
 
 
+class MockAuth:
+    def get_user(self, token: str):
+        # Mock validation - accept any token for now, or specific test token
+        # Return a mock user object structure similar to Gotrue
+        class MockUser:
+            def __init__(self, email):
+                self.email = email
+                self.id = "mock-user-id"
+        
+        class MockUserResponse:
+            def __init__(self, email):
+                self.user = MockUser(email)
+                
+        # For testing, we can decode the token or just return a default email
+        # If the token is an email (for simple testing), use it
+        email = "test@testcorp.com" 
+        if "@" in token:
+            email = token
+            
+        return MockUserResponse(email)
+
 class MockSupabaseClient:
     def __init__(self):
         self.storage = MockStorage()
+        self.auth = MockAuth()
         self._tables = {
             "diseases": _diseases,
             "clients": _clients,

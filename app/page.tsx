@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import { Upload, ChevronRight, AlertTriangle, CheckCircle2, FlaskConical, Github, ArrowRight, Play, Search, Leaf } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
+import Image from 'next/image'
 
 export default function LandingPage() {
   const [analyzing, setAnalyzing] = useState(false)
@@ -36,10 +37,10 @@ export default function LandingPage() {
             <span className="font-black text-xl tracking-tight">DiagAPI</span>
           </div>
           <div className="hidden md:flex items-center gap-8 text-sm font-bold text-gray-400">
-            <Link href="#" className="hover:text-black transition-colors">Products</Link>
+            {/* <Link href="#" className="hover:text-black transition-colors">Products</Link>
             <Link href="#" className="hover:text-black transition-colors">Solutions</Link>
-            <Link href="#" className="hover:text-black transition-colors">Pricing</Link>
-            <Link href="#" className="hover:text-black transition-colors">Docs</Link>
+            <Link href="#" className="hover:text-black transition-colors">Pricing</Link> */}
+            <Link href="/docs" className="hover:text-black transition-colors">Docs</Link>
           </div>
         </div>
         <div className="flex items-center gap-6">
@@ -47,7 +48,7 @@ export default function LandingPage() {
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.364 17.636l-.707.707M6.364 6.364l.707.707m11.314 11.314l.707.707M12 5a7 7 0 100 14 7 7 0 000-14z" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path></svg>
           </button>
           <Link href="/login" className="bg-[#13ec13] hover:bg-[#0fb30f] text-white font-black px-6 py-2.5 rounded-lg shadow-lg shadow-green-500/20 transition-all text-sm">
-            Contact Sales
+            Get Started
           </Link>
         </div>
       </nav>
@@ -114,12 +115,14 @@ export default function LandingPage() {
               <div className="bg-white rounded-[32px] p-4 shadow-2xl shadow-black/5 border border-gray-100 flex flex-col md:flex-row gap-8">
                 {/* Leaf Image */}
                 <div className="w-full md:w-[320px] h-[320px] rounded-[24px] overflow-hidden relative group">
-                  <img
+                  <Image
                     src="https://images.unsplash.com/photo-1598214811340-025c27633c7f?q=80&w=2671&auto=format&fit=crop"
                     alt="Analyzed Leaf"
-                    className="w-full h-full object-cover grayscale-[0.2] transition-all group-hover:scale-110 duration-700"
+                    fill
+                    className="object-cover grayscale-[0.2] transition-all group-hover:scale-110 duration-700"
+                    sizes="(max-width: 768px) 100vw, 320px"
                   />
-                  <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-2 border border-white/20">
+                  <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-2 border border-white/20 z-10">
                     <div className="w-4 h-4 rounded-full bg-[#13ec13] flex items-center justify-center">
                       <CheckCircle2 className="text-white w-3 h-3" />
                     </div>

@@ -27,6 +27,7 @@ export function ProductForm({ onSuccess }: ProductFormProps) {
             setUrl('')
             setCategory('Diagnostic Tool')
             onSuccess()
+            alert("Product saved successfully!")
         } catch (error) {
             console.error("Failed to save product", error)
             alert("Failed to save product. Check console for details.")

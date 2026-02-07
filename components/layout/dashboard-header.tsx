@@ -1,12 +1,21 @@
 'use client'
 
-import { Bell, Search, User } from 'lucide-react'
+import { Bell, Search, User, Menu } from 'lucide-react'
+import { useSidebar } from '@/components/ui/sidebar-context'
 
 export function DashboardHeader() {
+    const { toggle } = useSidebar()
+
     return (
         <header className="h-16 bg-[var(--bg-card)] border-b border-[var(--border-light)] px-6 flex items-center justify-between sticky top-0 z-10">
             {/* Title / Breadcrumb (Dynamic based on route could be added here, for now static or simple) */}
-            <div className="flex items-center">
+            <div className="flex items-center gap-4">
+                <button
+                    onClick={toggle}
+                    className="md:hidden p-2 -ml-2 text-[var(--text-secondary)] hover:bg-gray-100 rounded-lg"
+                >
+                    <Menu className="w-5 h-5" />
+                </button>
                 <h1 className="text-lg font-bold text-[var(--text-primary)]">Dashboard Home</h1>
             </div>
 

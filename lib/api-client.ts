@@ -2,23 +2,40 @@ import { supabase } from './supabase'
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'
 
+// Simple memory cache
+let cachedApiKey: string | null = null
+
+export function setCachedApiKey(key: string | null) {
+    cachedApiKey = key
+}
+
 export async function getAuthHeaders() {
     const { data: { session } } = await supabase.auth.getSession()
     if (!session) return null
 
-    // We need to fetch the API Key from the profile first 
-    // OR the backend should accept the Supabase JWT. 
-    // Based on previous code, the backend expects 'X-API-Key'.
-    // Let's fetch the profile to get the key.
+    // 1. Return cached key if available
+    if (cachedApiKey) return {
+        'Content-Type': 'application/json',
+        'X-API-Key': cachedApiKey
+    }
 
+    // 2. Bootstrap: Fetch API Key from profile using Session Token
     try {
-        const email = session.user.email
-        const res = await fetch(`${API_URL}/client/profile?email=${email}`)
+        // Use standard fetch to avoid infinite loop if api.get calls this
+        const res = await fetch(`${API_URL}/client/profile`, {
+            headers: {
+                'Authorization': `Bearer ${session.access_token}`
+            }
+        })
+
         if (res.ok) {
             const data = await res.json()
-            return {
-                'Content-Type': 'application/json',
-                'X-API-Key': data.api_key
+            if (data.api_key) {
+                cachedApiKey = data.api_key as string
+                return {
+                    'Content-Type': 'application/json',
+                    'X-API-Key': cachedApiKey
+                }
             }
         }
     } catch (e) {

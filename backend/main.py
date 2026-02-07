@@ -21,7 +21,6 @@ app.include_router(auth.router, prefix="", tags=["Auth"])
 app.include_router(diseases.router, prefix="", tags=["Diseases"])
 app.include_router(products.router, prefix="", tags=["Products"])
 app.include_router(mappings.router, prefix="", tags=["Mappings"])
-app.include_router(mappings.router, prefix="", tags=["Mappings"])
 app.include_router(detection.router, prefix="", tags=["Detection"])
 from routes import admin
 app.include_router(admin.router, prefix="", tags=["Admin/Billing"])
