@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+supabase
+pydantic
+python-multipart
+python-dotenv
+bcrypt
+requests
+google-generativeai
+cryptography
+Pillow
+gunicorn
