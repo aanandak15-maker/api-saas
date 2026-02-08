@@ -13,12 +13,11 @@ const PLANS = [
         annualPrice: 9600,
         description: 'Local agri shops, small startups, pilot projects',
         features: [
-            'Advanced Crop & Disease Detection',
-            'Essential Advisory',
-            '1 Product Recommendation Slot',
-            'Basic Insights Dashboard',
             'Essential Usage Capacity',
-            'Platform Branding',
+            'Basic Advisory',
+            '1 Product Slot',
+            'Basic Analytics',
+            'Standard Branding',
             'Email Support'
         ],
         cta: 'Start Growing',
@@ -32,12 +31,11 @@ const PLANS = [
         annualPrice: 38400,
         description: 'Growing agri brands, seed & pesticide companies',
         features: [
-            'Advanced Disease Intelligence',
-            'Full Advisory Layers',
-            '3 Product Recommendation Slots',
-            'Advanced Insights Dashboard',
-            'Business-Scale Usage',
-            'Brand Logo Support',
+            'Business Usage Capacity',
+            'Advanced Advisory Layers',
+            '3 Product Slots',
+            'Advanced Analytics',
+            'Logo Branding',
             'Priority Support'
         ],
         cta: 'Scale My Business',
@@ -51,12 +49,11 @@ const PLANS = [
         annualPrice: 96000,
         description: 'Large companies, marketplaces, NGOs',
         features: [
-            'High-Volume Disease Detection',
-            'Complete Advisory + Preventive Layers',
-            'Unlimited Product Mapping',
-            'Business Intelligence Reports',
-            'High-Volume Usage',
-            'Branding Personalization',
+            'High-Volume Capacity',
+            'Complete Advisory + Prevention',
+            '10 Product Slots',
+            'Business Intelligence',
+            'Custom Branding',
             'Dedicated Support'
         ],
         cta: 'Power My Platform',
@@ -70,13 +67,12 @@ const PLANS = [
         annualPrice: null,
         description: 'Government bodies, national brands, agri platforms',
         features: [
+            'Unlimited Capacity',
             'Full White-Label API',
-            'Full White-Label Experience',
-            'SLA & Uptime Guarantee',
-            'Account Manager',
-            'Unlimited Mapping',
-            'Custom Integrations',
-            'Private Infrastructure Option'
+            'Unlimited Product Slots',
+            'Custom Reporting',
+            'Full White-Label',
+            'Dedicated Account Manager'
         ],
         cta: 'Contact Sales',
         popular: false
