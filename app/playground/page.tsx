@@ -6,7 +6,7 @@ import { FileUpload } from "@/components/demo/FileUpload";
 import { AnalysisResult } from "@/components/demo/AnalysisResult";
 import { Sprout } from "lucide-react";
 
-export default function DemoPage() {
+export default function PlaygroundPage() {
     const [file, setFile] = useState<File | null>(null);
     const [crop, setCrop] = useState("Tomato");
     const [result, setResult] = useState<any>(null);
@@ -18,28 +18,22 @@ export default function DemoPage() {
         setError(null);
         setResult(null);
 
-        // Using Naksh API Key for demo
-        const apiKey = "zIS7TKdQeKeOOne3AlinyiDcYQusLQ1V";
-
         try {
             const formData = new FormData();
             formData.append("image", selectedFile);
             formData.append("crop_type", crop);
-            // Hardcoded location for demo
             formData.append("location_lat", "28.7041");
             formData.append("location_lng", "77.1025");
 
-            const res = await fetch("http://localhost:8000/detect", {
+            // Use Next.js API route which proxies to backend
+            const res = await fetch("/api/detect", {
                 method: "POST",
-                headers: {
-                    "x-api-key": apiKey,
-                },
                 body: formData,
             });
 
             if (!res.ok) {
                 const errData = await res.json().catch(() => ({}));
-                throw new Error(errData.detail || `API Error: ${res.statusText}`);
+                throw new Error(errData.error || `Analysis failed: ${res.statusText}`);
             }
 
             const detectionData = await res.json();
@@ -68,7 +62,7 @@ export default function DemoPage() {
                     <Sprout className="w-8 h-8 text-[#13ec13]" />
                 </div>
                 <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">
-                    Plant Disease <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-[#13ec13]">Intelligence</span>
+                    Plant Disease <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-[#13ec13]">Playground</span>
                 </h1>
                 <p className="max-w-xl mx-auto text-lg text-gray-600">
                     Upload a leaf photo to get instant diagnosis, scientific insights, and treatment recommendations.
