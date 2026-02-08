@@ -78,7 +78,7 @@ export default function AdminKeysPage() {
             <div className="max-w-4xl mx-auto">
                 <header className="mb-8">
                     <h1 className="text-3xl font-bold text-gray-900">Platform Admin: Gemini Keys</h1>
-                    <p className="text-gray-600">Manage your AI infrastructure cost and access.</p>
+                    <p className="text-gray-600">Manage your diagnostic infrastructure cost and access.</p>
                 </header>
 
                 {/* Stats Card */}
@@ -103,7 +103,7 @@ export default function AdminKeysPage() {
                                     value={newKey}
                                     onChange={e => setNewKey(e.target.value)}
                                     className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
-                                    placeholder="Starts with AIza..."
+                                    placeholder="API Key..."
                                     required
                                 />
                                 <p className="text-xs text-gray-500 mt-1">Key will be encrypted before storage.</p>

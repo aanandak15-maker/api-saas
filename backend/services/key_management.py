@@ -6,9 +6,8 @@ import datetime
 # Load Encryption Key from Env
 ENCRYPTION_KEY = os.getenv("ENCRYPTION_KEY")
 if not ENCRYPTION_KEY:
-    # Fallback for dev - normally should block launch
-    print("WARNING: ENCRYPTION_KEY not set. Generating temporary key (DATA LOSS ON RESTART)")
-    ENCRYPTION_KEY = Fernet.generate_key()
+    # CRITICAL: Do not fallback to random key. It causes data loss on restart.
+    raise RuntimeError("FATAL: ENCRYPTION_KEY environment variable is required.")
 
 cipher_suite = Fernet(ENCRYPTION_KEY)
 

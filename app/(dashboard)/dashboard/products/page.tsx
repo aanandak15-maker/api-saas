@@ -9,19 +9,42 @@ export default function ProductsPage() {
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
 
-    const loadProducts = async () => {
+    const [limits, setLimits] = useState({ disabled: false, message: "" })
+
+    const loadData = async () => {
+        setLoading(true)
         try {
-            const data = await api.get('/products')
-            setProducts(data.products || [])
+            // Parallel fetch for speed
+            const [productsData, profileData] = await Promise.all([
+                api.get('/products').catch(() => ({ products: [] })),
+                api.get('/client/profile').catch(() => null)
+            ])
+
+            setProducts(productsData.products || [])
+
+            // Check Limits
+            if (profileData) {
+                const max = profileData.max_products
+                const current = profileData.current_products
+                if (max !== -1 && current >= max) {
+                    setLimits({
+                        disabled: true,
+                        message: `Your active plan allows ${max} product${max === 1 ? '' : 's'}. You currently have ${current}.`
+                    })
+                } else {
+                    setLimits({ disabled: false, message: "" })
+                }
+            }
+
         } catch (error) {
-            console.error("Failed to load products", error)
+            console.error("Failed to load products/profile", error)
         } finally {
             setLoading(false)
         }
     }
 
     useEffect(() => {
-        loadProducts()
+        loadData()
     }, [])
 
     const handleDelete = async (id: string) => {
@@ -48,7 +71,11 @@ export default function ProductsPage() {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-[380px_1fr] gap-8 items-start pt-6">
-                <ProductForm onSuccess={loadProducts} />
+                <ProductForm
+                    onSuccess={loadData}
+                    disabled={limits.disabled}
+                    limitMessage={limits.message}
+                />
                 <ProductList products={products} onDelete={handleDelete} />
             </div>
         </div>

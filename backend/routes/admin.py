@@ -90,7 +90,7 @@ async def export_usage_csv(request: Request):
         media_type="text/csv",
         headers={
             "Content-Disposition": "attachment; filename=usage_log.csv",
-            "Access-Control-Allow-Origin": os.environ.get("ALLOWED_ORIGIN", "*"),
+            "Access-Control-Allow-Origin": os.environ.get("ALLOWED_ORIGIN", ""),
             "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
             "Access-Control-Allow-Headers": "*"
         }

@@ -5,7 +5,7 @@ import { Badge } from '@/components/ui/badge'
 
 interface LogEntry {
     id: string
-    created_at: string
+    timestamp: string
     endpoint: string
     status: string
     confidence?: number
@@ -39,13 +39,13 @@ export function RecentActivity({ logs }: RecentActivityProps) {
                         {logs.length > 0 ? logs.map((log) => (
                             <tr key={log.id} className="hover:bg-gray-50 transition-colors">
                                 <td className="px-6 py-4 text-[var(--text-primary)]">
-                                    {new Date(log.created_at).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })}
+                                    {new Date(log.timestamp).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })}
                                 </td>
                                 <td className="px-6 py-4 font-mono text-gray-600">{log.endpoint}</td>
                                 <td className="px-6 py-4">
                                     <span className={`px-2.5 py-0.5 rounded-full text-xs font-medium border ${log.status === 'Success' || log.status === '200'
-                                            ? 'bg-[#dcfce7] text-[#166534] border-[#bbf7d0]'
-                                            : 'bg-[#fee2e2] text-[#991b1b] border-[#fecaca]'
+                                        ? 'bg-[#dcfce7] text-[#166534] border-[#bbf7d0]'
+                                        : 'bg-[#fee2e2] text-[#991b1b] border-[#fecaca]'
                                         }`}>
                                         {log.status === '200' ? 'Success' : log.status}
                                     </span>

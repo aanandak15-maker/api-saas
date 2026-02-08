@@ -18,7 +18,6 @@ import {
 const navItems = [
     { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
     { name: 'Products', href: '/dashboard/products', icon: Package },
-    { name: 'Mapping', href: '/dashboard/mapping', icon: MapIcon },
     { name: 'Analytics', href: '/dashboard/analytics', icon: BarChart3 },
     { name: 'API Docs', href: '/dashboard/api-keys', icon: FileText },
 ]

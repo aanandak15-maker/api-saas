@@ -1,0 +1,390 @@
+INFO:     Will watch for changes in these directories: ['/Users/anand/Downloads/api_new/api-saas/backend']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [45820] using StatReload
+/Users/anand/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Started server process [45893]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:57232 - "POST /signup HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57235 - "POST /products HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57237 - "POST /products HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57239 - "POST /products HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57241 - "POST /products HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57243 - "POST /products HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57245 - "POST /mappings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57247 - "POST /mappings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57249 - "POST /mappings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57251 - "POST /mappings HTTP/1.1" 200 OK
+Traceback (most recent call last):
+  File "/Users/anand/Downloads/api_new/api-saas/backend/services/storage_service.py", line 16, in upload_detection_image
+    img = Image.open(io.BytesIO(image_bytes))
+  File "/Users/anand/Library/Python/3.9/lib/python/site-packages/PIL/Image.py", line 3580, in open
+    raise UnidentifiedImageError(msg)
+PIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x107cf6040>
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1770548389.653024 1427874 alts_credentials.cc:93] ALTS creds ignored. Not running on GCP and untrusted ALTS is not enabled.
+DEBUG: Starting upload for bf066aae-2883-4d93-9bfe-d13d9266ad56.jpg
+DEBUG: Read 15 bytes
+Compression failed, using original: cannot identify image file <_io.BytesIO object at 0x107cf6040>
+DEBUG: Uploading to Supabase bucket 'detection-images'
+Storage endpoint URL should have a trailing slash.
+DEBUG: Upload success
+Key Manager Error: {'message': "Could not find the table 'public.ai_keys' in the schema cache", 'code': 'PGRST205', 'hint': "Perhaps you meant the table 'public.api_logs'", 'details': None}
+Gemini attempt 1 failed: 400 Unable to process input image. Please retry or report in https://developers.generativeai.google/guide/troubleshooting. Retrying in 1.5s...
+Gemini attempt 2 failed: 400 Unable to process input image. Please retry or report in https://developers.generativeai.google/guide/troubleshooting. Retrying in 2.2s...
+Gemini failed after 3 attempts: 400 Unable to process input image. Please retry or report in https://developers.generativeai.google/guide/troubleshooting
+Gemini Error: 400 Unable to process input image. Please retry or report in https://developers.generativeai.google/guide/troubleshooting
+DEBUG: Config: {'layer_scientific': False, 'layer_symptoms': True, 'layer_treatment_organic': True, 'layer_treatment_chemical': False, 'layer_treatment_biological': False, 'layer_prevention': True, 'layer_faq': False, 'layer_products_organic': True, 'layer_products_chemical': False, 'layer_products_biological': False}
+DEBUG: Enabled Types: ['organic']
+DEBUG: Mappings Found: 4
+DEBUG: Plan: germination, Max Recs: 1
+DEBUG: Selected Product IDs: ['f1af1231-b378-4315-bf9f-4598a77a2e96']
+INFO:     127.0.0.1:57253 - "POST /detect HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57260 - "POST /signup HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57262 - "POST /products HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57264 - "POST /products HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57266 - "POST /products HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57268 - "POST /products HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57270 - "POST /products HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57272 - "POST /mappings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57274 - "POST /mappings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "POST /mappings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57278 - "POST /mappings HTTP/1.1" 200 OK
+Traceback (most recent call last):
+  File "/Users/anand/Downloads/api_new/api-saas/backend/services/storage_service.py", line 16, in upload_detection_image
+    img = Image.open(io.BytesIO(image_bytes))
+  File "/Users/anand/Library/Python/3.9/lib/python/site-packages/PIL/Image.py", line 3580, in open
+    raise UnidentifiedImageError(msg)
+PIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x1113c5f90>
+E0000 00:00:1770548399.954309 1427874 alts_credentials.cc:93] ALTS creds ignored. Not running on GCP and untrusted ALTS is not enabled.
+DEBUG: Starting upload for 66886152-2d58-45b5-9abc-e3b2c3e8509d.jpg
+DEBUG: Read 15 bytes
+Compression failed, using original: cannot identify image file <_io.BytesIO object at 0x1113c5f90>
+DEBUG: Uploading to Supabase bucket 'detection-images'
+DEBUG: Upload success
+Key Manager Error: {'message': "Could not find the table 'public.ai_keys' in the schema cache", 'code': 'PGRST205', 'hint': "Perhaps you meant the table 'public.api_logs'", 'details': None}
+Gemini attempt 1 failed: 400 Unable to process input image. Please retry or report in https://developers.generativeai.google/guide/troubleshooting. Retrying in 1.5s...
+Gemini attempt 2 failed: 400 Unable to process input image. Please retry or report in https://developers.generativeai.google/guide/troubleshooting. Retrying in 2.2s...
+Gemini failed after 3 attempts: 400 Unable to process input image. Please retry or report in https://developers.generativeai.google/guide/troubleshooting
+Gemini Error: 400 Unable to process input image. Please retry or report in https://developers.generativeai.google/guide/troubleshooting
+DEBUG: Config: {'layer_scientific': False, 'layer_symptoms': True, 'layer_treatment_organic': True, 'layer_treatment_chemical': False, 'layer_treatment_biological': False, 'layer_prevention': True, 'layer_faq': False, 'layer_products_organic': True, 'layer_products_chemical': False, 'layer_products_biological': False}
+DEBUG: Enabled Types: ['organic']
+DEBUG: Mappings Found: 4
+DEBUG: Plan: cultivation, Max Recs: 3
+DEBUG: Selected Product IDs: ['bfc52e1c-f806-406a-b602-c458554f27be', 'ecb6e067-2c5b-4f4d-b8d0-8258d020d3ca', 'd9d2027a-7c7d-4f57-b279-6332b93d6077']
+INFO:     127.0.0.1:57280 - "POST /detect HTTP/1.1" 200 OK
+WARNING:  StatReload detected changes in 'routes/detection.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [45893]
+/Users/anand/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Started server process [46197]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:57300 - "POST /signup HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57303 - "POST /products HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57305 - "POST /products HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57307 - "POST /products HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57309 - "POST /products HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57311 - "POST /products HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57313 - "POST /mappings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57315 - "POST /mappings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57317 - "POST /mappings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57320 - "POST /mappings HTTP/1.1" 200 OK
+Traceback (most recent call last):
+  File "/Users/anand/Downloads/api_new/api-saas/backend/services/storage_service.py", line 16, in upload_detection_image
+    img = Image.open(io.BytesIO(image_bytes))
+  File "/Users/anand/Library/Python/3.9/lib/python/site-packages/PIL/Image.py", line 3580, in open
+    raise UnidentifiedImageError(msg)
+PIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x107fe20e0>
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1770548464.441663 1429563 alts_credentials.cc:93] ALTS creds ignored. Not running on GCP and untrusted ALTS is not enabled.
+DEBUG: Starting upload for 970da34f-acd2-49d8-af20-9945243ba817.jpg
+DEBUG: Read 96 bytes
+Compression failed, using original: cannot identify image file <_io.BytesIO object at 0x107fe20e0>
+DEBUG: Uploading to Supabase bucket 'detection-images'
+Storage endpoint URL should have a trailing slash.
+DEBUG: Upload success
+Key Manager Error: {'message': "Could not find the table 'public.ai_keys' in the schema cache", 'code': 'PGRST205', 'hint': "Perhaps you meant the table 'public.api_logs'", 'details': None}
+Gemini attempt 1 failed: 400 Unable to process input image. Please retry or report in https://developers.generativeai.google/guide/troubleshooting. Retrying in 1.5s...
+Gemini attempt 2 failed: 400 Unable to process input image. Please retry or report in https://developers.generativeai.google/guide/troubleshooting. Retrying in 2.2s...
+Gemini failed after 3 attempts: 400 Unable to process input image. Please retry or report in https://developers.generativeai.google/guide/troubleshooting
+Gemini Error: 400 Unable to process input image. Please retry or report in https://developers.generativeai.google/guide/troubleshooting
+DEBUG: Config: {'layer_scientific': False, 'layer_symptoms': True, 'layer_treatment_organic': True, 'layer_treatment_chemical': False, 'layer_treatment_biological': False, 'layer_prevention': True, 'layer_faq': False, 'layer_products_organic': True, 'layer_products_chemical': False, 'layer_products_biological': False}
+DEBUG: Enabled Types: ['organic']
+DEBUG: Mappings Found: 4
+DEBUG: Plan: germination, Max Recs: 1
+DEBUG: Selected Product IDs: ['b27eeee6-382a-4a18-b1d9-ac90786a30ed']
+DEBUG: Fetched Product Details Count: 1
+INFO:     127.0.0.1:57322 - "POST /detect HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57329 - "POST /signup HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57331 - "POST /products HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57333 - "POST /products HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57335 - "POST /products HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57337 - "POST /products HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57339 - "POST /products HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57341 - "POST /mappings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57343 - "POST /mappings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57345 - "POST /mappings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57347 - "POST /mappings HTTP/1.1" 200 OK
+Traceback (most recent call last):
+  File "/Users/anand/Downloads/api_new/api-saas/backend/services/storage_service.py", line 16, in upload_detection_image
+    img = Image.open(io.BytesIO(image_bytes))
+  File "/Users/anand/Library/Python/3.9/lib/python/site-packages/PIL/Image.py", line 3580, in open
+    raise UnidentifiedImageError(msg)
+PIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x110f32770>
+E0000 00:00:1770548474.563861 1429563 alts_credentials.cc:93] ALTS creds ignored. Not running on GCP and untrusted ALTS is not enabled.
+DEBUG: Starting upload for 984a3c7c-aa24-445b-a64e-3ea10c827d04.jpg
+DEBUG: Read 96 bytes
+Compression failed, using original: cannot identify image file <_io.BytesIO object at 0x110f32770>
+DEBUG: Uploading to Supabase bucket 'detection-images'
+DEBUG: Upload success
+Key Manager Error: {'message': "Could not find the table 'public.ai_keys' in the schema cache", 'code': 'PGRST205', 'hint': "Perhaps you meant the table 'public.api_logs'", 'details': None}
+Gemini attempt 1 failed: 400 Unable to process input image. Please retry or report in https://developers.generativeai.google/guide/troubleshooting. Retrying in 1.5s...
+Gemini attempt 2 failed: 400 Unable to process input image. Please retry or report in https://developers.generativeai.google/guide/troubleshooting. Retrying in 2.2s...
+Gemini failed after 3 attempts: 400 Unable to process input image. Please retry or report in https://developers.generativeai.google/guide/troubleshooting
+Gemini Error: 400 Unable to process input image. Please retry or report in https://developers.generativeai.google/guide/troubleshooting
+DEBUG: Config: {'layer_scientific': False, 'layer_symptoms': True, 'layer_treatment_organic': True, 'layer_treatment_chemical': False, 'layer_treatment_biological': False, 'layer_prevention': True, 'layer_faq': False, 'layer_products_organic': True, 'layer_products_chemical': False, 'layer_products_biological': False}
+DEBUG: Enabled Types: ['organic']
+DEBUG: Mappings Found: 4
+DEBUG: Plan: cultivation, Max Recs: 3
+DEBUG: Selected Product IDs: ['3a0973bb-7293-4f91-93e8-e34455781fb6', 'd2ed5537-a782-4c4f-96da-0874066850ef', 'a57f9791-ae48-4af8-a414-72dc4c98e158']
+DEBUG: Fetched Product Details Count: 3
+INFO:     127.0.0.1:57349 - "POST /detect HTTP/1.1" 200 OK
+WARNING:  StatReload detected changes in 'routes/detection.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [46197]
+/Users/anand/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Started server process [46421]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:57371 - "POST /signup HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57374 - "POST /products HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57376 - "POST /products HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57378 - "POST /products HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57380 - "POST /products HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57382 - "POST /products HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57384 - "POST /mappings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57386 - "POST /mappings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57388 - "POST /mappings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57390 - "POST /mappings HTTP/1.1" 200 OK
+Traceback (most recent call last):
+  File "/Users/anand/Downloads/api_new/api-saas/backend/services/storage_service.py", line 16, in upload_detection_image
+    img = Image.open(io.BytesIO(image_bytes))
+  File "/Users/anand/Library/Python/3.9/lib/python/site-packages/PIL/Image.py", line 3580, in open
+    raise UnidentifiedImageError(msg)
+PIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x109f6f130>
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1770548516.118702 1431112 alts_credentials.cc:93] ALTS creds ignored. Not running on GCP and untrusted ALTS is not enabled.
+DEBUG: Starting upload for e3072244-fe40-469a-ac87-acb2c6fa83f7.jpg
+DEBUG: Read 96 bytes
+Compression failed, using original: cannot identify image file <_io.BytesIO object at 0x109f6f130>
+DEBUG: Uploading to Supabase bucket 'detection-images'
+Storage endpoint URL should have a trailing slash.
+DEBUG: Upload success
+Key Manager Error: {'message': "Could not find the table 'public.ai_keys' in the schema cache", 'code': 'PGRST205', 'hint': "Perhaps you meant the table 'public.api_logs'", 'details': None}
+Gemini attempt 1 failed: 400 Unable to process input image. Please retry or report in https://developers.generativeai.google/guide/troubleshooting. Retrying in 1.5s...
+Gemini attempt 2 failed: 400 Unable to process input image. Please retry or report in https://developers.generativeai.google/guide/troubleshooting. Retrying in 2.2s...
+Gemini failed after 3 attempts: 400 Unable to process input image. Please retry or report in https://developers.generativeai.google/guide/troubleshooting
+Gemini Error: 400 Unable to process input image. Please retry or report in https://developers.generativeai.google/guide/troubleshooting
+INFO:     127.0.0.1:57392 - "POST /detect HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57400 - "POST /signup HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57402 - "POST /products HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57404 - "POST /products HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57406 - "POST /products HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57408 - "POST /products HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57410 - "POST /products HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57412 - "POST /mappings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57414 - "POST /mappings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57416 - "POST /mappings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57418 - "POST /mappings HTTP/1.1" 200 OK
+Traceback (most recent call last):
+  File "/Users/anand/Downloads/api_new/api-saas/backend/services/storage_service.py", line 16, in upload_detection_image
+    img = Image.open(io.BytesIO(image_bytes))
+  File "/Users/anand/Library/Python/3.9/lib/python/site-packages/PIL/Image.py", line 3580, in open
+    raise UnidentifiedImageError(msg)
+PIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x112ee3310>
+E0000 00:00:1770548528.107139 1431112 alts_credentials.cc:93] ALTS creds ignored. Not running on GCP and untrusted ALTS is not enabled.
+DEBUG: Starting upload for 4914f2ad-1e95-4c4e-ab0a-9fb0c7a73a92.jpg
+DEBUG: Read 96 bytes
+Compression failed, using original: cannot identify image file <_io.BytesIO object at 0x112ee3310>
+DEBUG: Uploading to Supabase bucket 'detection-images'
+DEBUG: Upload success
+Key Manager Error: {'message': "Could not find the table 'public.ai_keys' in the schema cache", 'code': 'PGRST205', 'hint': "Perhaps you meant the table 'public.api_logs'", 'details': None}
+Gemini attempt 1 failed: 400 Unable to process input image. Please retry or report in https://developers.generativeai.google/guide/troubleshooting. Retrying in 1.5s...
+Gemini attempt 2 failed: 400 Unable to process input image. Please retry or report in https://developers.generativeai.google/guide/troubleshooting. Retrying in 2.2s...
+Gemini failed after 3 attempts: 400 Unable to process input image. Please retry or report in https://developers.generativeai.google/guide/troubleshooting
+Gemini Error: 400 Unable to process input image. Please retry or report in https://developers.generativeai.google/guide/troubleshooting
+INFO:     127.0.0.1:57420 - "POST /detect HTTP/1.1" 200 OK
+WARNING:  StatReload detected changes in 'plan_config.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [46421]
+/Users/anand/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Started server process [47584]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:57520 - "OPTIONS /client/profile HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57521 - "OPTIONS /client/profile HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57520 - "GET /client/profile HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57520 - "GET /client/profile HTTP/1.1" 200 OK
+WARNING:  StatReload detected changes in 'api_schemas.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [47584]
+/Users/anand/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Started server process [47804]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'routes/auth.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [47804]
+/Users/anand/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Started server process [47812]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'routes/auth.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [47812]
+/Users/anand/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Started server process [47818]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:57566 - "GET /client/profile HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57566 - "GET /client/profile HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57635 - "GET /client/profile HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57635 - "GET /client/profile HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57642 - "GET /client/profile HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57642 - "OPTIONS /client/change-plan HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57642 - "POST /client/change-plan HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57642 - "GET /client/profile HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57658 - "POST /client/change-plan HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57658 - "GET /client/profile HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57658 - "POST /client/change-plan HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57658 - "GET /client/profile HTTP/1.1" 200 OK
+WARNING:  StatReload detected changes in 'services/key_management.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [47818]
+/Users/anand/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Started server process [51075]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'services/detection_service.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [51075]
+/Users/anand/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Started server process [51081]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'middleware/auth_middleware.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [51081]
+/Users/anand/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Started server process [51088]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'routes/auth.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [51088]
+/Users/anand/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Process SpawnProcess-11:
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/anand/Library/Python/3.9/lib/python/site-packages/uvicorn/_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+  File "/Users/anand/Library/Python/3.9/lib/python/site-packages/uvicorn/server.py", line 67, in run
+    return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+  File "/Users/anand/Library/Python/3.9/lib/python/site-packages/uvicorn/_compat.py", line 53, in asyncio_run
+    return loop.run_until_complete(main)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+  File "/Users/anand/Library/Python/3.9/lib/python/site-packages/uvicorn/server.py", line 71, in serve
+    await self._serve(sockets)
+  File "/Users/anand/Library/Python/3.9/lib/python/site-packages/uvicorn/server.py", line 78, in _serve
+    config.load()
+  File "/Users/anand/Library/Python/3.9/lib/python/site-packages/uvicorn/config.py", line 438, in load
+    self.loaded_app = import_from_string(self.app)
+  File "/Users/anand/Library/Python/3.9/lib/python/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/anand/Downloads/api_new/api-saas/backend/main.py", line 3, in <module>
+    from routes import auth, diseases, products, detection, mappings
+  File "/Users/anand/Downloads/api_new/api-saas/backend/routes/auth.py", line 431, in <module>
+    @require_admin_key
+NameError: name 'require_admin_key' is not defined
+WARNING:  StatReload detected changes in 'routes/admin.py'. Reloading...
+/Users/anand/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Process SpawnProcess-12:
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/anand/Library/Python/3.9/lib/python/site-packages/uvicorn/_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+  File "/Users/anand/Library/Python/3.9/lib/python/site-packages/uvicorn/server.py", line 67, in run
+    return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+  File "/Users/anand/Library/Python/3.9/lib/python/site-packages/uvicorn/_compat.py", line 53, in asyncio_run
+    return loop.run_until_complete(main)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+  File "/Users/anand/Library/Python/3.9/lib/python/site-packages/uvicorn/server.py", line 71, in serve
+    await self._serve(sockets)
+  File "/Users/anand/Library/Python/3.9/lib/python/site-packages/uvicorn/server.py", line 78, in _serve
+    config.load()
+  File "/Users/anand/Library/Python/3.9/lib/python/site-packages/uvicorn/config.py", line 438, in load
+    self.loaded_app = import_from_string(self.app)
+  File "/Users/anand/Library/Python/3.9/lib/python/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/anand/Downloads/api_new/api-saas/backend/main.py", line 3, in <module>
+    from routes import auth, diseases, products, detection, mappings
+  File "/Users/anand/Downloads/api_new/api-saas/backend/routes/auth.py", line 431, in <module>
+    @require_admin_key
+NameError: name 'require_admin_key' is not defined

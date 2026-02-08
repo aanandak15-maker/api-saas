@@ -7,25 +7,25 @@ export function APIDocs() {
     const [tab, setTab] = useState('curl')
 
     const snippets: any = {
-        curl: `curl -X POST "${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/v1/diagnose/crop" \\
-  -H "X-API-Key: YOUR_API_KEY" \\
+        curl: `curl -X POST "${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/detect" \\
+  -H "x-api-key: YOUR_API_KEY" \\
   -F "image=@leaf.jpg"`,
         js: `const formData = new FormData();
 formData.append('image', file);
 
-const response = await fetch('${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/v1/diagnose/crop', {
+const response = await fetch('${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/detect', {
   method: 'POST',
-  headers: { 'X-API-Key': 'YOUR_API_KEY' },
+  headers: { 'x-api-key': 'YOUR_API_KEY' },
   body: formData
 });
 
 const result = await response.json();
-console.log(result.detected_disease);`,
+console.log(result);`,
         python: `import requests
 
-url = "${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/v1/diagnose/crop"
+url = "${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/detect"
 files = {"image": open("leaf.jpg", "rb")}
-headers = {"X-API-Key": "YOUR_API_KEY"}
+headers = {"x-api-key": "YOUR_API_KEY"}
 
 response = requests.post(url, files=files, headers=headers)
 print(response.json())`
@@ -70,9 +70,9 @@ print(response.json())`
                 <h4 className="font-bold text-sm text-[var(--text-primary)] mb-4">Available Endpoints</h4>
                 <div className="space-y-3">
                     {[
-                        { method: 'POST', path: '/v1/diagnose/crop', desc: 'Plant pathology analysis from image' },
-                        { method: 'GET', path: '/v1/diseases/list', desc: 'List all supported botanical pathogens' },
-                        { method: 'POST', path: '/v1/detect', desc: 'Generic biological detection' }
+                        { method: 'POST', path: '/detect', desc: 'Plant pathology analysis from image' },
+                        { method: 'GET', path: '/diseases/list', desc: 'List all supported botanical pathogens' },
+                        { method: 'POST', path: '/detect-result', desc: 'Process external AI results' }
                     ].map((ep, i) => (
                         <div key={i} className="flex items-center gap-4 text-xs font-medium">
                             <span className={`w-14 text-center py-1 rounded-md ${ep.method === 'POST' ? 'bg-blue-100 text-blue-700' : 'bg-green-100 text-green-700'}`}>{ep.method}</span>

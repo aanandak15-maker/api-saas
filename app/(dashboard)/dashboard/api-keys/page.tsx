@@ -16,8 +16,18 @@ export default function APIKeysPage() {
             const { data: { session } } = await supabase.auth.getSession()
             if (!session?.user?.email) return
 
-            const data = await api.get(`/client/profile?email=${session.user.email}`)
-            setApiKey(data.api_key)
+            // MUST use Bearer token to get sensitive API key
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/client/profile`, {
+                headers: {
+                    'Authorization': `Bearer ${session.access_token}`
+                }
+            })
+
+            if (res.ok) {
+                const data = await res.json()
+                setApiKey(data.api_key)
+                setCachedApiKey(data.api_key)
+            }
         } catch (error) {
             console.error("Failed to load profile", error)
         } finally {

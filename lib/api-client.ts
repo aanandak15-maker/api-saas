@@ -63,6 +63,25 @@ export const api = {
         if (!res.ok) throw new Error(`API Error: ${res.statusText}`)
         return res.json()
     },
+    put: async (endpoint: string, body: any) => {
+        const headers = await getAuthHeaders() || {} as any
+        // If no auth headers yet, try to fetch session
+        if (!headers['X-API-Key'] && !headers['Authorization']) {
+            const { data: { session } } = await supabase.auth.getSession()
+            if (session) {
+                headers['Authorization'] = `Bearer ${session.access_token}`
+                headers['Content-Type'] = 'application/json'
+            }
+        }
+
+        const res = await fetch(`${API_URL}${endpoint}`, {
+            method: 'PUT',
+            headers,
+            body: JSON.stringify(body)
+        })
+        if (!res.ok) throw new Error(`API Error: ${res.statusText}`)
+        return res.json()
+    },
     delete: async (endpoint: string) => {
         const headers = await getAuthHeaders()
         if (!headers) throw new Error("Unauthorized")

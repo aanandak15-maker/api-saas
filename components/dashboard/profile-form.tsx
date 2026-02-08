@@ -14,19 +14,11 @@ export function ProfileForm() {
     useEffect(() => {
         async function loadProfile() {
             try {
-                // In a real app we'd get the email from the auth session
-                // For now we'll fetch the profile currently logged in or stored in local storage
-                // Since the current backend relies on query param, we might need to adjust auth strategy later.
-                // But for this 'clean' version, let's just show empty or fetch if we have context.
-
-                // TEMPORARY: Attempt to fetch for the logged in user if we stored email
-                const storedEmail = localStorage.getItem('user_email')
-                if (storedEmail) {
-                    const data = await api.get(`/client/profile?email=${storedEmail}`)
-                    if (data) {
-                        setCompanyName(data.company_name)
-                        setEmail(data.email)
-                    }
+                // Fetch real profile data
+                const data = await api.get('/client/profile')
+                if (data) {
+                    setCompanyName(data.company_name)
+                    setEmail(data.email)
                 }
             } catch (e) {
                 console.error("Failed to load profile", e)
@@ -40,11 +32,16 @@ export function ProfileForm() {
     const handleSave = async (e: React.FormEvent) => {
         e.preventDefault()
         setSaving(true)
-        // In a real app, we would update the backend here
-        await new Promise(r => setTimeout(r, 1000))
-        setSaving(false)
-        setShowToast(true)
-        setTimeout(() => setShowToast(false), 3000)
+        try {
+            await api.put('/client/profile', { company_name: companyName })
+            setShowToast(true)
+            setTimeout(() => setShowToast(false), 3000)
+        } catch (e) {
+            console.error("Failed to update profile", e)
+            alert("Failed to save changes")
+        } finally {
+            setSaving(false)
+        }
     }
 
     return (

@@ -1,0 +1,52 @@
+
+> agri-saas-platform@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3000
+  - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 1550ms
+ ○ Compiling /login ...
+ ✓ Compiled /login in 2.1s (667 modules)
+ GET /login 200 in 2305ms
+ ✓ Compiled in 258ms (320 modules)
+ ✓ Compiled /favicon.ico in 335ms (361 modules)
+ GET /favicon.ico 200 in 401ms
+ ✓ Compiled /dashboard in 423ms (733 modules)
+ ✓ Compiled /dashboard/billing in 433ms (763 modules)
+ ○ Compiling /dashboard/settings ...
+ ✓ Compiled /dashboard/settings in 907ms (743 modules)
+ ✓ Compiled in 1886ms (757 modules)
+ ✓ Compiled in 575ms (757 modules)
+ ✓ Compiled in 327ms (757 modules)
+ ✓ Compiled in 463ms (743 modules)
+ GET /login 200 in 611ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 1299ms (419 modules)
+ GET /favicon.ico 200 in 1585ms
+ GET /dashboard/billing 200 in 354ms
+ GET /dashboard/settings 200 in 76ms
+ GET /dashboard/settings 200 in 383ms
+ GET /dashboard/settings 200 in 128ms
+ ✓ Compiled in 1807ms (757 modules)
+ ✓ Compiled in 432ms (757 modules)
+ GET /login 200 in 397ms
+ GET /login 200 in 35ms
+ ✓ Compiled in 2.3s (757 modules)
+ ✓ Compiled in 264ms (370 modules)
+ ✓ Compiled in 280ms (757 modules)
+ ○ Compiling / ...
+ ✓ Compiled / in 1864ms (1605 modules)
+ GET / 200 in 2076ms
+ GET /dashboard/billing 200 in 253ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 917ms (851 modules)
+ GET /favicon.ico 200 in 1461ms
+ GET /favicon.ico 200 in 112ms
+ GET /dashboard/billing 200 in 900ms
+ ✓ Compiled in 1660ms (1619 modules)
+ GET /dashboard/billing 200 in 246ms
+ ✓ Compiled /favicon.ico in 232ms (851 modules)
+ GET /favicon.ico 200 in 677ms

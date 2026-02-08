@@ -1,4 +1,4 @@
-from antigravity import Router, Request, Response
+from fastapi import APIRouter as Router, Request, Response
 from services.supabase_client import supabase_admin, supabase
 from utils.api_key_generator import generate_api_key
 from middleware.auth_middleware import require_api_key, CorsResponse
@@ -7,7 +7,7 @@ import bcrypt
 router = Router()
 
 from schemas import SignupRequest, DashboardSignupRequest
-from api_schemas import SignupResponse, LoginResponse, ClientProfile, GenericResponse
+from api_schemas import SignupResponse, LoginResponse, ClientProfile, GenericResponse, PlanUpdateRequest, ProfileUpdateRequest
 from pydantic import ValidationError
 
 @router.post("/signup", response_model=SignupResponse, status_code=201)
@@ -192,6 +192,43 @@ async def get_client_profile(request: Request):
     
     profile = result.data[0]
     
+    # Fetch Plan Config & Usage
+    try:
+        # 1. Plan Config
+        from plan_config import get_plan_config
+        plan_cfg = get_plan_config(profile["plan_type"])
+        profile["max_products"] = plan_cfg["max_products"]
+        profile["max_scans_per_month"] = plan_cfg["max_scans_per_month"]
+        profile["display_labels"] = plan_cfg.get("display_labels")
+
+        # 2. Current Usage - Products
+        prod_res = supabase_admin.table("client_products") \
+            .select("id", count="exact") \
+            .eq("client_id", client_id) \
+            .eq("is_active", True) \
+            .execute()
+        profile["current_products"] = prod_res.count if prod_res.count is not None else 0
+        
+        # 3. Current Usage - Scans (This Month)
+        from datetime import datetime, timezone
+        start_of_month = datetime.now(timezone.utc).replace(day=1, hour=0, minute=0, second=0, microsecond=0).strftime("%Y-%m-%d")
+        scan_res = supabase_admin.table("api_logs") \
+            .select("id", count="exact") \
+            .eq("client_id", client_id) \
+            .gte("timestamp", start_of_month) \
+            .execute()
+        profile["current_scans"] = scan_res.count if scan_res.count is not None else 0
+        
+    except Exception as e:
+        print(f"Failed to fetch detailed profile stats: {e}")
+        # Defaults
+        profile["max_products"] = 1
+        profile["max_scans_per_month"] = 1000
+        profile["current_products"] = 0
+        profile["current_products"] = 0
+        profile["current_scans"] = 0
+        profile["display_labels"] = None
+
     # Security: Remove API key if not authorized via Bearer Token
     if not show_sensitive:
         profile.pop("api_key", None)
@@ -388,3 +425,68 @@ async def get_usage_history(request: Request):
     return CorsResponse({
         "history": history
     })
+
+
+@router.post("/client/change-plan", response_model=GenericResponse)
+@require_admin_key
+async def change_plan(request: Request):
+    """
+    Update client's plan type (Demo Feature)
+    """
+    client_id = request.state.client_id
+    try:
+        data = await request.json()
+        validated = PlanUpdateRequest(**data)
+    except ValidationError as e:
+        return CorsResponse({"error": "Validation Error", "details": e.errors()}, status=422)
+        
+    new_plan = validated.new_plan.lower()
+    
+    # Validate against plan config
+    from plan_config import PLAN_LIMITS
+    if new_plan not in PLAN_LIMITS:
+        return CorsResponse({"error": f"Invalid plan: {new_plan}. Allowed: {list(PLAN_LIMITS.keys())}"}, status=400)
+        
+    # Update DB
+    result = supabase_admin.table("clients") \
+        .update({"plan_type": new_plan}) \
+        .eq("id", client_id) \
+        .execute()
+        
+    if not result.data:
+        return CorsResponse({"error": "Failed to update plan"}, status=500)
+        
+    return CorsResponse({
+        "success": True,
+        "message": f"Plan updated to {new_plan.capitalize()}"
+    })
+
+
+@router.put("/client/profile", response_model=GenericResponse)
+@require_api_key
+async def update_profile(request: Request):
+    """
+    Update client profile (Company Name, Phone)
+    """
+    client_id = request.state.client_id
+    try:
+        data = await request.json()
+        validated = ProfileUpdateRequest(**data)
+    except ValidationError as e:
+        return CorsResponse({"error": "Validation Error", "details": e.errors()}, status=422)
+        
+    updates = {}
+    if validated.company_name:
+        updates["company_name"] = validated.company_name
+    if validated.phone:
+        updates["phone"] = validated.phone
+        
+    if not updates:
+        return CorsResponse({"success": True, "message": "No changes detected"})
+        
+    result = supabase_admin.table("clients").update(updates).eq("id", client_id).execute()
+    
+    if not result.data:
+        return CorsResponse({"error": "Failed to update profile"}, status=500)
+        
+    return CorsResponse({"success": True, "message": "Profile updated successfully"})

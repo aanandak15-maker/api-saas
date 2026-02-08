@@ -1,74 +1,197 @@
+"""
+Enhanced Detection Service
+- Retry logic with exponential backoff
+- Disease name normalization
+- Severity level support
+- Debug logging for failed parses
+- Temperature=0 for deterministic output
+"""
 import os
 import json
+import asyncio
 import google.generativeai as genai
 from dotenv import load_dotenv
+from datetime import datetime
 
 load_dotenv()
 
-# Configure Gemini
-# Use dynamic key from DB
 from services.key_management import get_active_gemini_key
 
-# We configure per-request or globally? 
-# GenAI library configures globally. We must re-configure if key changes or configure JIT.
-# Ideally JIT configuration inside the function.
+# --- CONFIGURATION ---
+MAX_RETRIES = 3
+BASE_DELAY = 1.5  # seconds, exponential backoff base
+
+
+from typing import Optional
+
+def normalize_disease_name(name: str) -> Optional[str]:
+    """
+    Normalize disease name for better DB matching.
+    Removes crop prefixes and standardizes casing.
+    """
+    if not name:
+        return None
+    
+    # Common crop prefixes to remove
+    prefixes = ["Tomato ", "Potato ", "Rice ", "Corn ", "Wheat ", "Apple ", "Grape "]
+    for prefix in prefixes:
+        if name.lower().startswith(prefix.lower()):
+            name = name[len(prefix):]
+            break
+    
+    # Clean up and title case
+    return name.strip().title()
+
+
+DEBUG_LOGGING = os.getenv("DEBUG_AI_LOGGING", "false").lower() == "true"
+
+def log_ai_debug(raw_response: str, error: str = None):
+    """
+    Log failed AI responses for debugging.
+    Writes to a rotating debug file.
+    """
+    if not DEBUG_LOGGING:
+        return
+
+    try:
+        log_path = "/tmp/gemini_debug.log"
+        timestamp = datetime.now().isoformat()
+        with open(log_path, "a") as f:
+            f.write(f"\n=== {timestamp} ===\n")
+            if error:
+                f.write(f"ERROR: {error}\n")
+            f.write(f"RAW RESPONSE:\n{raw_response[:1000]}\n")  # Truncate to 1KB
+    except Exception:
+        pass  # Silent fail for logging
+
+
+async def call_gemini_with_retry(model, prompt: str, image_data: dict, max_retries: int = MAX_RETRIES):
+    """
+    Call Gemini API with retry logic and exponential backoff.
+    """
+    last_error = None
+    
+    for attempt in range(max_retries):
+        try:
+            response = await model.generate_content_async([prompt, image_data])
+            return response
+        except Exception as e:
+            last_error = e
+            if attempt < max_retries - 1:
+                delay = BASE_DELAY ** (attempt + 1)
+                print(f"Gemini attempt {attempt + 1} failed: {e}. Retrying in {delay:.1f}s...")
+                await asyncio.sleep(delay)
+            else:
+                print(f"Gemini failed after {max_retries} attempts: {e}")
+    
+    raise last_error
+
 
 async def detect_disease_from_image(image_file):
     """
-    Run Gemini Pro Vision model for disease detection
+    Run Gemini Vision model for disease detection.
+    Enhanced with retry logic, normalization, and debug logging.
     """
     api_key = get_active_gemini_key()
     
-    if api_key:
-        genai.configure(api_key=api_key)
-    else:
+    if not api_key:
         print("WARNING: No Gemini API Key found (DB or Env). Using mock.")
         return {
-            "disease_id": "TOM-0045",
-            "confidence": 94.5,
-            "disease_name": "Early Blight",
-            "crop": "Tomato"
+            "disease_id": "TOM-0680",
+            "confidence": 0.945,
+            "disease": "Early Blight",
+            "crop": "Tomato",
+            "isHealthy": False,
+            "severity": "moderate",
+            "_mock": True
         }
+
+    genai.configure(api_key=api_key)
 
     try:
         # Read image bytes
         image_bytes = await image_file.read()
         
-        # Prepare model
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        # Prepare model with temperature=0 for deterministic output
+        model = genai.GenerativeModel(
+            'gemini-flash-lite-latest',
+            generation_config=genai.GenerationConfig(temperature=0.0)
+        )
         
         prompt = """
-        Analyze this plant image. Return ONLY a JSON object with this exact structure:
-        {
-            "isHealthy": boolean,
-            "crop": "crop name",
-            "disease": "disease name or null",
-            "confidence": float (0.0 to 1.0)
-        }
-        Do not add markdown formatting or backticks. Just the JSON string.
-        """
+You are an agricultural plant disease vision classifier.
 
-        # Generate content
-        response = model.generate_content([
-            prompt,
-            {"mime_type": image_file.content_type, "data": image_bytes}
-        ])
+Analyze the provided plant image and return ONLY a valid JSON object.
+Do NOT return markdown, code blocks, comments, or explanations.
+Do NOT include any text before or after the JSON.
+Do NOT use backticks.
+
+JSON schema (STRICT — no extra keys allowed):
+
+{
+  "isHealthy": boolean,
+  "crop": string | null,
+  "disease": string | null,
+  "confidence": float,
+  "severity": string | null
+}
+
+Rules:
+- If plant appears healthy → "isHealthy": true, "disease": null, "severity": null
+- If plant is diseased → "isHealthy": false and provide best disease guess
+- severity MUST be one of: "mild", "moderate", "severe", or null (if uncertain)
+- If uncertain → set "disease": null and confidence <= 0.5
+- Confidence MUST be between 0.0 and 1.0
+- Crop name must be a single word if possible (e.g., "Tomato", not "Tomato Plant")
+- If crop cannot be determined → crop = null
+- If image is not a plant → return all null except confidence <= 0.3
+- Never output "unknown disease" as a string — use null instead
+- Never add extra keys
+- Never exceed confidence 1.0
+
+Return ONLY the JSON object.
+"""
+
+        # Prepare image data
+        image_data = {"mime_type": image_file.content_type, "data": image_bytes}
+        
+        # Call Gemini with retry
+        response = await call_gemini_with_retry(model, prompt, image_data)
         
         # Parse JSON
         text_response = response.text.strip()
+        
         # Clean up if model adds backticks despite instructions
         if text_response.startswith("```"):
             text_response = text_response.strip("`").replace("json", "").strip()
-            
-        data = json.loads(text_response)
+        
+        try:
+            data = json.loads(text_response)
+        except json.JSONDecodeError as parse_error:
+            log_ai_debug(text_response, str(parse_error))
+            raise ValueError(f"Invalid JSON from AI: {parse_error}")
+        
+        # Normalize disease name for better DB matching
+        if data.get("disease"):
+            data["disease"] = normalize_disease_name(data["disease"])
+        
+        # Validate severity
+        valid_severities = ["mild", "moderate", "severe", None]
+        if data.get("severity") not in valid_severities:
+            data["severity"] = None
+        
+        # Ensure confidence is float between 0 and 1
+        if isinstance(data.get("confidence"), (int, float)):
+            data["confidence"] = max(0.0, min(1.0, float(data["confidence"])))
+        else:
+            data["confidence"] = 0.5
         
         return data
 
     except Exception as e:
         print(f"Gemini Error: {e}")
-        # Fallback to mock on error to keep system stable during dev
-        return {
-            "disease_id": "TOM-0045",
-            "confidence": 85.0,
-            "error": str(e)
-        }
+        log_ai_debug("", str(e))
+        
+        # FAIL FAST: Do not return mock data in production.
+        # This allows the caller (route) to handle the 503 or 500 appropriately.
+        raise e

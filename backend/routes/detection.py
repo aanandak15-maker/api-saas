@@ -1,4 +1,4 @@
-from antigravity import Router, Request, Response
+from fastapi import APIRouter as Router, Request, Response
 from services.supabase_client import supabase_admin
 from services.storage_service import upload_detection_image
 from services.detection_service import detect_disease_from_image
@@ -8,15 +8,21 @@ import uuid
 
 router = Router()
 
-@require_api_key
 @router.post("/detect", response_model=GenericResponse)
+@require_api_key
 async def detect_disease(request: Request):
     """
     Upload image, detect disease (GEMINI), store record
     """
     try:
         client_id = request.state.client_id
-        
+
+        # Check Plan Limits
+        from services.plan_service import check_plan_limits
+        plan_check = check_plan_limits(client_id, "detect")
+        if not plan_check["allowed"]:
+             return CorsResponse({"error": plan_check["error"]}, status=403)
+         
         # Get uploaded file
         form = await request.form()
         image_file = form.get("image")
@@ -40,6 +46,7 @@ async def detect_disease(request: Request):
         
         disease = None
         confidence = ai_result.get("confidence", 0.0)
+        severity = ai_result.get("severity")
         
         # Check if healthy
         if ai_result.get("isHealthy"):
@@ -49,7 +56,8 @@ async def detect_disease(request: Request):
                 "result": {
                     "status": "healthy",
                     "crop": ai_result.get("crop"),
-                    "confidence": confidence
+                    "confidence": confidence,
+                    "severity": None
                 }
             })
 
@@ -67,7 +75,8 @@ async def detect_disease(request: Request):
                  "result": {
                      "status": "unknown",
                      "detected_name": disease_name,
-                     "confidence": confidence
+                     "confidence": confidence,
+                     "severity": severity
                  }
              })
 
@@ -83,18 +92,92 @@ async def detect_disease(request: Request):
             "location_lng": form.get("location_lng")
         }).execute()
         
-        return CorsResponse({
-            "success": True,
-            "detection_id": record.data[0]["id"],
-            "image_url": image_url,
-            "detected_disease": {
-                "disease_id": disease_record["disease_id"],
-                "disease_name": disease_record["disease_name"],
-                "crop": disease_record["crop"],
-                "confidence": confidence
-            },
-            "advisory_url": f"/disease/{disease_record['disease_id']}"
-        })
+        # 4. Fetch Config & Products
+        from services.response_builder import ResponseBuilder, get_client_config
+        
+        config = get_client_config(client_id)
+        
+        # Determine which product types to fetch
+        enabled_types = []
+        if config.get("layer_products_organic", True):
+            enabled_types.append("organic")
+        if config.get("layer_products_chemical", False):
+            enabled_types.append("chemical")
+        if config.get("layer_products_biological", False):
+            enabled_types.append("biological")
+            
+        products_map = {"organic": [], "chemical": [], "biological": []}
+        
+        if enabled_types:
+            try:
+                # Fetch mappings for enabled types
+                mappings = supabase_admin.table("disease_product_mappings") \
+                    .select("product_id, treatment_type") \
+                    .eq("client_id", client_id) \
+                    .eq("disease_id", disease_record["id"]) \
+                    .in_("treatment_type", enabled_types) \
+                    .eq("is_active", True) \
+                    .execute()
+                    
+                if mappings.data:
+                    # Get Plan Limits for Recommendations
+                    # Fetch client plan first
+                    client_res = supabase_admin.table("clients").select("plan_type").eq("id", client_id).execute()
+                    plan_type = client_res.data[0]["plan_type"] if client_res.data else "trial"
+                    
+                    from plan_config import get_plan_config
+                    plan_config = get_plan_config(plan_type)
+                    max_recs = plan_config.get("max_recs_per_disease", 1)
+                    
+                    # Group product IDs by type
+                    type_product_ids = {t: [] for t in enabled_types}
+                    all_ids = []
+                    
+                    # Collect all IDs in order (mappings are likely ordered by priority if we added order, but here DB order)
+                    # We should prioritize based on type? Or just take first N?
+                    # Let's take first N from the mappings result (assuming DB returns in some stable order)
+                    
+                    mapped_items = mappings.data
+                    
+                    # Apply Limit if not Unlimited (-1)
+                    if max_recs != -1:
+                        mapped_items = mapped_items[:max_recs]
+                        
+                    for m in mapped_items:
+                        t = m["treatment_type"]
+                        if t in type_product_ids:
+                            type_product_ids[t].append(m["product_id"])
+                            all_ids.append(m["product_id"])
+                    
+                    if all_ids:
+                        # Fetch product details
+                        products_res = supabase_admin.table("client_products") \
+                            .select("id, product_name, product_url, product_brand") \
+                            .in_("id", all_ids) \
+                            .execute()
+                            
+                        # Map back to types
+                        id_to_product = {p["id"]: p for p in products_res.data}
+                        for t, ids in type_product_ids.items():
+                            for pid in ids:
+                                if pid in id_to_product:
+                                    products_map[t].append(id_to_product[pid])
+                                    
+            except Exception as e:
+                print(f"Product fetch failed: {e}")
+
+        # Build Response
+        builder = ResponseBuilder(client_id, config)
+        response_data = builder.build(
+            disease_record=disease_record,
+            confidence=confidence,
+            severity=severity,
+            image_url=image_url,
+            detection_id=record.data[0]["id"],
+            products=products_map
+        )
+
+        return CorsResponse(response_data)
 
     except Exception as e:
         import traceback

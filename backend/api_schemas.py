@@ -18,6 +18,24 @@ class ClientProfile(BaseModel):
     plan_type: str
     subscription_status: str
     api_key: Optional[str] = None  # Only shown if auth via Bearer
+    
+    # Plan Limits & Usage
+    max_products: Optional[int] = 1
+    max_scans_per_month: Optional[int] = 1000
+    current_products: Optional[int] = 0
+    current_products: Optional[int] = 0
+    current_scans: Optional[int] = 0
+    display_labels: Optional[Dict[str, str]] = None
+
+class PlanUpdateRequest(BaseModel):
+    new_plan: str
+
+class ProfileUpdateRequest(BaseModel):
+    company_name: Optional[str] = None
+    phone: Optional[str] = None
+    # Email updates usually require verification, skipping for now
+
+
 
 class SignupResponse(BaseModel):
     success: bool

@@ -6,14 +6,18 @@ app = FastAPI(title="Disease Intelligence API")
 
 # CORS
 import os
-origins = [os.getenv("ALLOWED_ORIGIN", "*")]
+origins = [
+    "http://localhost:3000",
+    "http://localhost:8000",
+    os.getenv("ALLOWED_ORIGIN", "http://localhost:3000")
+]
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
+    allow_headers=["*", "x-api-key", "content-type", "authorization"],
 )
 
 # Include Routers
@@ -24,6 +28,9 @@ app.include_router(mappings.router, prefix="", tags=["Mappings"])
 app.include_router(detection.router, prefix="", tags=["Detection"])
 from routes import admin
 app.include_router(admin.router, prefix="", tags=["Admin/Billing"])
+from routes import config
+app.include_router(config.router, prefix="", tags=["Config"])
+
 
 
 @app.get("/")

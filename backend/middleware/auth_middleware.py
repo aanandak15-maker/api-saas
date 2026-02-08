@@ -1,24 +1,18 @@
 from functools import wraps
-from antigravity import Request, Response
+from fastapi import Request, Response
+from fastapi.responses import JSONResponse
 from services.supabase_client import supabase_admin
 
 import os
 
-# CORS Headers to include in ALL responses
-ALLOWED_ORIGIN = os.environ.get("ALLOWED_ORIGIN", "*")
+# ... (lines 6-16 omitted)
 
-CORS_HEADERS = {
-    "Access-Control-Allow-Origin": ALLOWED_ORIGIN,
-    "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
-    "Access-Control-Allow-Headers": "Content-Type, X-API-Key, Authorization",
-    "Access-Control-Allow-Credentials": "true"
-}
-
-class CorsResponse(Response):
+class CorsResponse(JSONResponse):
     """Response with CORS headers included"""
     def __init__(self, content, status=200):
-        super().__init__(content, status)
-        self.headers.update(CORS_HEADERS)
+        # JSONResponse expects status_code, not status
+        super().__init__(content=content, status_code=status)
+        # self.headers.update(CORS_HEADERS) # Handled by CORSMiddleware
 
 def require_api_key(func):
     """Middleware to validate API key"""
@@ -68,26 +62,41 @@ def require_api_key(func):
             }, status=403)
         
         # --- RATE LIMITING (Step 4) ---
-        # Limit: 1000 calls / day
+        # Limit depends on plan
         try:
             from datetime import datetime, timezone
-            today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+            from plan_config import get_plan_config
             
-            # Count calls today
-            # Supabase API logs table
-            count_res = supabase_admin.table("api_logs") \
-                .select("*", count="exact") \
-                .eq("client_id", client["id"]) \
-                .gte("timestamp", today_str) \
-                .execute()
+            # Fetch Plan Config
+            plan_type = client.get("plan_type", "trial")
+            plan_cfg = get_plan_config(plan_type)
             
-            calls_today = count_res.count if count_res.count is not None else 0
+            # Calculate daily limit (Monthly / 30)
+            monthly_limit = plan_cfg.get("max_scans_per_month", 1000)
             
-            if calls_today >= 1000:
-                print(f"Rate limit exceeded for client {client['id']}")
-                return CorsResponse({
-                    "error": "Daily rate limit exceeded (1000 calls). Upgrade your plan."
-                }, status=429)
+            if monthly_limit == -1:
+                daily_limit = -1 # Unlimited
+            else:
+                daily_limit = max(10, int(monthly_limit / 30)) # at least 10/day even for small plans
+
+            if daily_limit != -1:
+                today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+                
+                # Count calls today
+                # Supabase API logs table
+                count_res = supabase_admin.table("api_logs") \
+                    .select("*", count="exact") \
+                    .eq("client_id", client["id"]) \
+                    .gte("timestamp", today_str) \
+                    .execute()
+                
+                calls_today = count_res.count if count_res.count is not None else 0
+                
+                if calls_today >= daily_limit:
+                    print(f"Rate limit exceeded for client {client['id']}")
+                    return CorsResponse({
+                        "error": f"Daily rate limit exceeded ({daily_limit} calls). Upgrade your plan."
+                    }, status=429)
 
         except Exception as e:
             # Fail closed - deny request if rate limit cannot be verified
@@ -98,8 +107,18 @@ def require_api_key(func):
         # Attach client_id to request state
         request.state.client_id = client["id"]
         
-        # Execute Request
-        response = await func(request, *args, **kwargs)
+        try:
+            # Execute Request
+            response = await func(request, *args, **kwargs)
+        except Exception as e:
+            import traceback
+            print(f"Middleware Caught Exception: {e}")
+            traceback.print_exc()
+            return CorsResponse({
+                "error": "Internal Server Error (Caught by Middleware)",
+                "details": str(e),
+                "trace": traceback.format_exc()
+            }, status=500)
         
         # --- LOGGING (Step 5) ---
         # Record the call for billing and analytics
@@ -131,7 +150,12 @@ def require_admin_key(func):
         admin_key = request.headers.get("X-Admin-Key")
         
         # In production, store this in env var
-        expected_key = os.environ.get("ADMIN_API_KEY", "admin-secret-key-123")
+        expected_key = os.environ.get("ADMIN_API_KEY")
+        
+        if not expected_key:
+             return CorsResponse({
+                "error": "Admin access disabled (key not configured)"
+            }, status=503)
         
         if not admin_key or admin_key != expected_key:
             return CorsResponse({
