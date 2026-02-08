@@ -8,6 +8,7 @@ import { api } from '@/lib/api-client'
 
 interface Log {
     id: string
+    timestamp: string
     created_at: string
     endpoint: string
     status: string

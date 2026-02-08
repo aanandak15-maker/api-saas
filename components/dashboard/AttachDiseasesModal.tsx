@@ -244,7 +244,7 @@ export function AttachDiseasesModal({ isOpen, onClose, product, onSuccess }: Att
                         <div className="space-y-6">
                             {Object.keys(groupedDiseases).length === 0 && (
                                 <div className="text-center py-12 text-gray-400">
-                                    No diseases found matching "{searchQuery}"
+                                    No diseases found matching &quot;{searchQuery}&quot;
                                 </div>
                             )}
 

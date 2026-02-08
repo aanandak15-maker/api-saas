@@ -50,3 +50,298 @@
  GET /dashboard/billing 200 in 246ms
  ✓ Compiled /favicon.ico in 232ms (851 modules)
  GET /favicon.ico 200 in 677ms
+ ✓ Compiled in 1086ms (800 modules)
+ ⨯ Error: Cannot find module './948.js'
+Require stack:
+- /Users/anand/Downloads/api_new/api-saas/.next/server/webpack-runtime.js
+- /Users/anand/Downloads/api_new/api-saas/.next/server/app/favicon.ico/route.js
+- /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/require.js
+- /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/load-components.js
+- /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/build/utils.js
+- /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/dev/hot-middleware.js
+- /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/lib/router-server.js
+- /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/lib/start-server.js
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1410:15)
+    at /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/require-hook.js:55:36
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1051:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1056:22)
+    at Module._load (node:internal/modules/cjs/loader:1219:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:238:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1493:12)
+    at mod.require (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:152:16)
+    at __webpack_require__.f.require (/Users/anand/Downloads/api_new/api-saas/.next/server/webpack-runtime.js:203:28)
+    at /Users/anand/Downloads/api_new/api-saas/.next/server/webpack-runtime.js:116:40
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (/Users/anand/Downloads/api_new/api-saas/.next/server/webpack-runtime.js:115:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (/Users/anand/Downloads/api_new/api-saas/.next/server/webpack-runtime.js:167:22)
+    at /Users/anand/Downloads/api_new/api-saas/.next/server/app/(dashboard)/dashboard/settings/page.js:1:13156
+    at Object.<anonymous> (/Users/anand/Downloads/api_new/api-saas/.next/server/app/(dashboard)/dashboard/settings/page.js:1:13213)
+    at Module._compile (node:internal/modules/cjs/loader:1738:14)
+    at Object..js (node:internal/modules/cjs/loader:1871:10)
+    at Module.load (node:internal/modules/cjs/loader:1470:32)
+    at Module._load (node:internal/modules/cjs/loader:1290:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:238:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1493:12)
+    at mod.require (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:152:16)
+    at requirePage (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/require.js:109:84)
+    at /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/load-components.js:103:84
+    at async loadComponentsImpl (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/load-components.js:103:26)
+    at async DevServer.findPageComponentsImpl (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/next-server.js:714:36)
+    at async DevServer.findPageComponents (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/dev/next-dev-server.js:577:20)
+    at async DevServer.renderPageComponent (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/base-server.js:1910:24)
+    at async DevServer.renderToResponseImpl (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/base-server.js:1962:32)
+    at async DevServer.pipeImpl (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/base-server.js:922:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/next-server.js:272:17)
+    at async DevServer.handleRequestImpl (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/base-server.js:818:17)
+    at async /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/lib/router-server.js:179:21)
+    at async handleRequest (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/lib/router-server.js:359:24)
+    at async requestHandlerImpl (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/lib/router-server.js:383:13)
+    at async Server.requestListener (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/anand/Downloads/api_new/api-saas/.next/server/webpack-runtime.js',
+    '/Users/anand/Downloads/api_new/api-saas/.next/server/app/favicon.ico/route.js',
+    '/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/require.js',
+    '/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/load-components.js',
+    '/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/build/utils.js',
+    '/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/dev/hot-middleware.js',
+    '/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/dev/hot-reloader-webpack.js',
+    '/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js',
+    '/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/lib/router-server.js',
+    '/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/lib/start-server.js'
+  ],
+  page: '/dashboard/settings'
+}
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 1516ms (1834 modules)
+ GET /_next/static/css/app/layout.css?v=1770551096624 404 in 1675ms
+ GET /_next/static/css/app/layout.css?v=1770551098372 404 in 14ms
+ GET /dashboard/settings 200 in 127ms
+ GET /_next/static/css/app/layout.css?v=1770551098569 404 in 19ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 21ms
+ GET /_next/static/chunks/app/(dashboard)/layout.js 404 in 19ms
+ GET /_next/static/chunks/main-app.js?v=1770551098569 404 in 21ms
+ GET /_next/static/chunks/app/(dashboard)/dashboard/settings/page.js 404 in 20ms
+ ✓ Compiled in 498ms (1848 modules)
+ ⨯ Error: Cannot find module './948.js'
+Require stack:
+- /Users/anand/Downloads/api_new/api-saas/.next/server/webpack-runtime.js
+- /Users/anand/Downloads/api_new/api-saas/.next/server/app/(dashboard)/dashboard/page.js
+- /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/require.js
+- /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/load-components.js
+- /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/build/utils.js
+- /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/dev/hot-middleware.js
+- /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/lib/router-server.js
+- /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/lib/start-server.js
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1410:15)
+    at /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/require-hook.js:55:36
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1051:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1056:22)
+    at Module._load (node:internal/modules/cjs/loader:1219:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:238:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1493:12)
+    at mod.require (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:152:16)
+    at __webpack_require__.f.require (/Users/anand/Downloads/api_new/api-saas/.next/server/webpack-runtime.js:198:28)
+    at /Users/anand/Downloads/api_new/api-saas/.next/server/webpack-runtime.js:111:40
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (/Users/anand/Downloads/api_new/api-saas/.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (/Users/anand/Downloads/api_new/api-saas/.next/server/webpack-runtime.js:162:22)
+    at /Users/anand/Downloads/api_new/api-saas/.next/server/app/_not-found/page.js:1:3511
+    at Object.<anonymous> (/Users/anand/Downloads/api_new/api-saas/.next/server/app/_not-found/page.js:1:3556)
+    at Module._compile (node:internal/modules/cjs/loader:1738:14)
+    at Object..js (node:internal/modules/cjs/loader:1871:10)
+    at Module.load (node:internal/modules/cjs/loader:1470:32)
+    at Module._load (node:internal/modules/cjs/loader:1290:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:238:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1493:12)
+    at mod.require (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:152:16)
+    at requirePage (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/require.js:109:84)
+    at /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/load-components.js:103:84
+    at async loadComponentsImpl (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/load-components.js:103:26)
+    at async DevServer.findPageComponentsImpl (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/next-server.js:714:36)
+    at async DevServer.findPageComponents (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/dev/next-dev-server.js:577:20)
+    at async DevServer.renderErrorToResponseImpl (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/base-server.js:2090:30)
+    at async pipe.req.req (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/base-server.js:2056:30)
+    at async DevServer.pipeImpl (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/base-server.js:922:25)
+    at async /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/lib/router-server.js:179:21)
+    at async handleRequest (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/lib/router-server.js:374:24)
+    at async requestHandlerImpl (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/lib/router-server.js:383:13)
+    at async Server.requestListener (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/anand/Downloads/api_new/api-saas/.next/server/webpack-runtime.js',
+    '/Users/anand/Downloads/api_new/api-saas/.next/server/app/(dashboard)/dashboard/page.js',
+    '/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/require.js',
+    '/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/load-components.js',
+    '/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/build/utils.js',
+    '/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/dev/hot-middleware.js',
+    '/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/dev/hot-reloader-webpack.js',
+    '/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js',
+    '/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/lib/router-server.js',
+    '/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/lib/start-server.js'
+  ]
+}
+ GET /_next/static/css/app/layout.css?v=1770551156448 500 in 569ms
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat '/Users/anand/Downloads/api_new/api-saas/.next/server/vendor-chunks/iceberg-js.js'
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/iceberg-js' in /Users/anand/Downloads/api_new/api-saas/.next/server for build dependencies doesn't lead to expected result '/Users/anand/Downloads/api_new/api-saas/.next/server/vendor-chunks/iceberg-js.js', but to 'Error: Can't resolve './vendor-chunks/iceberg-js' in '/Users/anand/Downloads/api_new/api-saas/.next/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/iceberg-js (expected /Users/anand/Downloads/api_new/api-saas/.next/server/vendor-chunks/iceberg-js.js)
+<w>  at file dependencies /Users/anand/Downloads/api_new/api-saas/.next/server/webpack-runtime.js
+<w>  at file /Users/anand/Downloads/api_new/api-saas/.next/server/webpack-runtime.js
+<w>  at file dependencies /Users/anand/Downloads/api_new/api-saas/.next/server/app/favicon.ico/route.js
+<w>  at file /Users/anand/Downloads/api_new/api-saas/.next/server/app/favicon.ico/route.js
+<w>  at file dependencies /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/require.js
+<w>  at file /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/require.js
+<w>  at file dependencies /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/load-components.js
+<w>  at file /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/build/utils.js
+<w>  at file /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at file /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at file dependencies /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/compiled/loader-runner/LoaderRunner.js
+<w>  at file /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/compiled/loader-runner/LoaderRunner.js
+<w>  at file dependencies /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/compiled/webpack/bundle5.js
+<w>  at file /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/compiled/webpack/bundle5.js
+<w>  at file dependencies /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/compiled/webpack/webpack.js
+<w>  at file /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/compiled/webpack/webpack.js
+<w>  at file dependencies /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/build/webpack/plugins/define-env-plugin.js
+<w>  at file /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/build/webpack/plugins/define-env-plugin.js
+<w>  at file dependencies /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/build/swc/index.js
+<w>  at file /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/build/swc/index.js
+<w>  at file dependencies /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/tslib' in /Users/anand/Downloads/api_new/api-saas/.next/server for build dependencies doesn't lead to expected result '/Users/anand/Downloads/api_new/api-saas/.next/server/vendor-chunks/tslib.js', but to 'Error: Can't resolve './vendor-chunks/tslib' in '/Users/anand/Downloads/api_new/api-saas/.next/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/tslib (expected /Users/anand/Downloads/api_new/api-saas/.next/server/vendor-chunks/tslib.js)
+<w>  at file dependencies /Users/anand/Downloads/api_new/api-saas/.next/server/webpack-runtime.js
+<w>  at file /Users/anand/Downloads/api_new/api-saas/.next/server/webpack-runtime.js
+<w>  at file dependencies /Users/anand/Downloads/api_new/api-saas/.next/server/app/favicon.ico/route.js
+<w>  at file /Users/anand/Downloads/api_new/api-saas/.next/server/app/favicon.ico/route.js
+<w>  at file dependencies /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/require.js
+<w>  at file /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/require.js
+<w>  at file dependencies /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/load-components.js
+<w>  at file /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/build/utils.js
+<w>  at file /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at file /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at file dependencies /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/compiled/loader-runner/LoaderRunner.js
+<w>  at file /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/compiled/loader-runner/LoaderRunner.js
+<w>  at file dependencies /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/compiled/webpack/bundle5.js
+<w>  at file /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/compiled/webpack/bundle5.js
+<w>  at file dependencies /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/compiled/webpack/webpack.js
+<w>  at file /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/compiled/webpack/webpack.js
+<w>  at file dependencies /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/build/webpack/plugins/define-env-plugin.js
+<w>  at file /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/build/webpack/plugins/define-env-plugin.js
+<w>  at file dependencies /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/build/swc/index.js
+<w>  at file /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/build/swc/index.js
+<w>  at file dependencies /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat '/Users/anand/Downloads/api_new/api-saas/.next/server/vendor-chunks/iceberg-js.js'
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/iceberg-js' in /Users/anand/Downloads/api_new/api-saas/.next/server for build dependencies doesn't lead to expected result '/Users/anand/Downloads/api_new/api-saas/.next/server/vendor-chunks/iceberg-js.js', but to 'Error: Can't resolve './vendor-chunks/iceberg-js' in '/Users/anand/Downloads/api_new/api-saas/.next/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/iceberg-js (expected /Users/anand/Downloads/api_new/api-saas/.next/server/vendor-chunks/iceberg-js.js)
+<w>  at file dependencies /Users/anand/Downloads/api_new/api-saas/.next/server/webpack-runtime.js
+<w>  at file /Users/anand/Downloads/api_new/api-saas/.next/server/webpack-runtime.js
+<w>  at file dependencies /Users/anand/Downloads/api_new/api-saas/.next/server/app/favicon.ico/route.js
+<w>  at file /Users/anand/Downloads/api_new/api-saas/.next/server/app/favicon.ico/route.js
+<w>  at file dependencies /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/require.js
+<w>  at file /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/require.js
+<w>  at file dependencies /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/load-components.js
+<w>  at file /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/build/utils.js
+<w>  at file /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at file /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at resolve commonjs /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+ ✓ Compiled in 779ms (1841 modules)
+ ✓ Compiled /_not-found in 139ms (1830 modules)
+ ⨯ Error: Cannot find module './948.js'
+Require stack:
+- /Users/anand/Downloads/api_new/api-saas/.next/server/webpack-runtime.js
+- /Users/anand/Downloads/api_new/api-saas/.next/server/app/_not-found/page.js
+- /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/require.js
+- /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/load-components.js
+- /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/build/utils.js
+- /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/dev/hot-middleware.js
+- /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/lib/router-server.js
+- /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/lib/start-server.js
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1410:15)
+    at /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/require-hook.js:55:36
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1051:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1056:22)
+    at Module._load (node:internal/modules/cjs/loader:1219:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:238:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1493:12)
+    at mod.require (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:152:16)
+    at __webpack_require__.f.require (/Users/anand/Downloads/api_new/api-saas/.next/server/webpack-runtime.js:198:28)
+    at /Users/anand/Downloads/api_new/api-saas/.next/server/webpack-runtime.js:111:40
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (/Users/anand/Downloads/api_new/api-saas/.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (/Users/anand/Downloads/api_new/api-saas/.next/server/webpack-runtime.js:162:22)
+    at /Users/anand/Downloads/api_new/api-saas/.next/server/app/_not-found/page.js:1:3511
+    at Object.<anonymous> (/Users/anand/Downloads/api_new/api-saas/.next/server/app/_not-found/page.js:1:3556)
+    at Module._compile (node:internal/modules/cjs/loader:1738:14)
+    at Object..js (node:internal/modules/cjs/loader:1871:10)
+    at Module.load (node:internal/modules/cjs/loader:1470:32)
+    at Module._load (node:internal/modules/cjs/loader:1290:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:238:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1493:12)
+    at mod.require (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:152:16)
+    at requirePage (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/require.js:109:84)
+    at /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/load-components.js:103:84
+    at async loadComponentsImpl (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/load-components.js:103:26)
+    at async DevServer.findPageComponentsImpl (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/next-server.js:714:36)
+    at async DevServer.findPageComponents (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/dev/next-dev-server.js:577:20)
+    at async DevServer.renderErrorToResponseImpl (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/base-server.js:2090:30)
+    at async pipe.req.req (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/base-server.js:2056:30)
+    at async DevServer.pipeImpl (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/base-server.js:922:25)
+    at async /Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/lib/router-server.js:179:21)
+    at async handleRequest (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/lib/router-server.js:374:24)
+    at async requestHandlerImpl (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/lib/router-server.js:383:13)
+    at async Server.requestListener (/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/anand/Downloads/api_new/api-saas/.next/server/webpack-runtime.js',
+    '/Users/anand/Downloads/api_new/api-saas/.next/server/app/_not-found/page.js',
+    '/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/require.js',
+    '/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/load-components.js',
+    '/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/build/utils.js',
+    '/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/dev/hot-middleware.js',
+    '/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/dev/hot-reloader-webpack.js',
+    '/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js',
+    '/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/lib/router-server.js',
+    '/Users/anand/Downloads/api_new/api-saas/node_modules/next/dist/server/lib/start-server.js'
+  ]
+}
+ ✓ Compiled /_error in 109ms (1832 modules)
+ GET /_next/static/css/app/layout.css?v=1770551290862 500 in 275ms
