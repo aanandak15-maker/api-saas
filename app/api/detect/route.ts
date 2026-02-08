@@ -21,9 +21,10 @@ export async function POST(request: Request) {
         // Hardcode fallback for crop_type if missing?
         if (!crop_type) backendFormData.append('crop_type', 'Tomato');
 
-        const backendUrl = 'http://localhost:8000/detect';
+        const backendUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+        const detectUrl = `${backendUrl}/detect`;
 
-        const res = await fetch(backendUrl, {
+        const res = await fetch(detectUrl, {
             method: 'POST',
             headers: {
                 'x-api-key': 'zIS7TKdQeKeOOne3AlinyiDcYQusLQ1V', // Naksh Key (Organic Focus)

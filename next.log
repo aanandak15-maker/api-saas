@@ -610,3 +610,9 @@ Require stack:
   ]
 }
  ✓ Compiled in 710ms (1928 modules)
+ GET /dashboard 200 in 81ms
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 21ms
+   Reload env: .env.local
+ ✓ Compiled in 437ms (1879 modules)
+ ✓ Compiled in 1430ms (1022 modules)
+ ✓ Compiled in 137ms (1022 modules)
