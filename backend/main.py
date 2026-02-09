@@ -9,6 +9,8 @@ import os
 origins = [
     "http://localhost:3000",
     "http://localhost:8000",
+    "https://api-saas-pi.vercel.app",
+    "https://api-saas-khr2ehsc0-stufi339s-projects.vercel.app",
     os.getenv("ALLOWED_ORIGIN", "http://localhost:3000")
 ]
 
