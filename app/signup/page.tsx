@@ -25,16 +25,38 @@ export default function Signup() {
         setMsg('')
 
         try {
-            // calculated plan_type could be added here
-            const res = await api.post('/signup', {
-                ...formData,
-                plan_type: 'starter'
+            // 1. Create Supabase Auth User
+            const { data: authData, error: authError } = await api.auth.signUp(formData.email, formData.password)
+
+            if (authError) {
+                // If user already exists, Supabase might return a distinct error
+                if (authError.message.includes("already registered")) {
+                    throw new Error("Account with this email already exists. Please Log In.")
+                }
+                throw authError
+            }
+
+            if (!authData.user) {
+                throw new Error("Failed to create account. Please try again.")
+            }
+
+            // 2. Create Client Record in Backend
+            // We pass the email from authData to be sure
+            await api.post('/dashboard/signup', {
+                email: authData.user.email,
+                company_name: formData.company_name
             })
 
-            setMsg('Account created! Redirecting to login...')
+            setMsg('Account created successfully! Redirecting to login...')
             setTimeout(() => router.push('/login'), 2000)
+
         } catch (err: any) {
-            setError(err.message || 'Signup failed. Please try again.')
+            // Handle 409 from Backend if Auth succeeded but Backend failed (unlikely race condition but possible)
+            if (err.message && err.message.includes("already exists")) {
+                setError("Account with this email already exists. Please Log In.")
+            } else {
+                setError(err.message || 'Signup failed. Please try again.')
+            }
         } finally {
             setLoading(false)
         }

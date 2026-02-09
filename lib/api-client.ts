@@ -91,5 +91,16 @@ export const api = {
         })
         if (!res.ok) throw new Error(`API Error: ${res.statusText}`)
         return res.json()
+    },
+    auth: {
+        signUp: async (email: string, password: string) => {
+            return await supabase.auth.signUp({ email, password })
+        },
+        signIn: async (email: string, password: string) => {
+            return await supabase.auth.signInWithPassword({ email, password })
+        },
+        signOut: async () => {
+            return await supabase.auth.signOut()
+        }
     }
 }
