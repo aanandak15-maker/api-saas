@@ -17,6 +17,10 @@ class ConfigResponse(BaseModel):
     layer_products_organic: bool
     layer_products_chemical: bool
     layer_products_biological: bool
+    # Branding (Optional)
+    layer_branding: Optional[bool] = False
+    branding_custom_text: Optional[str] = None
+    branding_primary_color: Optional[str] = None
 
 class ConfigUpdate(BaseModel):
     layer_scientific: Optional[bool] = None
@@ -29,6 +33,10 @@ class ConfigUpdate(BaseModel):
     layer_products_organic: Optional[bool] = None
     layer_products_chemical: Optional[bool] = None
     layer_products_biological: Optional[bool] = None
+    # Branding
+    layer_branding: Optional[bool] = None
+    branding_custom_text: Optional[str] = None
+    branding_primary_color: Optional[str] = None
 
 DEFAULT_CONFIG = {
     "layer_scientific": False,
@@ -40,7 +48,10 @@ DEFAULT_CONFIG = {
     "layer_faq": False,
     "layer_products_organic": True,
     "layer_products_chemical": False,
-    "layer_products_biological": False
+    "layer_products_biological": False,
+    "layer_branding": False,
+    "branding_custom_text": None,
+    "branding_primary_color": None
 }
 
 @router.get("")
@@ -71,7 +82,17 @@ async def update_config(request: Request):
         return CorsResponse({"error": "Invalid JSON body"}, status=400)
     
     # Build update payload (only layer_ fields)
-    update_data = {k: v for k, v in body.items() if k.startswith("layer_") and isinstance(v, bool)}
+    # Build update payload
+    # Allow layer_ bools AND branding text fields
+    allowed_keys = [
+        "layer_scientific", "layer_symptoms", 
+        "layer_treatment_organic", "layer_treatment_chemical", "layer_treatment_biological",
+        "layer_prevention", "layer_faq",
+        "layer_products_organic", "layer_products_chemical", "layer_products_biological",
+        "layer_branding", "branding_custom_text", "branding_primary_color"
+    ]
+    
+    update_data = {k: v for k, v in body.items() if k in allowed_keys and v is not None}
     
     if not update_data:
         return CorsResponse({"error": "No valid fields provided for update"}, status=400)

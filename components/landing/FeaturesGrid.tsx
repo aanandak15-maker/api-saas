@@ -6,8 +6,13 @@ export function FeaturesGrid() {
     const features = [
         {
             title: 'AI Crop Detection',
-            desc: 'Multi-crop disease identification with 99.8% confirmed accuracy.',
+            desc: 'Multi-crop identification with Smart Validation to prevent false positives.',
             icon: Scan,
+        },
+        {
+            title: 'Layered API Response',
+            desc: 'Granular control over data: Toggle scientific info, chemical treatments, or branding.',
+            icon: Box,
         },
         {
             title: 'Advisory Engine',
@@ -15,7 +20,7 @@ export function FeaturesGrid() {
             icon: MessageSquareText,
         },
         {
-            title: 'Product Slots',
+            title: 'Product Recommended',
             desc: 'Promote your fertilizers, pesticides, and seeds directly in results.',
             icon: ShoppingBag,
         },
@@ -25,13 +30,8 @@ export function FeaturesGrid() {
             icon: BarChart2,
         },
         {
-            title: 'White-Label API',
-            desc: 'Your branding, your domain, your customer relationship.',
-            icon: Box,
-        },
-        {
-            title: 'Multi-Language Support',
-            desc: 'Serve diverse farmer audiences in their local dialect.',
+            title: 'Global Reach',
+            desc: 'Multi-language support to serve diverse farmer audiences.',
             icon: Globe,
         },
     ];

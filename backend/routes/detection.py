@@ -36,11 +36,25 @@ async def detect_disease(request: Request):
         unique_filename = f"{uuid.uuid4()}.{file_extension}"
         
         # Upload to Supabase Storage
-        image_url = await upload_detection_image(image_file, unique_filename)
+        try:
+            image_url = await upload_detection_image(image_file, unique_filename)
+            if not image_url:
+                 raise ValueError("Failed to upload image")
+        except ValueError as ve:
+             return CorsResponse({"error": str(ve)}, status=400)
+        except Exception as e:
+             return CorsResponse({"error": "Encryption/Storage Error"}, status=500)
         
         # 1. Run Gemini Detection
-        ai_result = await detect_disease_from_image(image_file)
+        await image_file.seek(0)
+        expected_crop = form.get("crop_type")
+        ai_result = await detect_disease_from_image(image_file, expected_crop=expected_crop)
         
+        # Initialize Response Builder
+        from services.response_builder import ResponseBuilder, get_client_config
+        config = get_client_config(client_id)
+        builder = ResponseBuilder(client_id, config)
+
         # 2. Match AI result to Database
         from utils.disease_matcher import match_disease_from_db
         
@@ -48,18 +62,34 @@ async def detect_disease(request: Request):
         confidence = ai_result.get("confidence", 0.0)
         severity = ai_result.get("severity")
         
+        # Common Response Data (Base)
+        response_base = {
+            "success": True,
+            "image_url": image_url,
+            "result": {
+                "confidence": confidence,
+                "severity": severity,
+                "crop": ai_result.get("crop")
+            }
+        }
+
         # Check if healthy
         if ai_result.get("isHealthy"):
-             return CorsResponse({
-                "success": True,
-                "image_url": image_url,
-                "result": {
-                    "status": "healthy",
-                    "crop": ai_result.get("crop"),
-                    "confidence": confidence,
-                    "severity": None
+             response_base["result"]["status"] = "healthy"
+             # Apply Branding/Layers to Healthy Response
+             # For healthy, we might still want branding, FAQ, prevention (general)
+             # But ResponseBuilder.build expects a disease_record.
+             # We should probably extend ResponseBuilder or just manually add branding here for now.
+             
+             if config.get("layer_branding", False):
+                branding = {
+                    "enabled": True,
+                    "custom_text": config.get("branding_custom_text"),
+                    "primary_color": config.get("branding_primary_color")
                 }
-            })
+                response_base["branding"] = {k: v for k, v in branding.items() if v}
+                
+             return CorsResponse(response_base)
 
         # Try to find disease
         disease_name = ai_result.get("disease") or ai_result.get("disease_name") # Handle both schemas
@@ -69,16 +99,18 @@ async def detect_disease(request: Request):
         
         if not disease_record:
              # Log unknown disease case? For now return unknown
-             return CorsResponse({
-                 "success": True,
-                 "image_url": image_url,
-                 "result": {
-                     "status": "unknown",
-                     "detected_name": disease_name,
-                     "confidence": confidence,
-                     "severity": severity
-                 }
-             })
+             response_base["result"]["status"] = "unknown"
+             response_base["result"]["detected_name"] = disease_name
+             
+             if config.get("layer_branding", False):
+                branding = {
+                    "enabled": True,
+                    "custom_text": config.get("branding_custom_text"),
+                    "primary_color": config.get("branding_primary_color")
+                }
+                response_base["branding"] = {k: v for k, v in branding.items() if v}
+
+             return CorsResponse(response_base)
 
         # 3. Store valid detection
         record = supabase_admin.table("detection_images").insert({
@@ -92,10 +124,7 @@ async def detect_disease(request: Request):
             "location_lng": form.get("location_lng")
         }).execute()
         
-        # 4. Fetch Config & Products
-        from services.response_builder import ResponseBuilder, get_client_config
-        
-        config = get_client_config(client_id)
+        # 4. Fetch Products (Only for Diseased)
         
         # Determine which product types to fetch
         enabled_types = []
@@ -166,8 +195,7 @@ async def detect_disease(request: Request):
             except Exception as e:
                 print(f"Product fetch failed: {e}")
 
-        # Build Response
-        builder = ResponseBuilder(client_id, config)
+        # Build Response for Diseased
         response_data = builder.build(
             disease_record=disease_record,
             confidence=confidence,
@@ -179,9 +207,17 @@ async def detect_disease(request: Request):
 
         return CorsResponse(response_data)
 
+        return CorsResponse(response_data)
+
+    except ValueError as ve:
+        # Catch known validation errors (e.g. invalid image, Gemini 400)
+        print(f"Validation Error: {ve}")
+        return CorsResponse({"error": str(ve)}, status=400)
+        
     except Exception as e:
         import traceback
-        return CorsResponse({"error": str(e)}, status=500)
+        traceback.print_exc()
+        return CorsResponse({"error": f"Internal Error: {str(e)}"}, status=500)
 
 
 @router.get("/detections", response_model=GenericResponse)

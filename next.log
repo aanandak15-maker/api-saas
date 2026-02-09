@@ -634,3 +634,23 @@ Require stack:
  ✓ Compiled in 2.5s (1879 modules)
  ✓ Compiled in 1068ms (1915 modules)
  ✓ Compiled in 662ms (1915 modules)
+ ○ Compiling /playground ...
+ ✓ Compiled /playground in 2.7s (1968 modules)
+ GET /playground 200 in 3689ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 716ms (1957 modules)
+ GET /_next/static/css/app/layout.css?v=1770578816147 404 in 798ms
+ GET /_next/static/chunks/main-app.js?v=1770578816147 404 in 791ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 787ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 606ms (937 modules)
+ GET /favicon.ico 200 in 694ms
+ GET / 200 in 1182ms
+ GET /_next/static/css/app/layout.css?v=1770579119733 404 in 29ms
+ GET /_next/static/chunks/main-app.js?v=1770579119733 404 in 94ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 92ms
+ GET /_next/static/chunks/app/page.js 404 in 91ms
+ ✓ Compiled in 3.1s (1939 modules)
+ ✓ Compiled in 495ms (1064 modules)
+   Reload env: .env.local
+ ✓ Compiled in 8.9s (1957 modules)

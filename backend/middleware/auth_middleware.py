@@ -32,7 +32,7 @@ def require_api_key(func):
             # Verify API key
             # Don't use .single() as it throws error on 0 rows
             result = supabase_admin.table("clients") \
-                .select("id, company_name, subscription_status, is_active") \
+                .select("id, company_name, subscription_status, is_active, plan_type") \
                 .eq("api_key", api_key) \
                 .execute()
             

@@ -87,7 +87,7 @@ async def call_gemini_with_retry(model, prompt: str, image_data: dict, max_retri
     raise last_error
 
 
-async def detect_disease_from_image(image_file):
+async def detect_disease_from_image(image_file, expected_crop: Optional[str] = None):
     """
     Run Gemini Vision model for disease detection.
     Enhanced with retry logic, normalization, and debug logging.
@@ -112,29 +112,42 @@ async def detect_disease_from_image(image_file):
         # Read image bytes
         image_bytes = await image_file.read()
         
+        print(f"DEBUG: Image Filename: {getattr(image_file, 'filename', 'unknown')}")
+        print(f"DEBUG: Content Type: {image_file.content_type}")
+        print(f"DEBUG: Size: {len(image_bytes)} bytes")
+        print(f"DEBUG: API Key: {api_key[:5]}...{api_key[-5:] if api_key else 'None'}")
+
+        
         # Prepare model with temperature=0 for deterministic output
         model = genai.GenerativeModel(
             'gemini-flash-lite-latest',
             generation_config=genai.GenerationConfig(temperature=0.0)
         )
         
-        prompt = """
+        prompt = f"""
 You are an agricultural plant disease vision classifier.
 
-Analyze the provided plant image and return ONLY a valid JSON object.
-Do NOT return markdown, code blocks, comments, or explanations.
-Do NOT include any text before or after the JSON.
-Do NOT use backticks.
+Context: 
+Expected Crop: {expected_crop if expected_crop else "Unknown (Detect it)"}
+
+Task:
+1. IDENTIFY the crop in the image.
+2. If 'Expected Crop' is provided:
+   - VERIFY if the image plausibly matches the expected crop.
+   - If the image is CLEARLY a different crop (e.g., Expected 'Tomato', but image is 'Rice'), reject the expected crop. Set "crop" to the *actual* detected crop and "disease" to null.
+   - If the image is the expected crop (or ambiguous), proceed to detect diseases for that crop.
+3. If 'Expected Crop' is NOT provided:
+   - Detect the crop and then the disease.
 
 JSON schema (STRICT — no extra keys allowed):
 
-{
+{{
   "isHealthy": boolean,
   "crop": string | null,
   "disease": string | null,
   "confidence": float,
   "severity": string | null
-}
+}}
 
 Rules:
 - If plant appears healthy → "isHealthy": true, "disease": null, "severity": null
@@ -194,4 +207,7 @@ Return ONLY the JSON object.
         
         # FAIL FAST: Do not return mock data in production.
         # This allows the caller (route) to handle the 503 or 500 appropriately.
+        if "400" in str(e) or "Unable to process" in str(e):
+             raise ValueError("AI Analysis Failed: The image could not be processed. Please try a clearer photo.")
+             
         raise e

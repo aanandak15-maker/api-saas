@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FileUpload } from "@/components/demo/FileUpload";
 import { AnalysisResult } from "@/components/demo/AnalysisResult";
 import { Sprout } from "lucide-react";
@@ -12,6 +12,27 @@ export default function PlaygroundPage() {
     const [result, setResult] = useState<any>(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
+    const [userApiKey, setUserApiKey] = useState<string | null>(null);
+
+    // Check for logged-in user's API key
+    useEffect(() => {
+        const fetchUserKey = async () => {
+            try {
+                const { getAuthHeaders } = await import("@/lib/api-client");
+                const headers = await getAuthHeaders();
+
+                if (headers && headers['X-API-Key']) {
+                    console.log("Playground: Found User API Key via getAuthHeaders");
+                    setUserApiKey(headers['X-API-Key']);
+                } else {
+                    console.log("Playground: No API Key found via getAuthHeaders");
+                }
+            } catch (e) {
+                console.error("Playground: Failed to fetch auth headers", e);
+            }
+        };
+        fetchUserKey();
+    }, []);
 
     const handleFileSelect = async (selectedFile: File) => {
         setLoading(true);
@@ -26,8 +47,14 @@ export default function PlaygroundPage() {
             formData.append("location_lng", "77.1025");
 
             // Use Next.js API route which proxies to backend
+            const headers: Record<string, string> = {};
+            if (userApiKey) {
+                headers['x-custom-api-key'] = userApiKey;
+            }
+
             const res = await fetch("/api/detect", {
                 method: "POST",
+                headers: headers,
                 body: formData,
             });
 

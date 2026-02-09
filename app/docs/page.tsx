@@ -106,7 +106,7 @@ export default function DocsPage() {
                                             <tr>
                                                 <td className="px-4 py-3 font-mono text-blue-600">crop</td>
                                                 <td className="px-4 py-3 text-gray-500">String</td>
-                                                <td className="px-4 py-3 text-gray-600">Wait (optional), e.g., "Tomato". Defaults to auto-detect if omitted.</td>
+                                                <td className="px-4 py-3 text-gray-600">Wait (optional), e.g., &quot;Tomato&quot;. Defaults to auto-detect if omitted.</td>
                                             </tr>
                                         </tbody>
                                     </table>

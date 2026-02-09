@@ -4,7 +4,7 @@ import time
 import os
 from PIL import Image
 
-API_URL = "http://localhost:8000"
+API_URL = "http://localhost:8001"
 
 async def test_health():
     async with aiohttp.ClientSession() as session:

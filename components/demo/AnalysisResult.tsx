@@ -7,6 +7,7 @@ import { TriggerCard } from "@/components/demo/layers/TriggerCard";
 import { TreatmentPanel } from "@/components/demo/layers/TreatmentPanel";
 import { PreventionCard } from "@/components/demo/layers/PreventionCard";
 import { ProductCarousel } from "@/components/demo/layers/ProductCarousel";
+import { BrandingCard } from "@/components/demo/layers/BrandingCard";
 
 interface AnalysisResultProps {
     data: any;
@@ -54,6 +55,11 @@ export function AnalysisResult({ data }: AnalysisResultProps) {
                     organic={advisory.organic_products}
                     chemical={advisory.chemical_products}
                 />
+            )}
+
+            {/* Layer 7: Branding (Optional) */}
+            {data.branding && (
+                <BrandingCard data={data.branding} />
             )}
         </motion.div>
     );

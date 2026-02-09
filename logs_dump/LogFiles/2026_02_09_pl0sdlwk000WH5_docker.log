@@ -1,0 +1,731 @@
+2026-02-08T23:50:06.9960314Z Site: plantdiseaseapi will be blocked for 4 minutes till 02/08/2026 23:54:06
+2026-02-08T23:54:07.1353560Z Site: plantdiseaseapi is unblocked.
+2026-02-09T00:24:51.6592753Z Container start method called.
+2026-02-09T00:24:51.6594301Z Establishing network.
+2026-02-09T00:24:51.6595494Z Pulling image: appsvc/python:3.10_20251017.5.tuxprod.
+2026-02-09T00:24:51.7292202Z Container is starting.
+2026-02-09T00:24:51.7293920Z Establishing user namespace if not established already.
+2026-02-09T00:24:51.7295128Z Establishing network if not established already.
+2026-02-09T00:24:51.7296440Z Mounting volumes.
+2026-02-09T00:24:51.7298107Z Nested mountpoint 
+2026-02-09T00:24:51.7328497Z Nested mountpoint volatile/logs
+2026-02-09T00:24:51.7439576Z Nested mountpoint 
+2026-02-09T00:24:51.7472177Z Nested mountpoint 
+2026-02-09T00:24:51.7505537Z Nested mountpoint 
+2026-02-09T00:24:51.8087239Z Creating container.
+2026-02-09T00:24:51.8088697Z Creating pipes for streaming container io.
+2026-02-09T00:24:51.8090190Z Creating stdout named pipe at /podr/container/pipe/347b10fa75b3_plantdiseaseapi/stdout_fa9e320fa25b447a986c1ff2cdd5e191.
+2026-02-09T00:24:51.8092525Z Successfully created stdout named pipe at: /podr/container/pipe/347b10fa75b3_plantdiseaseapi/stdout_fa9e320fa25b447a986c1ff2cdd5e191.
+2026-02-09T00:24:51.8093833Z Opening named pipe /podr/container/pipe/347b10fa75b3_plantdiseaseapi/stdout_fa9e320fa25b447a986c1ff2cdd5e191 for reading in non-blocking mode.
+2026-02-09T00:24:51.8095332Z Successfully opened named pipe: /podr/container/pipe/347b10fa75b3_plantdiseaseapi/stdout_fa9e320fa25b447a986c1ff2cdd5e191.
+2026-02-09T00:24:51.8096598Z Successfully removed non-blocking flag from /podr/container/pipe/347b10fa75b3_plantdiseaseapi/stdout_fa9e320fa25b447a986c1ff2cdd5e191.
+2026-02-09T00:24:51.8097745Z Creating stderr named pipe at /podr/container/pipe/347b10fa75b3_plantdiseaseapi/stderr_e03b48f5594546d4a880aa9d72479099.
+2026-02-09T00:24:51.8099380Z Successfully created stderr named pipe at: /podr/container/pipe/347b10fa75b3_plantdiseaseapi/stderr_e03b48f5594546d4a880aa9d72479099.
+2026-02-09T00:24:51.8100541Z Opening named pipe /podr/container/pipe/347b10fa75b3_plantdiseaseapi/stderr_e03b48f5594546d4a880aa9d72479099 for reading in non-blocking mode.
+2026-02-09T00:24:51.8101857Z Successfully opened named pipe: /podr/container/pipe/347b10fa75b3_plantdiseaseapi/stderr_e03b48f5594546d4a880aa9d72479099.
+2026-02-09T00:24:51.8103045Z Successfully removed non-blocking flag from /podr/container/pipe/347b10fa75b3_plantdiseaseapi/stderr_e03b48f5594546d4a880aa9d72479099.
+2026-02-09T00:24:51.8104264Z Creating container with image: appsvc/python:3.10_20251017.5.tuxprod from registry: 10.1.0.6:13209 and fully qualified image name: 10.1.0.6:13209/appsvc/python:3.10_20251017.5.tuxprod
+2026-02-09T00:24:52.1076841Z Starting container: 347b10fa75b3_plantdiseaseapi.
+2026-02-09T00:24:52.1234463Z Starting watchers and probes.
+2026-02-09T00:24:52.1236888Z Starting metrics collection.
+2026-02-09T00:24:52.1238637Z Container is running.
+2026-02-09T00:24:52.1479364Z Container start method finished after 488 ms.
+2026-02-09T00:25:38.2913318Z Container has finished running with exit code: 3.
+2026-02-09T00:25:38.2914877Z Container is terminating. Grace period: 5 seconds.
+2026-02-09T00:25:38.2993260Z Stop and delete container. Retry count = 0
+2026-02-09T00:25:38.2994920Z Stopping container: 347b10fa75b3_plantdiseaseapi.
+2026-02-09T00:25:38.3332092Z Deleting container: 347b10fa75b3_plantdiseaseapi. Retry count = 0
+2026-02-09T00:25:38.8167362Z Container spec TerminationMessagePolicy  path 
+2026-02-09T00:25:38.8179261Z Container is terminated. Total time elapsed: 519 ms.
+2026-02-09T00:25:38.8180825Z Site container: plantdiseaseapi terminated during site startup.
+2026-02-09T00:25:38.8480100Z Site startup probe failed after 46.6977577 seconds.
+2026-02-09T00:25:39.0677868Z Failed to start site. Revert by stopping site.
+2026-02-09T00:25:39.0685396Z Site: plantdiseaseapi stopped.
+2026-02-09T00:25:39.2706313Z Site: plantdiseaseapi will be blocked for 4 minutes till 02/09/2026 00:29:39
+2026-02-09T00:29:39.2699347Z Site: plantdiseaseapi is unblocked.
+2026-02-09T00:59:53.7415900Z Container start method called.
+2026-02-09T00:59:53.7422248Z Establishing network.
+2026-02-09T00:59:53.7423885Z Pulling image: appsvc/python:3.10_20251017.5.tuxprod.
+2026-02-09T00:59:53.8448491Z Container is starting.
+2026-02-09T00:59:53.8450647Z Establishing user namespace if not established already.
+2026-02-09T00:59:53.8452008Z Establishing network if not established already.
+2026-02-09T00:59:53.8453317Z Mounting volumes.
+2026-02-09T00:59:53.8454900Z Nested mountpoint 
+2026-02-09T00:59:53.8471279Z Nested mountpoint volatile/logs
+2026-02-09T00:59:53.8500930Z Nested mountpoint 
+2026-02-09T00:59:53.8506694Z Nested mountpoint 
+2026-02-09T00:59:53.8513655Z Nested mountpoint 
+2026-02-09T00:59:53.9063056Z Creating container.
+2026-02-09T00:59:53.9070960Z Creating pipes for streaming container io.
+2026-02-09T00:59:53.9072248Z Creating stdout named pipe at /podr/container/pipe/805e6a959880_plantdiseaseapi/stdout_d4126b9067ed4662b02e1b80e8cf5667.
+2026-02-09T00:59:53.9934459Z Successfully created stdout named pipe at: /podr/container/pipe/805e6a959880_plantdiseaseapi/stdout_d4126b9067ed4662b02e1b80e8cf5667.
+2026-02-09T00:59:53.9936476Z Opening named pipe /podr/container/pipe/805e6a959880_plantdiseaseapi/stdout_d4126b9067ed4662b02e1b80e8cf5667 for reading in non-blocking mode.
+2026-02-09T00:59:53.9938323Z Successfully opened named pipe: /podr/container/pipe/805e6a959880_plantdiseaseapi/stdout_d4126b9067ed4662b02e1b80e8cf5667.
+2026-02-09T00:59:53.9939765Z Successfully removed non-blocking flag from /podr/container/pipe/805e6a959880_plantdiseaseapi/stdout_d4126b9067ed4662b02e1b80e8cf5667.
+2026-02-09T00:59:53.9941424Z Creating stderr named pipe at /podr/container/pipe/805e6a959880_plantdiseaseapi/stderr_f6c167f230104333888728d4bf402526.
+2026-02-09T00:59:53.9950872Z Successfully created stderr named pipe at: /podr/container/pipe/805e6a959880_plantdiseaseapi/stderr_f6c167f230104333888728d4bf402526.
+2026-02-09T00:59:53.9956992Z Opening named pipe /podr/container/pipe/805e6a959880_plantdiseaseapi/stderr_f6c167f230104333888728d4bf402526 for reading in non-blocking mode.
+2026-02-09T00:59:53.9958980Z Successfully opened named pipe: /podr/container/pipe/805e6a959880_plantdiseaseapi/stderr_f6c167f230104333888728d4bf402526.
+2026-02-09T00:59:53.9960234Z Successfully removed non-blocking flag from /podr/container/pipe/805e6a959880_plantdiseaseapi/stderr_f6c167f230104333888728d4bf402526.
+2026-02-09T00:59:53.9966289Z Creating container with image: appsvc/python:3.10_20251017.5.tuxprod from registry: 10.1.0.6:13209 and fully qualified image name: 10.1.0.6:13209/appsvc/python:3.10_20251017.5.tuxprod
+2026-02-09T00:59:54.1610652Z Starting container: 805e6a959880_plantdiseaseapi.
+2026-02-09T00:59:54.1823318Z Starting watchers and probes.
+2026-02-09T00:59:54.1825635Z Starting metrics collection.
+2026-02-09T00:59:54.1827144Z Container is running.
+2026-02-09T00:59:54.2102600Z Container start method finished after 467 ms.
+2026-02-09T01:00:11.9143069Z Container has finished running with exit code: 1.
+2026-02-09T01:00:11.9145606Z Container is terminating. Grace period: 5 seconds.
+2026-02-09T01:00:11.9168870Z Stop and delete container. Retry count = 0
+2026-02-09T01:00:11.9170297Z Stopping container: 805e6a959880_plantdiseaseapi.
+2026-02-09T01:00:11.9397062Z Deleting container: 805e6a959880_plantdiseaseapi. Retry count = 0
+2026-02-09T01:00:12.5694248Z Container spec TerminationMessagePolicy  path 
+2026-02-09T01:00:12.5711878Z Container is terminated. Total time elapsed: 653 ms.
+2026-02-09T01:00:12.5713647Z Site container: plantdiseaseapi terminated during site startup.
+2026-02-09T01:00:12.6093369Z Site startup probe failed after 18.3972555 seconds.
+2026-02-09T01:00:12.8040182Z Failed to start site. Revert by stopping site.
+2026-02-09T01:00:12.8078183Z Site: plantdiseaseapi stopped.
+2026-02-09T01:00:13.1309792Z Site: plantdiseaseapi will be blocked for 4 minutes till 02/09/2026 01:04:13
+2026-02-09T01:04:13.1331779Z Site: plantdiseaseapi is unblocked.
+2026-02-09T01:34:55.9554730Z Container start method called.
+2026-02-09T01:34:55.9555761Z Establishing network.
+2026-02-09T01:34:55.9556627Z Pulling image: appsvc/python:3.10_20251017.5.tuxprod.
+2026-02-09T01:34:56.1175401Z Container is starting.
+2026-02-09T01:34:56.1178214Z Establishing user namespace if not established already.
+2026-02-09T01:34:56.1179525Z Establishing network if not established already.
+2026-02-09T01:34:56.1181633Z Mounting volumes.
+2026-02-09T01:34:56.1201414Z Nested mountpoint 
+2026-02-09T01:34:56.1209694Z Nested mountpoint volatile/logs
+2026-02-09T01:34:56.1242292Z Nested mountpoint 
+2026-02-09T01:34:56.1286085Z Nested mountpoint 
+2026-02-09T01:34:56.1321226Z Nested mountpoint 
+2026-02-09T01:34:56.1933508Z Creating container.
+2026-02-09T01:34:56.1934796Z Creating pipes for streaming container io.
+2026-02-09T01:34:56.1936011Z Creating stdout named pipe at /podr/container/pipe/2999685498c9_plantdiseaseapi/stdout_680b99263abf40fd9650d018f6fa3966.
+2026-02-09T01:34:56.1940895Z Successfully created stdout named pipe at: /podr/container/pipe/2999685498c9_plantdiseaseapi/stdout_680b99263abf40fd9650d018f6fa3966.
+2026-02-09T01:34:56.1942059Z Opening named pipe /podr/container/pipe/2999685498c9_plantdiseaseapi/stdout_680b99263abf40fd9650d018f6fa3966 for reading in non-blocking mode.
+2026-02-09T01:34:56.1943307Z Successfully opened named pipe: /podr/container/pipe/2999685498c9_plantdiseaseapi/stdout_680b99263abf40fd9650d018f6fa3966.
+2026-02-09T01:34:56.1944338Z Successfully removed non-blocking flag from /podr/container/pipe/2999685498c9_plantdiseaseapi/stdout_680b99263abf40fd9650d018f6fa3966.
+2026-02-09T01:34:56.1945379Z Creating stderr named pipe at /podr/container/pipe/2999685498c9_plantdiseaseapi/stderr_f6bad70ee1be4caf8ae5358066911113.
+2026-02-09T01:34:56.1958798Z Successfully created stderr named pipe at: /podr/container/pipe/2999685498c9_plantdiseaseapi/stderr_f6bad70ee1be4caf8ae5358066911113.
+2026-02-09T01:34:56.1964363Z Opening named pipe /podr/container/pipe/2999685498c9_plantdiseaseapi/stderr_f6bad70ee1be4caf8ae5358066911113 for reading in non-blocking mode.
+2026-02-09T01:34:56.1965842Z Successfully opened named pipe: /podr/container/pipe/2999685498c9_plantdiseaseapi/stderr_f6bad70ee1be4caf8ae5358066911113.
+2026-02-09T01:34:56.1967012Z Successfully removed non-blocking flag from /podr/container/pipe/2999685498c9_plantdiseaseapi/stderr_f6bad70ee1be4caf8ae5358066911113.
+2026-02-09T01:34:56.1968302Z Creating container with image: appsvc/python:3.10_20251017.5.tuxprod from registry: 10.1.0.6:13209 and fully qualified image name: 10.1.0.6:13209/appsvc/python:3.10_20251017.5.tuxprod
+2026-02-09T01:34:56.4311086Z Starting container: 2999685498c9_plantdiseaseapi.
+2026-02-09T01:34:56.4460895Z Starting watchers and probes.
+2026-02-09T01:34:56.4462735Z Starting metrics collection.
+2026-02-09T01:34:56.4463994Z Container is running.
+2026-02-09T01:34:56.4652675Z Container start method finished after 509 ms.
+2026-02-09T01:35:12.5466526Z Container has finished running with exit code: 3.
+2026-02-09T01:35:12.5468586Z Container is terminating. Grace period: 5 seconds.
+2026-02-09T01:35:12.5476285Z Stop and delete container. Retry count = 0
+2026-02-09T01:35:12.5479111Z Stopping container: 2999685498c9_plantdiseaseapi.
+2026-02-09T01:35:12.5802282Z Deleting container: 2999685498c9_plantdiseaseapi. Retry count = 0
+2026-02-09T01:35:13.1205243Z Container spec TerminationMessagePolicy  path 
+2026-02-09T01:35:13.1222884Z Container is terminated. Total time elapsed: 575 ms.
+2026-02-09T01:35:13.1224721Z Site container: plantdiseaseapi terminated during site startup.
+2026-02-09T01:35:13.1653648Z Site startup probe failed after 16.697898 seconds.
+2026-02-09T01:35:13.3225314Z Failed to start site. Revert by stopping site.
+2026-02-09T01:35:13.3245396Z Site: plantdiseaseapi stopped.
+2026-02-09T01:35:13.5998752Z Site: plantdiseaseapi will be blocked for 4 minutes till 02/09/2026 01:39:13
+2026-02-09T01:39:13.6012090Z Site: plantdiseaseapi is unblocked.
+2026-02-09T02:09:58.1254193Z Container start method called.
+2026-02-09T02:09:58.1256076Z Establishing network.
+2026-02-09T02:09:58.1257458Z Pulling image: appsvc/python:3.10_20251017.5.tuxprod.
+2026-02-09T02:09:58.2248490Z Container is starting.
+2026-02-09T02:09:58.2253021Z Establishing user namespace if not established already.
+2026-02-09T02:09:58.2254276Z Establishing network if not established already.
+2026-02-09T02:09:58.2255521Z Mounting volumes.
+2026-02-09T02:09:58.2257049Z Nested mountpoint 
+2026-02-09T02:09:58.2264042Z Nested mountpoint volatile/logs
+2026-02-09T02:09:58.2341568Z Nested mountpoint 
+2026-02-09T02:09:58.2359058Z Nested mountpoint 
+2026-02-09T02:09:58.2366459Z Nested mountpoint 
+2026-02-09T02:09:58.3007161Z Creating container.
+2026-02-09T02:09:58.3008282Z Creating pipes for streaming container io.
+2026-02-09T02:09:58.3009242Z Creating stdout named pipe at /podr/container/pipe/2697cbbef9f3_plantdiseaseapi/stdout_65d4328f355f4ac4896242205ab8c8a9.
+2026-02-09T02:09:58.3011366Z Successfully created stdout named pipe at: /podr/container/pipe/2697cbbef9f3_plantdiseaseapi/stdout_65d4328f355f4ac4896242205ab8c8a9.
+2026-02-09T02:09:58.3012490Z Opening named pipe /podr/container/pipe/2697cbbef9f3_plantdiseaseapi/stdout_65d4328f355f4ac4896242205ab8c8a9 for reading in non-blocking mode.
+2026-02-09T02:09:58.3013825Z Successfully opened named pipe: /podr/container/pipe/2697cbbef9f3_plantdiseaseapi/stdout_65d4328f355f4ac4896242205ab8c8a9.
+2026-02-09T02:09:58.3015009Z Successfully removed non-blocking flag from /podr/container/pipe/2697cbbef9f3_plantdiseaseapi/stdout_65d4328f355f4ac4896242205ab8c8a9.
+2026-02-09T02:09:58.3016138Z Creating stderr named pipe at /podr/container/pipe/2697cbbef9f3_plantdiseaseapi/stderr_e6e5ec0741824279b2d0da4084cb8f7c.
+2026-02-09T02:09:58.3017818Z Successfully created stderr named pipe at: /podr/container/pipe/2697cbbef9f3_plantdiseaseapi/stderr_e6e5ec0741824279b2d0da4084cb8f7c.
+2026-02-09T02:09:58.3018979Z Opening named pipe /podr/container/pipe/2697cbbef9f3_plantdiseaseapi/stderr_e6e5ec0741824279b2d0da4084cb8f7c for reading in non-blocking mode.
+2026-02-09T02:09:58.3020233Z Successfully opened named pipe: /podr/container/pipe/2697cbbef9f3_plantdiseaseapi/stderr_e6e5ec0741824279b2d0da4084cb8f7c.
+2026-02-09T02:09:58.3021398Z Successfully removed non-blocking flag from /podr/container/pipe/2697cbbef9f3_plantdiseaseapi/stderr_e6e5ec0741824279b2d0da4084cb8f7c.
+2026-02-09T02:09:58.3022590Z Creating container with image: appsvc/python:3.10_20251017.5.tuxprod from registry: 10.1.0.6:13209 and fully qualified image name: 10.1.0.6:13209/appsvc/python:3.10_20251017.5.tuxprod
+2026-02-09T02:09:58.5435930Z Starting container: 2697cbbef9f3_plantdiseaseapi.
+2026-02-09T02:09:58.5705312Z Starting watchers and probes.
+2026-02-09T02:09:58.5748791Z Starting metrics collection.
+2026-02-09T02:09:58.5764315Z Container is running.
+2026-02-09T02:09:58.6089952Z Container start method finished after 483 ms.
+2026-02-09T02:10:15.4359889Z Container has finished running with exit code: 1.
+2026-02-09T02:10:15.4363780Z Container is terminating. Grace period: 5 seconds.
+2026-02-09T02:10:15.4366534Z Stop and delete container. Retry count = 0
+2026-02-09T02:10:15.4367763Z Stopping container: 2697cbbef9f3_plantdiseaseapi.
+2026-02-09T02:10:15.5190604Z Deleting container: 2697cbbef9f3_plantdiseaseapi. Retry count = 0
+2026-02-09T02:10:16.0747093Z Container spec TerminationMessagePolicy  path 
+2026-02-09T02:10:16.0763653Z Container is terminated. Total time elapsed: 639 ms.
+2026-02-09T02:10:16.0765081Z Site container: plantdiseaseapi terminated during site startup.
+2026-02-09T02:10:16.1092618Z Site startup probe failed after 17.4986219 seconds.
+2026-02-09T02:10:16.3121320Z Failed to start site. Revert by stopping site.
+2026-02-09T02:10:16.3134403Z Site: plantdiseaseapi stopped.
+2026-02-09T02:10:16.6285238Z Site: plantdiseaseapi will be blocked for 4 minutes till 02/09/2026 02:14:16
+2026-02-09T02:14:16.6246831Z Site: plantdiseaseapi is unblocked.
+2026-02-09T02:45:00.5398864Z Container start method called.
+2026-02-09T02:45:00.5405058Z Establishing network.
+2026-02-09T02:45:00.5425462Z Pulling image: appsvc/python:3.10_20251017.5.tuxprod.
+2026-02-09T02:45:00.6138845Z Container is starting.
+2026-02-09T02:45:00.6144200Z Establishing user namespace if not established already.
+2026-02-09T02:45:00.6145990Z Establishing network if not established already.
+2026-02-09T02:45:00.6147418Z Mounting volumes.
+2026-02-09T02:45:00.6155959Z Nested mountpoint 
+2026-02-09T02:45:00.6175104Z Nested mountpoint volatile/logs
+2026-02-09T02:45:00.6220971Z Nested mountpoint 
+2026-02-09T02:45:00.6244229Z Nested mountpoint 
+2026-02-09T02:45:00.6250854Z Nested mountpoint 
+2026-02-09T02:45:00.6877564Z Creating container.
+2026-02-09T02:45:00.6879089Z Creating pipes for streaming container io.
+2026-02-09T02:45:00.6883385Z Creating stdout named pipe at /podr/container/pipe/2c8b797d00ed_plantdiseaseapi/stdout_85efb17a733b4e939abef093b37dab6e.
+2026-02-09T02:45:00.6885787Z Successfully created stdout named pipe at: /podr/container/pipe/2c8b797d00ed_plantdiseaseapi/stdout_85efb17a733b4e939abef093b37dab6e.
+2026-02-09T02:45:00.6887014Z Opening named pipe /podr/container/pipe/2c8b797d00ed_plantdiseaseapi/stdout_85efb17a733b4e939abef093b37dab6e for reading in non-blocking mode.
+2026-02-09T02:45:00.6888614Z Successfully opened named pipe: /podr/container/pipe/2c8b797d00ed_plantdiseaseapi/stdout_85efb17a733b4e939abef093b37dab6e.
+2026-02-09T02:45:00.6889927Z Successfully removed non-blocking flag from /podr/container/pipe/2c8b797d00ed_plantdiseaseapi/stdout_85efb17a733b4e939abef093b37dab6e.
+2026-02-09T02:45:00.6891291Z Creating stderr named pipe at /podr/container/pipe/2c8b797d00ed_plantdiseaseapi/stderr_f8af14b9989e49caa4288e4e25d70726.
+2026-02-09T02:45:00.6893042Z Successfully created stderr named pipe at: /podr/container/pipe/2c8b797d00ed_plantdiseaseapi/stderr_f8af14b9989e49caa4288e4e25d70726.
+2026-02-09T02:45:00.6894282Z Opening named pipe /podr/container/pipe/2c8b797d00ed_plantdiseaseapi/stderr_f8af14b9989e49caa4288e4e25d70726 for reading in non-blocking mode.
+2026-02-09T02:45:00.6895771Z Successfully opened named pipe: /podr/container/pipe/2c8b797d00ed_plantdiseaseapi/stderr_f8af14b9989e49caa4288e4e25d70726.
+2026-02-09T02:45:00.6896990Z Successfully removed non-blocking flag from /podr/container/pipe/2c8b797d00ed_plantdiseaseapi/stderr_f8af14b9989e49caa4288e4e25d70726.
+2026-02-09T02:45:00.6898255Z Creating container with image: appsvc/python:3.10_20251017.5.tuxprod from registry: 10.1.0.6:13209 and fully qualified image name: 10.1.0.6:13209/appsvc/python:3.10_20251017.5.tuxprod
+2026-02-09T02:45:00.9147331Z Starting container: 2c8b797d00ed_plantdiseaseapi.
+2026-02-09T02:45:01.0098310Z Starting watchers and probes.
+2026-02-09T02:45:01.0101381Z Starting metrics collection.
+2026-02-09T02:45:01.0103109Z Container is running.
+2026-02-09T02:45:01.0335090Z Container start method finished after 493 ms.
+2026-02-09T02:45:47.3879053Z Container has finished running with exit code: 3.
+2026-02-09T02:45:47.3880405Z Container is terminating. Grace period: 5 seconds.
+2026-02-09T02:45:47.3883488Z Stop and delete container. Retry count = 0
+2026-02-09T02:45:47.3884644Z Stopping container: 2c8b797d00ed_plantdiseaseapi.
+2026-02-09T02:45:47.4010934Z Deleting container: 2c8b797d00ed_plantdiseaseapi. Retry count = 0
+2026-02-09T02:45:47.9739438Z Container spec TerminationMessagePolicy  path 
+2026-02-09T02:45:47.9821428Z Container is terminated. Total time elapsed: 593 ms.
+2026-02-09T02:45:47.9822882Z Site container: plantdiseaseapi terminated during site startup.
+2026-02-09T02:45:47.9957923Z Site startup probe failed after 46.9617773 seconds.
+2026-02-09T02:45:48.1091099Z Failed to start site. Revert by stopping site.
+2026-02-09T02:45:48.1104466Z Site: plantdiseaseapi stopped.
+2026-02-09T02:45:48.3833210Z Site: plantdiseaseapi will be blocked for 4 minutes till 02/09/2026 02:49:48
+2026-02-09T02:49:48.3855665Z Site: plantdiseaseapi is unblocked.
+2026-02-09T03:20:02.5900188Z Container start method called.
+2026-02-09T03:20:02.5901778Z Establishing network.
+2026-02-09T03:20:02.5903189Z Pulling image: appsvc/python:3.10_20251017.5.tuxprod.
+2026-02-09T03:20:02.7000093Z Container is starting.
+2026-02-09T03:20:02.7004124Z Establishing user namespace if not established already.
+2026-02-09T03:20:02.7027428Z Establishing network if not established already.
+2026-02-09T03:20:02.7029467Z Mounting volumes.
+2026-02-09T03:20:02.7031267Z Nested mountpoint 
+2026-02-09T03:20:02.7039693Z Nested mountpoint volatile/logs
+2026-02-09T03:20:02.7080690Z Nested mountpoint 
+2026-02-09T03:20:02.7087812Z Nested mountpoint 
+2026-02-09T03:20:02.7093911Z Nested mountpoint 
+2026-02-09T03:20:02.7577805Z Creating container.
+2026-02-09T03:20:02.7579235Z Creating pipes for streaming container io.
+2026-02-09T03:20:02.7580773Z Creating stdout named pipe at /podr/container/pipe/bdc9601378b1_plantdiseaseapi/stdout_a279674cd1194b3cbf1cdfd35ae26b68.
+2026-02-09T03:20:02.7596778Z Successfully created stdout named pipe at: /podr/container/pipe/bdc9601378b1_plantdiseaseapi/stdout_a279674cd1194b3cbf1cdfd35ae26b68.
+2026-02-09T03:20:02.7598045Z Opening named pipe /podr/container/pipe/bdc9601378b1_plantdiseaseapi/stdout_a279674cd1194b3cbf1cdfd35ae26b68 for reading in non-blocking mode.
+2026-02-09T03:20:02.7599563Z Successfully opened named pipe: /podr/container/pipe/bdc9601378b1_plantdiseaseapi/stdout_a279674cd1194b3cbf1cdfd35ae26b68.
+2026-02-09T03:20:02.7607924Z Successfully removed non-blocking flag from /podr/container/pipe/bdc9601378b1_plantdiseaseapi/stdout_a279674cd1194b3cbf1cdfd35ae26b68.
+2026-02-09T03:20:02.7609623Z Creating stderr named pipe at /podr/container/pipe/bdc9601378b1_plantdiseaseapi/stderr_7d14f9c111ed476e9b7e7b8ab3bbdcd9.
+2026-02-09T03:20:02.7616109Z Successfully created stderr named pipe at: /podr/container/pipe/bdc9601378b1_plantdiseaseapi/stderr_7d14f9c111ed476e9b7e7b8ab3bbdcd9.
+2026-02-09T03:20:02.7617594Z Opening named pipe /podr/container/pipe/bdc9601378b1_plantdiseaseapi/stderr_7d14f9c111ed476e9b7e7b8ab3bbdcd9 for reading in non-blocking mode.
+2026-02-09T03:20:02.7621426Z Successfully opened named pipe: /podr/container/pipe/bdc9601378b1_plantdiseaseapi/stderr_7d14f9c111ed476e9b7e7b8ab3bbdcd9.
+2026-02-09T03:20:02.7622683Z Successfully removed non-blocking flag from /podr/container/pipe/bdc9601378b1_plantdiseaseapi/stderr_7d14f9c111ed476e9b7e7b8ab3bbdcd9.
+2026-02-09T03:20:02.7630524Z Creating container with image: appsvc/python:3.10_20251017.5.tuxprod from registry: 10.1.0.6:13209 and fully qualified image name: 10.1.0.6:13209/appsvc/python:3.10_20251017.5.tuxprod
+2026-02-09T03:20:02.9097655Z Starting container: bdc9601378b1_plantdiseaseapi.
+2026-02-09T03:20:02.9246051Z Starting watchers and probes.
+2026-02-09T03:20:02.9249867Z Starting metrics collection.
+2026-02-09T03:20:02.9252299Z Container is running.
+2026-02-09T03:20:03.6979437Z Container start method finished after 1107 ms.
+2026-02-09T03:20:18.3687602Z Container has finished running with exit code: 3.
+2026-02-09T03:20:18.3696235Z Container is terminating. Grace period: 5 seconds.
+2026-02-09T03:20:18.3721013Z Stop and delete container. Retry count = 0
+2026-02-09T03:20:18.3722777Z Stopping container: bdc9601378b1_plantdiseaseapi.
+2026-02-09T03:20:18.4166384Z Deleting container: bdc9601378b1_plantdiseaseapi. Retry count = 0
+2026-02-09T03:20:18.9647670Z Container spec TerminationMessagePolicy  path 
+2026-02-09T03:20:18.9649686Z Container is terminated. Total time elapsed: 595 ms.
+2026-02-09T03:20:18.9650891Z Site container: plantdiseaseapi terminated during site startup.
+2026-02-09T03:20:18.9923270Z Site startup probe failed after 15.2876415 seconds.
+2026-02-09T03:20:19.1117265Z Failed to start site. Revert by stopping site.
+2026-02-09T03:20:19.1166288Z Site: plantdiseaseapi stopped.
+2026-02-09T03:20:19.4049404Z Site: plantdiseaseapi will be blocked for 4 minutes till 02/09/2026 03:24:19
+2026-02-09T03:24:19.4065367Z Site: plantdiseaseapi is unblocked.
+2026-02-09T03:55:06.0958543Z Container start method called.
+2026-02-09T03:55:06.0960421Z Establishing network.
+2026-02-09T03:55:06.0962304Z Pulling image: appsvc/python:3.10_20251017.5.tuxprod.
+2026-02-09T03:55:06.2110042Z Container is starting.
+2026-02-09T03:55:06.2111078Z Establishing user namespace if not established already.
+2026-02-09T03:55:06.2111752Z Establishing network if not established already.
+2026-02-09T03:55:06.2112523Z Mounting volumes.
+2026-02-09T03:55:06.2113359Z Nested mountpoint 
+2026-02-09T03:55:06.2239614Z Nested mountpoint volatile/logs
+2026-02-09T03:55:06.2265680Z Nested mountpoint 
+2026-02-09T03:55:06.2279676Z Nested mountpoint 
+2026-02-09T03:55:06.2298345Z Nested mountpoint 
+2026-02-09T03:55:06.2739434Z Creating container.
+2026-02-09T03:55:06.2740784Z Creating pipes for streaming container io.
+2026-02-09T03:55:06.2742005Z Creating stdout named pipe at /podr/container/pipe/35a7885eb4c2_plantdiseaseapi/stdout_e03be1f49cd5409fb8d1c74eface13e3.
+2026-02-09T03:55:06.3117472Z Successfully created stdout named pipe at: /podr/container/pipe/35a7885eb4c2_plantdiseaseapi/stdout_e03be1f49cd5409fb8d1c74eface13e3.
+2026-02-09T03:55:06.3121185Z Opening named pipe /podr/container/pipe/35a7885eb4c2_plantdiseaseapi/stdout_e03be1f49cd5409fb8d1c74eface13e3 for reading in non-blocking mode.
+2026-02-09T03:55:06.3122912Z Successfully opened named pipe: /podr/container/pipe/35a7885eb4c2_plantdiseaseapi/stdout_e03be1f49cd5409fb8d1c74eface13e3.
+2026-02-09T03:55:06.3124225Z Successfully removed non-blocking flag from /podr/container/pipe/35a7885eb4c2_plantdiseaseapi/stdout_e03be1f49cd5409fb8d1c74eface13e3.
+2026-02-09T03:55:06.3125469Z Creating stderr named pipe at /podr/container/pipe/35a7885eb4c2_plantdiseaseapi/stderr_dc577173cc374eebb9011ec4053f3c4a.
+2026-02-09T03:55:06.3127208Z Successfully created stderr named pipe at: /podr/container/pipe/35a7885eb4c2_plantdiseaseapi/stderr_dc577173cc374eebb9011ec4053f3c4a.
+2026-02-09T03:55:06.3128667Z Opening named pipe /podr/container/pipe/35a7885eb4c2_plantdiseaseapi/stderr_dc577173cc374eebb9011ec4053f3c4a for reading in non-blocking mode.
+2026-02-09T03:55:06.3130109Z Successfully opened named pipe: /podr/container/pipe/35a7885eb4c2_plantdiseaseapi/stderr_dc577173cc374eebb9011ec4053f3c4a.
+2026-02-09T03:55:06.3131477Z Successfully removed non-blocking flag from /podr/container/pipe/35a7885eb4c2_plantdiseaseapi/stderr_dc577173cc374eebb9011ec4053f3c4a.
+2026-02-09T03:55:06.3132830Z Creating container with image: appsvc/python:3.10_20251017.5.tuxprod from registry: 10.1.0.6:13209 and fully qualified image name: 10.1.0.6:13209/appsvc/python:3.10_20251017.5.tuxprod
+2026-02-09T03:55:06.6172584Z Starting container: 35a7885eb4c2_plantdiseaseapi.
+2026-02-09T03:55:06.6345969Z Starting watchers and probes.
+2026-02-09T03:55:06.6374768Z Starting metrics collection.
+2026-02-09T03:55:06.6377223Z Container is running.
+2026-02-09T03:55:06.6734723Z Container start method finished after 577 ms.
+2026-02-09T03:55:22.8181402Z Container has finished running with exit code: 3.
+2026-02-09T03:55:22.8185358Z Container is terminating. Grace period: 5 seconds.
+2026-02-09T03:55:22.8199585Z Stop and delete container. Retry count = 0
+2026-02-09T03:55:22.8201341Z Stopping container: 35a7885eb4c2_plantdiseaseapi.
+2026-02-09T03:55:22.8485228Z Deleting container: 35a7885eb4c2_plantdiseaseapi. Retry count = 0
+2026-02-09T03:55:23.3826151Z Container spec TerminationMessagePolicy  path 
+2026-02-09T03:55:23.3838524Z Container is terminated. Total time elapsed: 564 ms.
+2026-02-09T03:55:23.3840072Z Site container: plantdiseaseapi terminated during site startup.
+2026-02-09T03:55:23.3970470Z Site startup probe failed after 16.7165075 seconds.
+2026-02-09T03:55:23.6160994Z Failed to start site. Revert by stopping site.
+2026-02-09T03:55:23.6217822Z Site: plantdiseaseapi stopped.
+2026-02-09T03:55:23.9512153Z Site: plantdiseaseapi will be blocked for 4 minutes till 02/09/2026 03:59:23
+2026-02-09T03:59:23.9526273Z Site: plantdiseaseapi is unblocked.
+2026-02-09T04:30:06.5176245Z Container start method called.
+2026-02-09T04:30:06.5178077Z Establishing network.
+2026-02-09T04:30:06.5179629Z Pulling image: appsvc/python:3.10_20251017.5.tuxprod.
+2026-02-09T04:30:06.7103577Z Container is starting.
+2026-02-09T04:30:06.7105683Z Establishing user namespace if not established already.
+2026-02-09T04:30:06.7107354Z Establishing network if not established already.
+2026-02-09T04:30:06.7108975Z Mounting volumes.
+2026-02-09T04:30:06.7110699Z Nested mountpoint 
+2026-02-09T04:30:06.7146355Z Nested mountpoint volatile/logs
+2026-02-09T04:30:06.7367436Z Nested mountpoint 
+2026-02-09T04:30:06.7373842Z Nested mountpoint 
+2026-02-09T04:30:06.7399621Z Nested mountpoint 
+2026-02-09T04:30:06.7912444Z Creating container.
+2026-02-09T04:30:06.7913804Z Creating pipes for streaming container io.
+2026-02-09T04:30:06.7915039Z Creating stdout named pipe at /podr/container/pipe/96caf0a6cfc1_plantdiseaseapi/stdout_e7254aae80ad4c259057474863e17d52.
+2026-02-09T04:30:06.7917196Z Successfully created stdout named pipe at: /podr/container/pipe/96caf0a6cfc1_plantdiseaseapi/stdout_e7254aae80ad4c259057474863e17d52.
+2026-02-09T04:30:06.7922261Z Opening named pipe /podr/container/pipe/96caf0a6cfc1_plantdiseaseapi/stdout_e7254aae80ad4c259057474863e17d52 for reading in non-blocking mode.
+2026-02-09T04:30:06.7925721Z Successfully opened named pipe: /podr/container/pipe/96caf0a6cfc1_plantdiseaseapi/stdout_e7254aae80ad4c259057474863e17d52.
+2026-02-09T04:30:06.7927803Z Successfully removed non-blocking flag from /podr/container/pipe/96caf0a6cfc1_plantdiseaseapi/stdout_e7254aae80ad4c259057474863e17d52.
+2026-02-09T04:30:06.7929909Z Creating stderr named pipe at /podr/container/pipe/96caf0a6cfc1_plantdiseaseapi/stderr_aeb29563a673466da01bbf0b1bd4c679.
+2026-02-09T04:30:06.7932304Z Successfully created stderr named pipe at: /podr/container/pipe/96caf0a6cfc1_plantdiseaseapi/stderr_aeb29563a673466da01bbf0b1bd4c679.
+2026-02-09T04:30:06.7934653Z Opening named pipe /podr/container/pipe/96caf0a6cfc1_plantdiseaseapi/stderr_aeb29563a673466da01bbf0b1bd4c679 for reading in non-blocking mode.
+2026-02-09T04:30:06.7936822Z Successfully opened named pipe: /podr/container/pipe/96caf0a6cfc1_plantdiseaseapi/stderr_aeb29563a673466da01bbf0b1bd4c679.
+2026-02-09T04:30:06.7938711Z Successfully removed non-blocking flag from /podr/container/pipe/96caf0a6cfc1_plantdiseaseapi/stderr_aeb29563a673466da01bbf0b1bd4c679.
+2026-02-09T04:30:06.7941525Z Creating container with image: appsvc/python:3.10_20251017.5.tuxprod from registry: 10.1.0.6:13209 and fully qualified image name: 10.1.0.6:13209/appsvc/python:3.10_20251017.5.tuxprod
+2026-02-09T04:30:06.9553471Z Starting container: 96caf0a6cfc1_plantdiseaseapi.
+2026-02-09T04:30:06.9720479Z Starting watchers and probes.
+2026-02-09T04:30:06.9767794Z Starting metrics collection.
+2026-02-09T04:30:06.9774680Z Container is running.
+2026-02-09T04:30:07.0089071Z Container start method finished after 488 ms.
+2026-02-09T04:30:23.0537463Z Container has finished running with exit code: 3.
+2026-02-09T04:30:23.0538665Z Container is terminating. Grace period: 5 seconds.
+2026-02-09T04:30:23.0723889Z Stop and delete container. Retry count = 0
+2026-02-09T04:30:23.0725172Z Stopping container: 96caf0a6cfc1_plantdiseaseapi.
+2026-02-09T04:30:23.1754008Z Deleting container: 96caf0a6cfc1_plantdiseaseapi. Retry count = 0
+2026-02-09T04:30:23.6944508Z Container spec TerminationMessagePolicy  path 
+2026-02-09T04:30:23.6992041Z Container is terminated. Total time elapsed: 626 ms.
+2026-02-09T04:30:23.6993699Z Site container: plantdiseaseapi terminated during site startup.
+2026-02-09T04:30:23.7383661Z Site startup probe failed after 16.7060224 seconds.
+2026-02-09T04:30:23.8827358Z Failed to start site. Revert by stopping site.
+2026-02-09T04:30:23.8893062Z Site: plantdiseaseapi stopped.
+2026-02-09T04:30:24.1782430Z Site: plantdiseaseapi will be blocked for 4 minutes till 02/09/2026 04:34:24
+2026-02-09T04:34:24.1789936Z Site: plantdiseaseapi is unblocked.
+2026-02-09T05:05:08.7854886Z Container start method called.
+2026-02-09T05:05:08.7855860Z Establishing network.
+2026-02-09T05:05:08.7856583Z Pulling image: appsvc/python:3.10_20251017.5.tuxprod.
+2026-02-09T05:05:08.8736478Z Container is starting.
+2026-02-09T05:05:08.8738390Z Establishing user namespace if not established already.
+2026-02-09T05:05:08.8739658Z Establishing network if not established already.
+2026-02-09T05:05:08.8740991Z Mounting volumes.
+2026-02-09T05:05:08.8742557Z Nested mountpoint 
+2026-02-09T05:05:08.9089674Z Nested mountpoint volatile/logs
+2026-02-09T05:05:08.9119613Z Nested mountpoint 
+2026-02-09T05:05:08.9166591Z Nested mountpoint 
+2026-02-09T05:05:08.9180359Z Nested mountpoint 
+2026-02-09T05:05:08.9655916Z Creating container.
+2026-02-09T05:05:08.9674876Z Creating pipes for streaming container io.
+2026-02-09T05:05:08.9684579Z Creating stdout named pipe at /podr/container/pipe/ae61b4c6510d_plantdiseaseapi/stdout_67b260517c5042e6a3244874e411c9a1.
+2026-02-09T05:05:08.9693427Z Successfully created stdout named pipe at: /podr/container/pipe/ae61b4c6510d_plantdiseaseapi/stdout_67b260517c5042e6a3244874e411c9a1.
+2026-02-09T05:05:08.9696801Z Opening named pipe /podr/container/pipe/ae61b4c6510d_plantdiseaseapi/stdout_67b260517c5042e6a3244874e411c9a1 for reading in non-blocking mode.
+2026-02-09T05:05:08.9705435Z Successfully opened named pipe: /podr/container/pipe/ae61b4c6510d_plantdiseaseapi/stdout_67b260517c5042e6a3244874e411c9a1.
+2026-02-09T05:05:08.9712496Z Successfully removed non-blocking flag from /podr/container/pipe/ae61b4c6510d_plantdiseaseapi/stdout_67b260517c5042e6a3244874e411c9a1.
+2026-02-09T05:05:08.9716976Z Creating stderr named pipe at /podr/container/pipe/ae61b4c6510d_plantdiseaseapi/stderr_df8b857ff36f4e9885e87e1e97c259ce.
+2026-02-09T05:05:08.9724559Z Successfully created stderr named pipe at: /podr/container/pipe/ae61b4c6510d_plantdiseaseapi/stderr_df8b857ff36f4e9885e87e1e97c259ce.
+2026-02-09T05:05:08.9730347Z Opening named pipe /podr/container/pipe/ae61b4c6510d_plantdiseaseapi/stderr_df8b857ff36f4e9885e87e1e97c259ce for reading in non-blocking mode.
+2026-02-09T05:05:08.9738103Z Successfully opened named pipe: /podr/container/pipe/ae61b4c6510d_plantdiseaseapi/stderr_df8b857ff36f4e9885e87e1e97c259ce.
+2026-02-09T05:05:08.9742214Z Successfully removed non-blocking flag from /podr/container/pipe/ae61b4c6510d_plantdiseaseapi/stderr_df8b857ff36f4e9885e87e1e97c259ce.
+2026-02-09T05:05:08.9746760Z Creating container with image: appsvc/python:3.10_20251017.5.tuxprod from registry: 10.1.0.6:13209 and fully qualified image name: 10.1.0.6:13209/appsvc/python:3.10_20251017.5.tuxprod
+2026-02-09T05:05:09.3268189Z Starting container: ae61b4c6510d_plantdiseaseapi.
+2026-02-09T05:05:09.3402652Z Starting watchers and probes.
+2026-02-09T05:05:09.3405182Z Starting metrics collection.
+2026-02-09T05:05:09.3408534Z Container is running.
+2026-02-09T05:05:10.2976594Z Container start method finished after 1511 ms.
+2026-02-09T05:05:25.0549048Z Container has finished running with exit code: 3.
+2026-02-09T05:05:25.0551955Z Container is terminating. Grace period: 5 seconds.
+2026-02-09T05:05:25.0722364Z Stop and delete container. Retry count = 0
+2026-02-09T05:05:25.0723970Z Stopping container: ae61b4c6510d_plantdiseaseapi.
+2026-02-09T05:05:25.1112091Z Deleting container: ae61b4c6510d_plantdiseaseapi. Retry count = 0
+2026-02-09T05:05:25.6873916Z Container spec TerminationMessagePolicy  path 
+2026-02-09T05:05:25.6886309Z Container is terminated. Total time elapsed: 616 ms.
+2026-02-09T05:05:25.6887892Z Site container: plantdiseaseapi terminated during site startup.
+2026-02-09T05:05:25.7148917Z Site startup probe failed after 15.4150606 seconds.
+2026-02-09T05:05:25.8965225Z Failed to start site. Revert by stopping site.
+2026-02-09T05:05:25.8988540Z Site: plantdiseaseapi stopped.
+2026-02-09T05:05:26.1875403Z Site: plantdiseaseapi will be blocked for 4 minutes till 02/09/2026 05:09:26
+2026-02-09T05:09:26.1852311Z Site: plantdiseaseapi is unblocked.
+2026-02-09T05:40:10.9560627Z Container start method called.
+2026-02-09T05:40:10.9605980Z Establishing network.
+2026-02-09T05:40:10.9607618Z Pulling image: appsvc/python:3.10_20251017.5.tuxprod.
+2026-02-09T05:40:11.2250871Z Container is starting.
+2026-02-09T05:40:11.2259878Z Establishing user namespace if not established already.
+2026-02-09T05:40:11.2268399Z Establishing network if not established already.
+2026-02-09T05:40:11.2276942Z Mounting volumes.
+2026-02-09T05:40:11.2282600Z Nested mountpoint 
+2026-02-09T05:40:11.2298042Z Nested mountpoint volatile/logs
+2026-02-09T05:40:11.2328339Z Nested mountpoint 
+2026-02-09T05:40:11.2334101Z Nested mountpoint 
+2026-02-09T05:40:11.2355913Z Nested mountpoint 
+2026-02-09T05:40:11.2837744Z Creating container.
+2026-02-09T05:40:11.2847912Z Creating pipes for streaming container io.
+2026-02-09T05:40:11.2849371Z Creating stdout named pipe at /podr/container/pipe/a38070f2fd98_plantdiseaseapi/stdout_3bfedbc783f64b638fff1daaa17e942e.
+2026-02-09T05:40:11.2857732Z Successfully created stdout named pipe at: /podr/container/pipe/a38070f2fd98_plantdiseaseapi/stdout_3bfedbc783f64b638fff1daaa17e942e.
+2026-02-09T05:40:11.2865248Z Opening named pipe /podr/container/pipe/a38070f2fd98_plantdiseaseapi/stdout_3bfedbc783f64b638fff1daaa17e942e for reading in non-blocking mode.
+2026-02-09T05:40:11.2869855Z Successfully opened named pipe: /podr/container/pipe/a38070f2fd98_plantdiseaseapi/stdout_3bfedbc783f64b638fff1daaa17e942e.
+2026-02-09T05:40:11.2871739Z Successfully removed non-blocking flag from /podr/container/pipe/a38070f2fd98_plantdiseaseapi/stdout_3bfedbc783f64b638fff1daaa17e942e.
+2026-02-09T05:40:11.2876700Z Creating stderr named pipe at /podr/container/pipe/a38070f2fd98_plantdiseaseapi/stderr_76d33243d9154014abbd9c2813d654ec.
+2026-02-09T05:40:11.2878572Z Successfully created stderr named pipe at: /podr/container/pipe/a38070f2fd98_plantdiseaseapi/stderr_76d33243d9154014abbd9c2813d654ec.
+2026-02-09T05:40:11.2880237Z Opening named pipe /podr/container/pipe/a38070f2fd98_plantdiseaseapi/stderr_76d33243d9154014abbd9c2813d654ec for reading in non-blocking mode.
+2026-02-09T05:40:11.2892053Z Successfully opened named pipe: /podr/container/pipe/a38070f2fd98_plantdiseaseapi/stderr_76d33243d9154014abbd9c2813d654ec.
+2026-02-09T05:40:11.2893506Z Successfully removed non-blocking flag from /podr/container/pipe/a38070f2fd98_plantdiseaseapi/stderr_76d33243d9154014abbd9c2813d654ec.
+2026-02-09T05:40:11.2895183Z Creating container with image: appsvc/python:3.10_20251017.5.tuxprod from registry: 10.1.0.6:13209 and fully qualified image name: 10.1.0.6:13209/appsvc/python:3.10_20251017.5.tuxprod
+2026-02-09T05:40:11.4234105Z Starting container: a38070f2fd98_plantdiseaseapi.
+2026-02-09T05:40:11.4383971Z Starting watchers and probes.
+2026-02-09T05:40:11.4396543Z Starting metrics collection.
+2026-02-09T05:40:11.4403821Z Container is running.
+2026-02-09T05:40:11.4544116Z Container start method finished after 497 ms.
+2026-02-09T05:40:28.3527725Z Container has finished running with exit code: 1.
+2026-02-09T05:40:28.3532532Z Container is terminating. Grace period: 5 seconds.
+2026-02-09T05:40:28.3540601Z Stop and delete container. Retry count = 0
+2026-02-09T05:40:28.3549347Z Stopping container: a38070f2fd98_plantdiseaseapi.
+2026-02-09T05:40:28.3860890Z Deleting container: a38070f2fd98_plantdiseaseapi. Retry count = 0
+2026-02-09T05:40:28.9200076Z Container spec TerminationMessagePolicy  path 
+2026-02-09T05:40:28.9214801Z Container is terminated. Total time elapsed: 568 ms.
+2026-02-09T05:40:28.9218328Z Site container: plantdiseaseapi terminated during site startup.
+2026-02-09T05:40:28.9530647Z Site startup probe failed after 17.497663 seconds.
+2026-02-09T05:40:29.1789079Z Failed to start site. Revert by stopping site.
+2026-02-09T05:40:29.1792770Z Site: plantdiseaseapi stopped.
+2026-02-09T05:40:29.4297061Z Site: plantdiseaseapi will be blocked for 4 minutes till 02/09/2026 05:44:29
+2026-02-09T05:44:29.4340429Z Site: plantdiseaseapi is unblocked.
+2026-02-09T06:15:13.0293199Z Container start method called.
+2026-02-09T06:15:13.0294796Z Establishing network.
+2026-02-09T06:15:13.0296143Z Pulling image: appsvc/python:3.10_20251017.5.tuxprod.
+2026-02-09T06:15:13.1060390Z Container is starting.
+2026-02-09T06:15:13.1070251Z Establishing user namespace if not established already.
+2026-02-09T06:15:13.1074323Z Establishing network if not established already.
+2026-02-09T06:15:13.1076059Z Mounting volumes.
+2026-02-09T06:15:13.1079921Z Nested mountpoint 
+2026-02-09T06:15:13.1606503Z Nested mountpoint volatile/logs
+2026-02-09T06:15:13.1621580Z Nested mountpoint 
+2026-02-09T06:15:13.1665204Z Nested mountpoint 
+2026-02-09T06:15:13.1707010Z Nested mountpoint 
+2026-02-09T06:15:13.2317944Z Creating container.
+2026-02-09T06:15:13.2319320Z Creating pipes for streaming container io.
+2026-02-09T06:15:13.2320535Z Creating stdout named pipe at /podr/container/pipe/a07784d30785_plantdiseaseapi/stdout_62319d08532947de8398c851d794f9c1.
+2026-02-09T06:15:13.2536983Z Successfully created stdout named pipe at: /podr/container/pipe/a07784d30785_plantdiseaseapi/stdout_62319d08532947de8398c851d794f9c1.
+2026-02-09T06:15:13.2538691Z Opening named pipe /podr/container/pipe/a07784d30785_plantdiseaseapi/stdout_62319d08532947de8398c851d794f9c1 for reading in non-blocking mode.
+2026-02-09T06:15:13.2543515Z Successfully opened named pipe: /podr/container/pipe/a07784d30785_plantdiseaseapi/stdout_62319d08532947de8398c851d794f9c1.
+2026-02-09T06:15:13.2544813Z Successfully removed non-blocking flag from /podr/container/pipe/a07784d30785_plantdiseaseapi/stdout_62319d08532947de8398c851d794f9c1.
+2026-02-09T06:15:13.2546337Z Creating stderr named pipe at /podr/container/pipe/a07784d30785_plantdiseaseapi/stderr_5de6339f09874f9b89f76bb38a10ea8a.
+2026-02-09T06:15:13.2548077Z Successfully created stderr named pipe at: /podr/container/pipe/a07784d30785_plantdiseaseapi/stderr_5de6339f09874f9b89f76bb38a10ea8a.
+2026-02-09T06:15:13.2549236Z Opening named pipe /podr/container/pipe/a07784d30785_plantdiseaseapi/stderr_5de6339f09874f9b89f76bb38a10ea8a for reading in non-blocking mode.
+2026-02-09T06:15:13.2550813Z Successfully opened named pipe: /podr/container/pipe/a07784d30785_plantdiseaseapi/stderr_5de6339f09874f9b89f76bb38a10ea8a.
+2026-02-09T06:15:13.2552095Z Successfully removed non-blocking flag from /podr/container/pipe/a07784d30785_plantdiseaseapi/stderr_5de6339f09874f9b89f76bb38a10ea8a.
+2026-02-09T06:15:13.2553439Z Creating container with image: appsvc/python:3.10_20251017.5.tuxprod from registry: 10.1.0.6:13209 and fully qualified image name: 10.1.0.6:13209/appsvc/python:3.10_20251017.5.tuxprod
+2026-02-09T06:15:13.4356656Z Starting container: a07784d30785_plantdiseaseapi.
+2026-02-09T06:15:13.4505392Z Starting watchers and probes.
+2026-02-09T06:15:13.4508324Z Starting metrics collection.
+2026-02-09T06:15:13.4509944Z Container is running.
+2026-02-09T06:15:14.2993348Z Container start method finished after 1269 ms.
+2026-02-09T06:15:29.8152324Z Container has finished running with exit code: 3.
+2026-02-09T06:15:29.8153733Z Container is terminating. Grace period: 5 seconds.
+2026-02-09T06:15:29.8415788Z Stop and delete container. Retry count = 0
+2026-02-09T06:15:29.8417349Z Stopping container: a07784d30785_plantdiseaseapi.
+2026-02-09T06:15:29.9102075Z Deleting container: a07784d30785_plantdiseaseapi. Retry count = 0
+2026-02-09T06:15:30.4574147Z Container spec TerminationMessagePolicy  path 
+2026-02-09T06:15:30.4575967Z Container is terminated. Total time elapsed: 616 ms.
+2026-02-09T06:15:30.4577348Z Site container: plantdiseaseapi terminated during site startup.
+2026-02-09T06:15:30.4864780Z Site startup probe failed after 16.1865985 seconds.
+2026-02-09T06:15:30.6727971Z Failed to start site. Revert by stopping site.
+2026-02-09T06:15:30.6731154Z Site: plantdiseaseapi stopped.
+2026-02-09T06:15:31.0078859Z Site: plantdiseaseapi will be blocked for 4 minutes till 02/09/2026 06:19:31
+2026-02-09T06:19:31.0054451Z Site: plantdiseaseapi is unblocked.
+2026-02-09T06:50:15.3856120Z Container start method called.
+2026-02-09T06:50:15.3857602Z Establishing network.
+2026-02-09T06:50:15.3858585Z Pulling image: appsvc/python:3.10_20251017.5.tuxprod.
+2026-02-09T06:50:15.5050776Z Container is starting.
+2026-02-09T06:50:15.5053206Z Establishing user namespace if not established already.
+2026-02-09T06:50:15.5059301Z Establishing network if not established already.
+2026-02-09T06:50:15.5061046Z Mounting volumes.
+2026-02-09T06:50:15.5062830Z Nested mountpoint 
+2026-02-09T06:50:15.5070227Z Nested mountpoint volatile/logs
+2026-02-09T06:50:15.5109648Z Nested mountpoint 
+2026-02-09T06:50:15.5134621Z Nested mountpoint 
+2026-02-09T06:50:15.5170967Z Nested mountpoint 
+2026-02-09T06:50:15.5735424Z Creating container.
+2026-02-09T06:50:15.5738762Z Creating pipes for streaming container io.
+2026-02-09T06:50:15.5740260Z Creating stdout named pipe at /podr/container/pipe/d5104b09d0ef_plantdiseaseapi/stdout_da4650fda6e34925ba132f4d7e81cec7.
+2026-02-09T06:50:15.5742602Z Successfully created stdout named pipe at: /podr/container/pipe/d5104b09d0ef_plantdiseaseapi/stdout_da4650fda6e34925ba132f4d7e81cec7.
+2026-02-09T06:50:15.5756297Z Opening named pipe /podr/container/pipe/d5104b09d0ef_plantdiseaseapi/stdout_da4650fda6e34925ba132f4d7e81cec7 for reading in non-blocking mode.
+2026-02-09T06:50:15.5757902Z Successfully opened named pipe: /podr/container/pipe/d5104b09d0ef_plantdiseaseapi/stdout_da4650fda6e34925ba132f4d7e81cec7.
+2026-02-09T06:50:15.5759254Z Successfully removed non-blocking flag from /podr/container/pipe/d5104b09d0ef_plantdiseaseapi/stdout_da4650fda6e34925ba132f4d7e81cec7.
+2026-02-09T06:50:15.5760506Z Creating stderr named pipe at /podr/container/pipe/d5104b09d0ef_plantdiseaseapi/stderr_9217646108944313b9d0b7ae1fda5539.
+2026-02-09T06:50:15.5767649Z Successfully created stderr named pipe at: /podr/container/pipe/d5104b09d0ef_plantdiseaseapi/stderr_9217646108944313b9d0b7ae1fda5539.
+2026-02-09T06:50:15.5825376Z Opening named pipe /podr/container/pipe/d5104b09d0ef_plantdiseaseapi/stderr_9217646108944313b9d0b7ae1fda5539 for reading in non-blocking mode.
+2026-02-09T06:50:15.5827293Z Successfully opened named pipe: /podr/container/pipe/d5104b09d0ef_plantdiseaseapi/stderr_9217646108944313b9d0b7ae1fda5539.
+2026-02-09T06:50:15.5828440Z Successfully removed non-blocking flag from /podr/container/pipe/d5104b09d0ef_plantdiseaseapi/stderr_9217646108944313b9d0b7ae1fda5539.
+2026-02-09T06:50:15.5829404Z Creating container with image: appsvc/python:3.10_20251017.5.tuxprod from registry: 10.1.0.6:13209 and fully qualified image name: 10.1.0.6:13209/appsvc/python:3.10_20251017.5.tuxprod
+2026-02-09T06:50:15.7257892Z Starting container: d5104b09d0ef_plantdiseaseapi.
+2026-02-09T06:50:15.7386152Z Starting watchers and probes.
+2026-02-09T06:50:15.7393423Z Starting metrics collection.
+2026-02-09T06:50:15.7395090Z Container is running.
+2026-02-09T06:50:15.7576737Z Container start method finished after 371 ms.
+2026-02-09T06:50:31.5557917Z Container has finished running with exit code: 3.
+2026-02-09T06:50:31.5559555Z Container is terminating. Grace period: 5 seconds.
+2026-02-09T06:50:31.5567045Z Stop and delete container. Retry count = 0
+2026-02-09T06:50:31.5568507Z Stopping container: d5104b09d0ef_plantdiseaseapi.
+2026-02-09T06:50:31.5980280Z Deleting container: d5104b09d0ef_plantdiseaseapi. Retry count = 0
+2026-02-09T06:50:32.2648021Z Container spec TerminationMessagePolicy  path 
+2026-02-09T06:50:32.2664328Z Container is terminated. Total time elapsed: 709 ms.
+2026-02-09T06:50:32.2668469Z Site container: plantdiseaseapi terminated during site startup.
+2026-02-09T06:50:32.3256132Z Site startup probe failed after 16.5671515 seconds.
+2026-02-09T06:50:32.4278153Z Failed to start site. Revert by stopping site.
+2026-02-09T06:50:32.4293121Z Site: plantdiseaseapi stopped.
+2026-02-09T06:50:32.8729187Z Site: plantdiseaseapi will be blocked for 4 minutes till 02/09/2026 06:54:32
+2026-02-09T06:54:32.8726020Z Site: plantdiseaseapi is unblocked.
+2026-02-09T07:25:17.5854495Z Container start method called.
+2026-02-09T07:25:17.5856197Z Establishing network.
+2026-02-09T07:25:17.5857558Z Pulling image: appsvc/python:3.10_20251017.5.tuxprod.
+2026-02-09T07:25:17.7270649Z Container is starting.
+2026-02-09T07:25:17.7272577Z Establishing user namespace if not established already.
+2026-02-09T07:25:17.7273763Z Establishing network if not established already.
+2026-02-09T07:25:17.7275113Z Mounting volumes.
+2026-02-09T07:25:17.7276751Z Nested mountpoint 
+2026-02-09T07:25:17.7301174Z Nested mountpoint volatile/logs
+2026-02-09T07:25:17.7318646Z Nested mountpoint 
+2026-02-09T07:25:17.7342392Z Nested mountpoint 
+2026-02-09T07:25:17.7346924Z Nested mountpoint 
+2026-02-09T07:25:17.8148688Z Creating container.
+2026-02-09T07:25:17.8150595Z Creating pipes for streaming container io.
+2026-02-09T07:25:17.8152109Z Creating stdout named pipe at /podr/container/pipe/5e5033973b33_plantdiseaseapi/stdout_b478056250f44957a2a3c062de6d0e6c.
+2026-02-09T07:25:17.8156399Z Successfully created stdout named pipe at: /podr/container/pipe/5e5033973b33_plantdiseaseapi/stdout_b478056250f44957a2a3c062de6d0e6c.
+2026-02-09T07:25:17.8157935Z Opening named pipe /podr/container/pipe/5e5033973b33_plantdiseaseapi/stdout_b478056250f44957a2a3c062de6d0e6c for reading in non-blocking mode.
+2026-02-09T07:25:17.8159347Z Successfully opened named pipe: /podr/container/pipe/5e5033973b33_plantdiseaseapi/stdout_b478056250f44957a2a3c062de6d0e6c.
+2026-02-09T07:25:17.8169762Z Successfully removed non-blocking flag from /podr/container/pipe/5e5033973b33_plantdiseaseapi/stdout_b478056250f44957a2a3c062de6d0e6c.
+2026-02-09T07:25:17.8171541Z Creating stderr named pipe at /podr/container/pipe/5e5033973b33_plantdiseaseapi/stderr_595e616a6d95452dab4cc81b6e8d99a9.
+2026-02-09T07:25:17.8173783Z Successfully created stderr named pipe at: /podr/container/pipe/5e5033973b33_plantdiseaseapi/stderr_595e616a6d95452dab4cc81b6e8d99a9.
+2026-02-09T07:25:17.8179976Z Opening named pipe /podr/container/pipe/5e5033973b33_plantdiseaseapi/stderr_595e616a6d95452dab4cc81b6e8d99a9 for reading in non-blocking mode.
+2026-02-09T07:25:17.8184989Z Successfully opened named pipe: /podr/container/pipe/5e5033973b33_plantdiseaseapi/stderr_595e616a6d95452dab4cc81b6e8d99a9.
+2026-02-09T07:25:17.8191842Z Successfully removed non-blocking flag from /podr/container/pipe/5e5033973b33_plantdiseaseapi/stderr_595e616a6d95452dab4cc81b6e8d99a9.
+2026-02-09T07:25:17.8193999Z Creating container with image: appsvc/python:3.10_20251017.5.tuxprod from registry: 10.1.0.6:13209 and fully qualified image name: 10.1.0.6:13209/appsvc/python:3.10_20251017.5.tuxprod
+2026-02-09T07:25:17.9566874Z Starting container: 5e5033973b33_plantdiseaseapi.
+2026-02-09T07:25:17.9756662Z Starting watchers and probes.
+2026-02-09T07:25:17.9759765Z Starting metrics collection.
+2026-02-09T07:25:17.9792791Z Container is running.
+2026-02-09T07:25:18.0014856Z Container start method finished after 415 ms.
+2026-02-09T07:25:33.9564101Z Container has finished running with exit code: 1.
+2026-02-09T07:25:33.9565548Z Container is terminating. Grace period: 5 seconds.
+2026-02-09T07:25:33.9709200Z Stop and delete container. Retry count = 0
+2026-02-09T07:25:33.9710691Z Stopping container: 5e5033973b33_plantdiseaseapi.
+2026-02-09T07:25:34.0132436Z Deleting container: 5e5033973b33_plantdiseaseapi. Retry count = 0
+2026-02-09T07:25:34.5438097Z Container spec TerminationMessagePolicy  path 
+2026-02-09T07:25:34.5451962Z Container is terminated. Total time elapsed: 574 ms.
+2026-02-09T07:25:34.5453383Z Site container: plantdiseaseapi terminated during site startup.
+2026-02-09T07:25:34.5838788Z Site startup probe failed after 16.581883 seconds.
+2026-02-09T07:25:34.8706406Z Failed to start site. Revert by stopping site.
+2026-02-09T07:25:34.8711081Z Site: plantdiseaseapi stopped.
+2026-02-09T07:25:35.1325310Z Site: plantdiseaseapi will be blocked for 4 minutes till 02/09/2026 07:29:35
+2026-02-09T07:29:35.1348789Z Site: plantdiseaseapi is unblocked.
+2026-02-09T08:00:19.8668511Z Container start method called.
+2026-02-09T08:00:19.8670213Z Establishing network.
+2026-02-09T08:00:19.8671498Z Pulling image: appsvc/python:3.10_20251017.5.tuxprod.
+2026-02-09T08:00:19.9864798Z Container is starting.
+2026-02-09T08:00:19.9872967Z Establishing user namespace if not established already.
+2026-02-09T08:00:19.9874546Z Establishing network if not established already.
+2026-02-09T08:00:19.9875885Z Mounting volumes.
+2026-02-09T08:00:19.9878715Z Nested mountpoint 
+2026-02-09T08:00:19.9898971Z Nested mountpoint volatile/logs
+2026-02-09T08:00:19.9914257Z Nested mountpoint 
+2026-02-09T08:00:20.0224146Z Nested mountpoint 
+2026-02-09T08:00:20.0283845Z Nested mountpoint 
+2026-02-09T08:00:20.1005605Z Creating container.
+2026-02-09T08:00:20.1013736Z Creating pipes for streaming container io.
+2026-02-09T08:00:20.1017720Z Creating stdout named pipe at /podr/container/pipe/d4a9938806b9_plantdiseaseapi/stdout_dda4d1c30b4c4644990b99f1cf3d9635.
+2026-02-09T08:00:20.1021198Z Successfully created stdout named pipe at: /podr/container/pipe/d4a9938806b9_plantdiseaseapi/stdout_dda4d1c30b4c4644990b99f1cf3d9635.
+2026-02-09T08:00:20.1025853Z Opening named pipe /podr/container/pipe/d4a9938806b9_plantdiseaseapi/stdout_dda4d1c30b4c4644990b99f1cf3d9635 for reading in non-blocking mode.
+2026-02-09T08:00:20.1030951Z Successfully opened named pipe: /podr/container/pipe/d4a9938806b9_plantdiseaseapi/stdout_dda4d1c30b4c4644990b99f1cf3d9635.
+2026-02-09T08:00:20.1041248Z Successfully removed non-blocking flag from /podr/container/pipe/d4a9938806b9_plantdiseaseapi/stdout_dda4d1c30b4c4644990b99f1cf3d9635.
+2026-02-09T08:00:20.1042894Z Creating stderr named pipe at /podr/container/pipe/d4a9938806b9_plantdiseaseapi/stderr_34656c6d268f4e0eb8f9f60559b455fb.
+2026-02-09T08:00:20.1044828Z Successfully created stderr named pipe at: /podr/container/pipe/d4a9938806b9_plantdiseaseapi/stderr_34656c6d268f4e0eb8f9f60559b455fb.
+2026-02-09T08:00:20.1051877Z Opening named pipe /podr/container/pipe/d4a9938806b9_plantdiseaseapi/stderr_34656c6d268f4e0eb8f9f60559b455fb for reading in non-blocking mode.
+2026-02-09T08:00:20.1053725Z Successfully opened named pipe: /podr/container/pipe/d4a9938806b9_plantdiseaseapi/stderr_34656c6d268f4e0eb8f9f60559b455fb.
+2026-02-09T08:00:20.1055026Z Successfully removed non-blocking flag from /podr/container/pipe/d4a9938806b9_plantdiseaseapi/stderr_34656c6d268f4e0eb8f9f60559b455fb.
+2026-02-09T08:00:20.1060747Z Creating container with image: appsvc/python:3.10_20251017.5.tuxprod from registry: 10.1.0.6:13209 and fully qualified image name: 10.1.0.6:13209/appsvc/python:3.10_20251017.5.tuxprod
+2026-02-09T08:00:20.2608230Z Starting container: d4a9938806b9_plantdiseaseapi.
+2026-02-09T08:00:20.2783092Z Starting watchers and probes.
+2026-02-09T08:00:20.2785425Z Starting metrics collection.
+2026-02-09T08:00:20.2824078Z Container is running.
+2026-02-09T08:00:20.3171088Z Container start method finished after 449 ms.
+2026-02-09T08:00:36.8914043Z Container has finished running with exit code: 1.
+2026-02-09T08:00:36.8915786Z Container is terminating. Grace period: 5 seconds.
+2026-02-09T08:00:36.9050889Z Stop and delete container. Retry count = 0
+2026-02-09T08:00:36.9052555Z Stopping container: d4a9938806b9_plantdiseaseapi.
+2026-02-09T08:00:36.9708072Z Deleting container: d4a9938806b9_plantdiseaseapi. Retry count = 0
+2026-02-09T08:00:37.5247653Z Container spec TerminationMessagePolicy  path 
+2026-02-09T08:00:37.5254616Z Container is terminated. Total time elapsed: 620 ms.
+2026-02-09T08:00:37.5255830Z Site container: plantdiseaseapi terminated during site startup.
+2026-02-09T08:00:37.5436520Z Site startup probe failed after 17.2241803 seconds.
+2026-02-09T08:00:37.8139184Z Failed to start site. Revert by stopping site.
+2026-02-09T08:00:37.8167075Z Site: plantdiseaseapi stopped.
+2026-02-09T08:00:38.1424338Z Site: plantdiseaseapi will be blocked for 4 minutes till 02/09/2026 08:04:38
+2026-02-09T08:04:38.1423267Z Site: plantdiseaseapi is unblocked.
+2026-02-09T08:35:21.9390768Z Container start method called.
+2026-02-09T08:35:21.9391850Z Establishing network.
+2026-02-09T08:35:21.9392617Z Pulling image: appsvc/python:3.10_20251017.5.tuxprod.
+2026-02-09T08:35:22.0492662Z Container is starting.
+2026-02-09T08:35:22.0494467Z Establishing user namespace if not established already.
+2026-02-09T08:35:22.0495805Z Establishing network if not established already.
+2026-02-09T08:35:22.0497203Z Mounting volumes.
+2026-02-09T08:35:22.0498674Z Nested mountpoint 
+2026-02-09T08:35:22.0525812Z Nested mountpoint volatile/logs
+2026-02-09T08:35:22.0552332Z Nested mountpoint 
+2026-02-09T08:35:22.0572828Z Nested mountpoint 
+2026-02-09T08:35:22.0589996Z Nested mountpoint 
+2026-02-09T08:35:22.1265125Z Creating container.
+2026-02-09T08:35:22.1266735Z Creating pipes for streaming container io.
+2026-02-09T08:35:22.1268153Z Creating stdout named pipe at /podr/container/pipe/f11a4e4850ee_plantdiseaseapi/stdout_39d4b3ebba7249e2bb3effb9f016367c.
+2026-02-09T08:35:22.1270427Z Successfully created stdout named pipe at: /podr/container/pipe/f11a4e4850ee_plantdiseaseapi/stdout_39d4b3ebba7249e2bb3effb9f016367c.
+2026-02-09T08:35:22.1271669Z Opening named pipe /podr/container/pipe/f11a4e4850ee_plantdiseaseapi/stdout_39d4b3ebba7249e2bb3effb9f016367c for reading in non-blocking mode.
+2026-02-09T08:35:22.1273107Z Successfully opened named pipe: /podr/container/pipe/f11a4e4850ee_plantdiseaseapi/stdout_39d4b3ebba7249e2bb3effb9f016367c.
+2026-02-09T08:35:22.1274624Z Successfully removed non-blocking flag from /podr/container/pipe/f11a4e4850ee_plantdiseaseapi/stdout_39d4b3ebba7249e2bb3effb9f016367c.
+2026-02-09T08:35:22.1276181Z Creating stderr named pipe at /podr/container/pipe/f11a4e4850ee_plantdiseaseapi/stderr_e5109a31a6d1476c938c41dc1b183cda.
+2026-02-09T08:35:22.1277924Z Successfully created stderr named pipe at: /podr/container/pipe/f11a4e4850ee_plantdiseaseapi/stderr_e5109a31a6d1476c938c41dc1b183cda.
+2026-02-09T08:35:22.1279171Z Opening named pipe /podr/container/pipe/f11a4e4850ee_plantdiseaseapi/stderr_e5109a31a6d1476c938c41dc1b183cda for reading in non-blocking mode.
+2026-02-09T08:35:22.1295958Z Successfully opened named pipe: /podr/container/pipe/f11a4e4850ee_plantdiseaseapi/stderr_e5109a31a6d1476c938c41dc1b183cda.
+2026-02-09T08:35:22.1299603Z Successfully removed non-blocking flag from /podr/container/pipe/f11a4e4850ee_plantdiseaseapi/stderr_e5109a31a6d1476c938c41dc1b183cda.
+2026-02-09T08:35:22.1303949Z Creating container with image: appsvc/python:3.10_20251017.5.tuxprod from registry: 10.1.0.6:13209 and fully qualified image name: 10.1.0.6:13209/appsvc/python:3.10_20251017.5.tuxprod
+2026-02-09T08:35:22.3822183Z Starting container: f11a4e4850ee_plantdiseaseapi.
+2026-02-09T08:35:22.3964189Z Starting watchers and probes.
+2026-02-09T08:35:22.3966546Z Starting metrics collection.
+2026-02-09T08:35:22.3968255Z Container is running.
+2026-02-09T08:35:22.4206401Z Container start method finished after 481 ms.
+2026-02-09T08:35:39.1892754Z Container has finished running with exit code: 1.
+2026-02-09T08:35:39.1894217Z Container is terminating. Grace period: 5 seconds.
+2026-02-09T08:35:39.1972786Z Stop and delete container. Retry count = 0
+2026-02-09T08:35:39.1975599Z Stopping container: f11a4e4850ee_plantdiseaseapi.
+2026-02-09T08:35:39.2509514Z Deleting container: f11a4e4850ee_plantdiseaseapi. Retry count = 0
+2026-02-09T08:35:39.8718601Z Container spec TerminationMessagePolicy  path 
+2026-02-09T08:35:39.8737593Z Container is terminated. Total time elapsed: 676 ms.
+2026-02-09T08:35:39.8739633Z Site container: plantdiseaseapi terminated during site startup.
+2026-02-09T08:35:39.9171476Z Site startup probe failed after 17.4958726 seconds.
+2026-02-09T08:35:40.2269406Z Failed to start site. Revert by stopping site.
+2026-02-09T08:35:40.2272349Z Site: plantdiseaseapi stopped.
+2026-02-09T08:35:40.4814805Z Site: plantdiseaseapi will be blocked for 4 minutes till 02/09/2026 08:39:40
+2026-02-09T08:39:40.4809594Z Site: plantdiseaseapi is unblocked.
+2026-02-09T09:10:25.1855786Z Container start method called.
+2026-02-09T09:10:25.1878773Z Establishing network.
+2026-02-09T09:10:25.1896508Z Pulling image: appsvc/python:3.10_20251017.5.tuxprod.
+2026-02-09T09:10:25.2803120Z Container is starting.
+2026-02-09T09:10:25.2814555Z Establishing user namespace if not established already.
+2026-02-09T09:10:25.2819455Z Establishing network if not established already.
+2026-02-09T09:10:25.2822181Z Mounting volumes.
+2026-02-09T09:10:25.2823891Z Nested mountpoint 
+2026-02-09T09:10:25.2854737Z Nested mountpoint volatile/logs
+2026-02-09T09:10:25.2898130Z Nested mountpoint 
+2026-02-09T09:10:25.2929728Z Nested mountpoint 
+2026-02-09T09:10:25.2938974Z Nested mountpoint 
+2026-02-09T09:10:25.3446042Z Creating container.
+2026-02-09T09:10:25.3447533Z Creating pipes for streaming container io.
+2026-02-09T09:10:25.3448835Z Creating stdout named pipe at /podr/container/pipe/10d783937323_plantdiseaseapi/stdout_1cb925a5e5004a29a4d2d02e28cd9ffb.
+2026-02-09T09:10:25.3451181Z Successfully created stdout named pipe at: /podr/container/pipe/10d783937323_plantdiseaseapi/stdout_1cb925a5e5004a29a4d2d02e28cd9ffb.
+2026-02-09T09:10:25.3452561Z Opening named pipe /podr/container/pipe/10d783937323_plantdiseaseapi/stdout_1cb925a5e5004a29a4d2d02e28cd9ffb for reading in non-blocking mode.
+2026-02-09T09:10:25.3454134Z Successfully opened named pipe: /podr/container/pipe/10d783937323_plantdiseaseapi/stdout_1cb925a5e5004a29a4d2d02e28cd9ffb.
+2026-02-09T09:10:25.3455446Z Successfully removed non-blocking flag from /podr/container/pipe/10d783937323_plantdiseaseapi/stdout_1cb925a5e5004a29a4d2d02e28cd9ffb.
+2026-02-09T09:10:25.3466925Z Creating stderr named pipe at /podr/container/pipe/10d783937323_plantdiseaseapi/stderr_553540ecc373467aafd555a1754ebc14.
+2026-02-09T09:10:25.3470487Z Successfully created stderr named pipe at: /podr/container/pipe/10d783937323_plantdiseaseapi/stderr_553540ecc373467aafd555a1754ebc14.
+2026-02-09T09:10:25.3474011Z Opening named pipe /podr/container/pipe/10d783937323_plantdiseaseapi/stderr_553540ecc373467aafd555a1754ebc14 for reading in non-blocking mode.
+2026-02-09T09:10:25.3478092Z Successfully opened named pipe: /podr/container/pipe/10d783937323_plantdiseaseapi/stderr_553540ecc373467aafd555a1754ebc14.
+2026-02-09T09:10:25.3481598Z Successfully removed non-blocking flag from /podr/container/pipe/10d783937323_plantdiseaseapi/stderr_553540ecc373467aafd555a1754ebc14.
+2026-02-09T09:10:25.3483107Z Creating container with image: appsvc/python:3.10_20251017.5.tuxprod from registry: 10.1.0.6:13209 and fully qualified image name: 10.1.0.6:13209/appsvc/python:3.10_20251017.5.tuxprod
+2026-02-09T09:10:25.5089686Z Starting container: 10d783937323_plantdiseaseapi.
+2026-02-09T09:10:25.5266179Z Starting watchers and probes.
+2026-02-09T09:10:25.5280272Z Starting metrics collection.
+2026-02-09T09:10:25.5294362Z Container is running.
+2026-02-09T09:10:25.5491827Z Container start method finished after 363 ms.
+2026-02-09T09:10:42.1868709Z Container has finished running with exit code: 1.
+2026-02-09T09:10:42.1875187Z Container is terminating. Grace period: 5 seconds.
+2026-02-09T09:10:42.1914845Z Stop and delete container. Retry count = 0
+2026-02-09T09:10:42.1923208Z Stopping container: 10d783937323_plantdiseaseapi.
+2026-02-09T09:10:42.2656765Z Deleting container: 10d783937323_plantdiseaseapi. Retry count = 0
+2026-02-09T09:10:42.7938429Z Container spec TerminationMessagePolicy  path 
+2026-02-09T09:10:42.7944391Z Container is terminated. Total time elapsed: 603 ms.
+2026-02-09T09:10:42.7945719Z Site container: plantdiseaseapi terminated during site startup.
+2026-02-09T09:10:42.8506888Z Site startup probe failed after 17.2983443 seconds.
+2026-02-09T09:10:43.1009663Z Failed to start site. Revert by stopping site.
+2026-02-09T09:10:43.1063619Z Site: plantdiseaseapi stopped.
+2026-02-09T09:10:43.3380720Z Site: plantdiseaseapi will be blocked for 4 minutes till 02/09/2026 09:14:43
+2026-02-09T09:14:43.3415167Z Site: plantdiseaseapi is unblocked.
+2026-02-09T09:32:01.0099600Z Container start method called.
+2026-02-09T09:32:01.0101864Z Establishing network.
+2026-02-09T09:32:01.0103608Z Pulling image: appsvc/python:3.10_20251017.5.tuxprod.
+2026-02-09T09:32:01.1719404Z Container is starting.
+2026-02-09T09:32:01.1724453Z Establishing user namespace if not established already.
+2026-02-09T09:32:01.1727777Z Establishing network if not established already.
+2026-02-09T09:32:01.1731077Z Mounting volumes.
+2026-02-09T09:32:01.1732795Z Nested mountpoint 
+2026-02-09T09:32:01.1749961Z Nested mountpoint volatile/logs
+2026-02-09T09:32:01.1767685Z Nested mountpoint 
+2026-02-09T09:32:01.1775110Z Nested mountpoint 
+2026-02-09T09:32:01.1809792Z Nested mountpoint 
+2026-02-09T09:32:01.2648477Z Creating container.
+2026-02-09T09:32:01.2649846Z Creating pipes for streaming container io.
+2026-02-09T09:32:01.2651070Z Creating stdout named pipe at /podr/container/pipe/f41a0b97afe7_plantdiseaseapi/stdout_62f10321fc5f48b4844ad12da2053a40.
+2026-02-09T09:32:01.2653298Z Successfully created stdout named pipe at: /podr/container/pipe/f41a0b97afe7_plantdiseaseapi/stdout_62f10321fc5f48b4844ad12da2053a40.
+2026-02-09T09:32:01.2654720Z Opening named pipe /podr/container/pipe/f41a0b97afe7_plantdiseaseapi/stdout_62f10321fc5f48b4844ad12da2053a40 for reading in non-blocking mode.
+2026-02-09T09:32:01.2656220Z Successfully opened named pipe: /podr/container/pipe/f41a0b97afe7_plantdiseaseapi/stdout_62f10321fc5f48b4844ad12da2053a40.
+2026-02-09T09:32:01.2657633Z Successfully removed non-blocking flag from /podr/container/pipe/f41a0b97afe7_plantdiseaseapi/stdout_62f10321fc5f48b4844ad12da2053a40.
+2026-02-09T09:32:01.2658962Z Creating stderr named pipe at /podr/container/pipe/f41a0b97afe7_plantdiseaseapi/stderr_1d79e598179f4694b7c7fc20c1c02c34.
+2026-02-09T09:32:01.2660716Z Successfully created stderr named pipe at: /podr/container/pipe/f41a0b97afe7_plantdiseaseapi/stderr_1d79e598179f4694b7c7fc20c1c02c34.
+2026-02-09T09:32:01.2662115Z Opening named pipe /podr/container/pipe/f41a0b97afe7_plantdiseaseapi/stderr_1d79e598179f4694b7c7fc20c1c02c34 for reading in non-blocking mode.
+2026-02-09T09:32:01.2663578Z Successfully opened named pipe: /podr/container/pipe/f41a0b97afe7_plantdiseaseapi/stderr_1d79e598179f4694b7c7fc20c1c02c34.
+2026-02-09T09:32:01.2665010Z Successfully removed non-blocking flag from /podr/container/pipe/f41a0b97afe7_plantdiseaseapi/stderr_1d79e598179f4694b7c7fc20c1c02c34.
+2026-02-09T09:32:01.2666469Z Creating container with image: appsvc/python:3.10_20251017.5.tuxprod from registry: 10.1.0.6:13209 and fully qualified image name: 10.1.0.6:13209/appsvc/python:3.10_20251017.5.tuxprod
+2026-02-09T09:32:01.4847160Z Starting container: f41a0b97afe7_plantdiseaseapi.
+2026-02-09T09:32:01.5024465Z Starting watchers and probes.
+2026-02-09T09:32:01.5042544Z Starting metrics collection.
+2026-02-09T09:32:01.5057566Z Container is running.
+2026-02-09T09:32:01.5250006Z Container start method finished after 514 ms.
+2026-02-09T09:32:21.3684965Z Container has finished running with exit code: 3.
+2026-02-09T09:32:21.3690794Z Container is terminating. Grace period: 5 seconds.
+2026-02-09T09:32:21.3769222Z Stop and delete container. Retry count = 0
+2026-02-09T09:32:21.3770869Z Stopping container: f41a0b97afe7_plantdiseaseapi.
+2026-02-09T09:32:21.3949221Z Deleting container: f41a0b97afe7_plantdiseaseapi. Retry count = 0
+2026-02-09T09:32:21.9843219Z Container spec TerminationMessagePolicy  path 
+2026-02-09T09:32:21.9859475Z Container is terminated. Total time elapsed: 609 ms.
+2026-02-09T09:32:21.9860898Z Site container: plantdiseaseapi terminated during site startup.
+2026-02-09T09:32:22.0223195Z Site startup probe failed after 20.4957296 seconds.
+2026-02-09T09:32:22.1859904Z Failed to start site. Revert by stopping site.
+2026-02-09T09:32:22.1892118Z Site: plantdiseaseapi stopped.

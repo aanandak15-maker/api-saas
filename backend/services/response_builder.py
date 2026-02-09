@@ -1,12 +1,17 @@
-
 from typing import Dict, Any, List, Optional
 from services.supabase_client import supabase_admin
 
 class ResponseBuilder:
-    def __init__(self, client_id: str, config: Dict[str, Any]):
+    def __init__(self, client_id: str, config: Dict[str, Any] = None):
         self.client_id = client_id
-        self.config = config
-
+        # Reload config if not provided
+        if config is None:
+            self.config = get_client_config(client_id)
+        else:
+            self.config = config
+        
+        print(f"DEBUG: ResponseBuilder init for client {client_id}")
+        print(f"DEBUG: Config used: {self.config}")
     def build(self, disease_record: Dict[str, Any], confidence: float, severity: Optional[str], image_url: str, detection_id: str, products: Dict[str, List[Any]]) -> Dict[str, Any]:
         """
         Constructs the final API response based on enabled layers.
@@ -97,6 +102,17 @@ class ResponseBuilder:
         if has_advisory:
             response["advisory"] = advisory
             response["advisory_url"] = f"/disease/{disease_record['disease_id']}"
+
+        # Layer 6: Branding
+        # Defensive check: branding columns might not exist yet
+        if self.config.get("layer_branding", False):
+            branding = {
+                "enabled": True,
+                "custom_text": self.config.get("branding_custom_text"),
+                "primary_color": self.config.get("branding_primary_color")
+            }
+            # Remove None values
+            response["branding"] = {k: v for k, v in branding.items() if v}
 
         return response
 

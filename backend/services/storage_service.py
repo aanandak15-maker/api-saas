@@ -39,9 +39,12 @@ async def upload_detection_image(image_file, filename: str) -> str:
             content_type = "image/jpeg" # Force JPEG after compression
             
         except Exception as e:
-            print(f"Compression failed, using original: {e}")
-            import traceback
-            traceback.print_exc()
+        # If strictly invalid image, fail here
+            if "cannot identify image file" in str(e):
+                raise ValueError("Invalid image file format. Please upload a valid JPG or PNG.")
+                
+            print(f"Compression failed: {e}")
+            # Otherwise fall back to original (risky but maybe okay for some edge cases)
             content_type = getattr(image_file, "content_type", "image/jpeg")
         
         # Upload to Supabase Storage
@@ -57,8 +60,11 @@ async def upload_detection_image(image_file, filename: str) -> str:
         public_url = supabase_admin.storage.from_("detection-images").get_public_url(filename)
         return public_url
 
+    except ValueError:
+        raise # Re-raise known validation errors
+
     except Exception as e:
-        # If bucket not found, try to create it
+        # If bucket not found, retry...
         if "Bucket not found" in str(e) or "404" in str(e):
             print("Bucket 'detection-images' not found. Creating...")
             try:

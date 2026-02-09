@@ -24,10 +24,16 @@ export async function POST(request: Request) {
         const backendUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
         const detectUrl = `${backendUrl}/detect`;
 
+        // Check for custom user API Key (from playground)
+        const userApiKey = request.headers.get('x-custom-api-key');
+        console.log("Proxy: Received x-custom-api-key:", userApiKey ? "Yes" : "No");
+
+        const apiKey = userApiKey || '5STKwI3BYhmhIMBHDRY0QhBdqoWnx7X6'; // Fallback to demo key
+
         const res = await fetch(detectUrl, {
             method: 'POST',
             headers: {
-                'x-api-key': 'zIS7TKdQeKeOOne3AlinyiDcYQusLQ1V', // Naksh Key (Organic Focus)
+                'x-api-key': apiKey,
             },
             body: backendFormData,
         });

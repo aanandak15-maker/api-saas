@@ -13,8 +13,8 @@ const PLANS = [
         annualPrice: 9600,
         description: 'Local agri shops, small startups, pilot projects',
         features: [
-            'Essential Usage Capacity',
-            'Basic Advisory',
+            '1,000 Scans / Month',
+            'Smart Crop Validation',
             '1 Product Slot',
             'Basic Analytics',
             'Standard Branding',
@@ -31,7 +31,7 @@ const PLANS = [
         annualPrice: 38400,
         description: 'Growing agri brands, seed & pesticide companies',
         features: [
-            'Business Usage Capacity',
+            '5,000 Scans / Month',
             'Advanced Advisory Layers',
             '3 Product Slots',
             'Advanced Analytics',
@@ -49,7 +49,7 @@ const PLANS = [
         annualPrice: 96000,
         description: 'Large companies, marketplaces, NGOs',
         features: [
-            'High-Volume Capacity',
+            '20,000 Scans / Month',
             'Complete Advisory + Prevention',
             '10 Product Slots',
             'Business Intelligence',
@@ -67,7 +67,7 @@ const PLANS = [
         annualPrice: null,
         description: 'Government bodies, national brands, agri platforms',
         features: [
-            'Unlimited Capacity',
+            'Unlimited Scans',
             'Full White-Label API',
             'Unlimited Product Slots',
             'Custom Reporting',

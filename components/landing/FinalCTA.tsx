@@ -17,20 +17,20 @@ export function FinalCTA() {
                         href="/signup"
                         className="bg-[#13ec13] hover:bg-[#0fb30f] text-white font-black px-10 py-5 rounded-xl shadow-xl shadow-green-500/30 transition-all text-xl w-full sm:w-auto transform hover:-translate-y-1"
                     >
-                        Start Free Trial
+                        Get API Access
                     </Link>
-                    <Link
-                        href="/contact"
-                        className="bg-gray-50 hover:bg-gray-100 text-gray-900 font-bold px-10 py-5 rounded-xl transition-all text-xl w-full sm:w-auto"
+                    <a
+                        href="mailto:plantsaathiai@gmail.com"
+                        className="bg-gray-50 hover:bg-gray-100 text-gray-900 font-bold px-10 py-5 rounded-xl transition-all text-xl w-full sm:w-auto text-center"
                     >
                         Contact Sales
-                    </Link>
+                    </a>
                 </div>
 
                 <p className="text-sm font-bold text-gray-400 uppercase tracking-widest">
-                    No credit card required • 14-day free trial
+                    Enterprise-Grade SLA • 99.8% Uptime
                 </p>
             </div>
-        </section>
+        </section >
     );
 }

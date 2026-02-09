@@ -12,6 +12,7 @@ import {
     CreditCard,
     Settings,
     Leaf,
+    Sliders,
     X
 } from 'lucide-react'
 
@@ -20,6 +21,7 @@ const navItems = [
     { name: 'Products', href: '/dashboard/products', icon: Package },
     { name: 'Analytics', href: '/dashboard/analytics', icon: BarChart3 },
     { name: 'API Docs', href: '/dashboard/api-keys', icon: FileText },
+    { name: 'API Config', href: '/dashboard/response-config', icon: Sliders },
 ]
 
 const bottomItems = [

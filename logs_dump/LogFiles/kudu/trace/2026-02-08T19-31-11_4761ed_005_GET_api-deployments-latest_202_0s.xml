@@ -1,0 +1,9 @@
+<step title="Incoming Request" date="2026-02-08T19:31:11.558" instance="4761ed" url="/api/deployments/latest" method="GET" type="request" pid="767,1,5" Accept="*/*" Host="plantdiseaseapi-akg4bxfbaegvfteg.scm.southeastasia-01.azurewebsites.net" User-Agent="AZURECLI/2.83.0 (HOMEBREW)" Accept-Encoding="gzip, deflate" Authorization="Bea..." x-ms-client-request-id="ad167cf8-0524-11f1-9ec8-42d2f44587d6" X-ARR-LOG-ID="ad167cf8-0524-11f1-9ec8-42d2f44587d6" CLIENT-IP="103.47.75.255:56748" X-SITE-DEPLOYMENT-ID="plantdiseaseapi" WAS-DEFAULT-HOSTNAME="plantdiseaseapi-akg4bxfbaegvfteg.scm.southeastasia-01.azurewebsites.net" X-Forwarded-Proto="https" X-AppService-Proto="https" X-Forwarded-TlsVersion="1.3" X-WAWS-Unencoded-URL="/api/deployments/latest" X-Client-IP="103.47.75.255" X-Client-Port="56748" >
+  <step title="Cleanup Xml Logs" date="2026-02-08T19:31:11.560" /><!-- duration: 4ms -->
+  <step title="DeploymentService.GetResult" date="2026-02-08T19:31:11.572" >
+    <step title="DeploymentService.GetLatestDeployment" date="2026-02-08T19:31:11.576" >
+      <step title="DeploymentManager.GetResults" date="2026-02-08T19:31:11.590" /><!-- duration: 236ms -->
+    </step><!-- duration: 254ms -->
+  </step><!-- duration: 260ms -->
+  <step title="Outgoing response" date="2026-02-08T19:31:11.835" type="response" statusCode="202" statusText="Accepted" /><!-- duration: 2ms -->
+</step><!-- duration: 282ms -->

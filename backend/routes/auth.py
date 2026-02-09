@@ -1,7 +1,7 @@
 from fastapi import APIRouter as Router, Request, Response
 from services.supabase_client import supabase_admin, supabase
 from utils.api_key_generator import generate_api_key
-from middleware.auth_middleware import require_api_key, CorsResponse
+from middleware.auth_middleware import require_api_key, require_admin_key, CorsResponse
 import bcrypt
 
 router = Router()

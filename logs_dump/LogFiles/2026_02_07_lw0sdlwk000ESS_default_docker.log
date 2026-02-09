@@ -1,0 +1,280 @@
+2026-02-07T15:57:15.6961915Z    _____                               
+2026-02-07T15:57:15.6981377Z   /  _  \ __________ _________   ____  
+2026-02-07T15:57:15.6981747Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2026-02-07T15:57:15.6981783Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2026-02-07T15:57:15.6981807Z \____|__  /_____ \____/ |__|    \___  >
+2026-02-07T15:57:15.6981856Z         \/      \/                  \/ 
+2026-02-07T15:57:15.6981903Z A P P   S E R V I C E   O N   L I N U X
+2026-02-07T15:57:15.6981925Z 
+2026-02-07T15:57:15.6981978Z Documentation    : http://aka.ms/webapp-linux
+2026-02-07T15:57:15.6982002Z Python quickstart: https://aka.ms/python-qs
+2026-02-07T15:57:15.6982034Z Python version   : 3.11.14
+2026-02-07T15:57:15.6982056Z Instance Name    : lw0sdlwk000ESS
+2026-02-07T15:57:15.6982121Z Instance Id      : b6e96858c831a75779f5b74d69e241bee2844e8469956c803745fe996c660b31
+2026-02-07T15:57:15.6982143Z 
+2026-02-07T15:57:15.6982165Z Note: Any data outside '/home' is not persisted
+2026-02-07T15:57:29.1924734Z Starting OpenBSD Secure Shell server: sshd.
+2026-02-07T15:57:29.2235522Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2026-02-07T15:57:29.5656074Z Updating certificates in /etc/ssl/certs...
+2026-02-07T15:57:52.6076016Z rehash: warning: skipping duplicate certificate in azl_Sectigo_Public_Server_Authentication_Root_R46.pem
+2026-02-07T15:57:52.6076868Z rehash: warning: skipping duplicate certificate in azl_SSL.com_TLS_RSA_Root_CA_2022.pem
+2026-02-07T15:57:52.6077043Z rehash: warning: skipping duplicate certificate in azl_SSL.com_TLS_ECC_Root_CA_2022.pem
+2026-02-07T15:57:52.6479298Z rehash: warning: skipping duplicate certificate in azl_Sectigo_Public_Server_Authentication_Root_E46.pem
+2026-02-07T15:57:52.6953457Z 4 added, 0 removed; done.
+2026-02-07T15:57:52.6966671Z Running hooks in /etc/ca-certificates/update.d...
+2026-02-07T15:57:52.7061844Z done.
+2026-02-07T15:57:52.8131265Z CA certificates copied and updated successfully.
+2026-02-07T15:57:52.9904588Z App Command Line not configured, will attempt auto-detect
+2026-02-07T15:57:53.3823384Z Starting periodic command scheduler: cron.
+2026-02-07T15:57:53.3923711Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite
+2026-02-07T15:57:53.6096890Z Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2026-02-07T15:57:53.6276982Z Build Operation ID: 2e8aedbe4666c6e3
+2026-02-07T15:57:53.6279298Z Oryx Version: 0.2.20251017.2, Commit: 482d4c55e818733ab33b9d2131f9dc485a21fd03, ReleaseTagName: 20251017.2
+2026-02-07T15:57:53.6287322Z Output is compressed. Extracting it...
+2026-02-07T15:57:53.6294976Z Extracting '/home/site/wwwroot/output.tar.gz' to directory '/tmp/8de6660f23a96f2'...
+2026-02-07T15:58:13.4008217Z App path is set to '/tmp/8de6660f23a96f2'
+2026-02-07T15:58:13.4107292Z No framework detected; using default app from /opt/defaultsite
+2026-02-07T15:58:13.4107650Z Generating `gunicorn` command for 'application:app'
+2026-02-07T15:58:13.5123293Z Writing output script to '/opt/startup/startup.sh'
+2026-02-07T15:58:13.6819133Z Using packages from virtual environment antenv located at /tmp/8de6660f23a96f2/antenv.
+2026-02-07T15:58:13.6819936Z Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8de6660f23a96f2/antenv/lib/python3.11/site-packages'
+2026-02-07T15:58:15.2110936Z [2026-02-07 15:58:15 +0000] [2116] [INFO] Starting gunicorn 25.0.2
+2026-02-07T15:58:16.1265548Z [2026-02-07 15:58:15 +0000] [2116] [INFO] Listening at: http://0.0.0.0:8000 (2116)
+2026-02-07T15:58:16.1265846Z [2026-02-07 15:58:15 +0000] [2116] [INFO] Using worker: sync
+2026-02-07T15:58:16.1265877Z [2026-02-07 15:58:15 +0000] [2119] [INFO] Booting worker with pid: 2119
+2026-02-07T15:58:17.1912877Z 169.254.129.1 - - [07/Feb/2026:15:58:17 +0000] "GET /robots933456.txt HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+2026-02-07T15:58:18.4857102Z 169.254.129.1 - - [07/Feb/2026:15:58:18 +0000] "GET / HTTP/1.1" 200 0 "-" "ReadyForRequest/1.0 (LocalCache)"
+2026-02-07T15:58:18.5183192Z 169.254.129.1 - - [07/Feb/2026:15:58:18 +0000] "GET / HTTP/1.1" 200 0 "-" "ReadyForRequest/1.0 (AppInit)"
+2026-02-07T15:59:02.4036945Z    _____                               
+2026-02-07T15:59:02.4038911Z   /  _  \ __________ _________   ____  
+2026-02-07T15:59:02.4038970Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2026-02-07T15:59:02.4039029Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2026-02-07T15:59:02.4039053Z \____|__  /_____ \____/ |__|    \___  >
+2026-02-07T15:59:02.4039086Z         \/      \/                  \/ 
+2026-02-07T15:59:02.4039109Z A P P   S E R V I C E   O N   L I N U X
+2026-02-07T15:59:02.4039130Z 
+2026-02-07T15:59:02.4039156Z Documentation    : http://aka.ms/webapp-linux
+2026-02-07T15:59:02.4039198Z Python quickstart: https://aka.ms/python-qs
+2026-02-07T15:59:02.4039221Z Python version   : 3.11.14
+2026-02-07T15:59:02.4039244Z Instance Name    : lw0sdlwk000ESS
+2026-02-07T15:59:02.4039285Z Instance Id      : b6e96858c831a75779f5b74d69e241bee2844e8469956c803745fe996c660b31
+2026-02-07T15:59:02.4039306Z 
+2026-02-07T15:59:02.4039328Z Note: Any data outside '/home' is not persisted
+2026-02-07T15:59:04.1000885Z Starting OpenBSD Secure Shell server: sshd.
+2026-02-07T15:59:04.2492375Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2026-02-07T15:59:04.5898526Z Updating certificates in /etc/ssl/certs...
+2026-02-07T15:59:21.5713563Z 169.254.129.1 - - [07/Feb/2026:15:59:21 +0000] "HEAD / HTTP/1.1" 200 0 "-" "Go-http-client/2.0"
+2026-02-07T15:59:21.6205095Z 169.254.129.1 - - [07/Feb/2026:15:59:21 +0000] "GET / HTTP/1.1" 200 0 "-" "Go-http-client/2.0"
+2026-02-07T15:59:39.8614570Z rehash: warning: skipping duplicate certificate in azl_Sectigo_Public_Server_Authentication_Root_R46.pem
+2026-02-07T15:59:39.8717365Z rehash: warning: skipping duplicate certificate in azl_SSL.com_TLS_RSA_Root_CA_2022.pem
+2026-02-07T15:59:39.9092567Z rehash: warning: skipping duplicate certificate in azl_SSL.com_TLS_ECC_Root_CA_2022.pem
+2026-02-07T15:59:39.9306871Z rehash: warning: skipping duplicate certificate in azl_Sectigo_Public_Server_Authentication_Root_E46.pem
+2026-02-07T15:59:40.0322070Z 4 added, 0 removed; done.
+2026-02-07T15:59:40.0395909Z Running hooks in /etc/ca-certificates/update.d...
+2026-02-07T15:59:40.1209075Z done.
+2026-02-07T15:59:40.1513634Z CA certificates copied and updated successfully.
+2026-02-07T15:59:40.2926525Z Site's appCommandLine: gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app
+2026-02-07T15:59:41.3269073Z Output is compressed. Extracting it...
+2026-02-07T15:59:41.3269916Z Extracting '/home/site/wwwroot/output.tar.gz' to directory '/tmp/8de6660f23a96f2'...
+2026-02-07T15:59:43.0662236Z Starting periodic command scheduler: cron.
+2026-02-07T15:59:43.0662672Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app'
+2026-02-07T15:59:43.0662704Z Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2026-02-07T15:59:43.0662727Z Build Operation ID: 2e8aedbe4666c6e3
+2026-02-07T15:59:43.0662844Z Oryx Version: 0.2.20251017.2, Commit: 482d4c55e818733ab33b9d2131f9dc485a21fd03, ReleaseTagName: 20251017.2
+2026-02-07T16:00:06.8717824Z App path is set to '/tmp/8de6660f23a96f2'
+2026-02-07T16:00:06.9742767Z Writing output script to '/opt/startup/startup.sh'
+2026-02-07T16:00:07.5973425Z Using packages from virtual environment antenv located at /tmp/8de6660f23a96f2/antenv.
+2026-02-07T16:00:07.5984219Z Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8de6660f23a96f2/antenv/lib/python3.11/site-packages'
+2026-02-07T16:00:13.7166682Z [2026-02-07 16:00:13 +0000] [2122] [INFO] Starting gunicorn 25.0.2
+2026-02-07T16:00:13.7283808Z [2026-02-07 16:00:13 +0000] [2122] [INFO] Listening at: http://0.0.0.0:8000 (2122)
+2026-02-07T16:00:13.7778881Z [2026-02-07 16:00:13 +0000] [2122] [INFO] Using worker: uvicorn.workers.UvicornWorker
+2026-02-07T16:00:13.7778980Z [2026-02-07 16:00:13 +0000] [2123] [INFO] Booting worker with pid: 2123
+2026-02-07T16:00:13.8794093Z [2026-02-07 16:00:13 +0000] [2124] [INFO] Booting worker with pid: 2124
+2026-02-07T16:00:14.1251092Z [2026-02-07 16:00:14 +0000] [2126] [INFO] Booting worker with pid: 2126
+2026-02-07T16:00:14.1260689Z [2026-02-07 16:00:14 +0000] [2125] [INFO] Booting worker with pid: 2125
+2026-02-07T16:00:55.1096896Z /tmp/8de6660f23a96f2/services/detection_service.py:3: FutureWarning: 
+2026-02-07T16:00:55.1097470Z 
+2026-02-07T16:00:55.1097506Z All support for the `google.generativeai` package has ended. It will no longer be receiving 
+2026-02-07T16:00:55.1097533Z updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+2026-02-07T16:00:55.1097555Z See README for more details:
+2026-02-07T16:00:55.1097575Z 
+2026-02-07T16:00:55.1097597Z https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+2026-02-07T16:00:55.1097643Z 
+2026-02-07T16:00:55.1097666Z   import google.generativeai as genai
+2026-02-07T16:00:55.1199399Z /tmp/8de6660f23a96f2/services/detection_service.py:3: FutureWarning: 
+2026-02-07T16:00:55.1199622Z 
+2026-02-07T16:00:55.1199654Z All support for the `google.generativeai` package has ended. It will no longer be receiving 
+2026-02-07T16:00:55.1199679Z updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+2026-02-07T16:00:55.1199702Z See README for more details:
+2026-02-07T16:00:55.1199752Z 
+2026-02-07T16:00:55.1199775Z https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+2026-02-07T16:00:55.1199793Z 
+2026-02-07T16:00:55.1199815Z   import google.generativeai as genai
+2026-02-07T16:00:55.1518593Z /tmp/8de6660f23a96f2/services/detection_service.py:3: FutureWarning: 
+2026-02-07T16:00:55.1518981Z 
+2026-02-07T16:00:55.1519050Z All support for the `google.generativeai` package has ended. It will no longer be receiving 
+2026-02-07T16:00:55.1519077Z updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+2026-02-07T16:00:55.1519100Z See README for more details:
+2026-02-07T16:00:55.1519119Z 
+2026-02-07T16:00:55.1519141Z https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+2026-02-07T16:00:55.1519160Z 
+2026-02-07T16:00:55.1519180Z   import google.generativeai as genai
+2026-02-07T16:00:55.1788972Z /tmp/8de6660f23a96f2/services/detection_service.py:3: FutureWarning: 
+2026-02-07T16:00:55.1789262Z 
+2026-02-07T16:00:55.1789301Z All support for the `google.generativeai` package has ended. It will no longer be receiving 
+2026-02-07T16:00:55.1789327Z updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+2026-02-07T16:00:55.1789516Z See README for more details:
+2026-02-07T16:00:55.1789539Z 
+2026-02-07T16:00:55.1789612Z https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+2026-02-07T16:00:55.1789633Z 
+2026-02-07T16:00:55.1789655Z   import google.generativeai as genai
+2026-02-07T16:00:56.6868224Z [2026-02-07 16:00:56 +0000] [2126] [INFO] Started server process [2126]
+2026-02-07T16:00:56.6873089Z [2026-02-07 16:00:56 +0000] [2126] [INFO] Waiting for application startup.
+2026-02-07T16:00:56.6878398Z [2026-02-07 16:00:56 +0000] [2126] [INFO] Application startup complete.
+2026-02-07T16:00:56.6891127Z [2026-02-07 16:00:56 +0000] [2123] [INFO] Started server process [2123]
+2026-02-07T16:00:56.6895704Z [2026-02-07 16:00:56 +0000] [2123] [INFO] Waiting for application startup.
+2026-02-07T16:00:56.6988472Z [2026-02-07 16:00:56 +0000] [2123] [INFO] Application startup complete.
+2026-02-07T16:00:56.7075844Z [2026-02-07 16:00:56 +0000] [2124] [INFO] Started server process [2124]
+2026-02-07T16:00:56.7077828Z [2026-02-07 16:00:56 +0000] [2124] [INFO] Waiting for application startup.
+2026-02-07T16:00:56.7082571Z [2026-02-07 16:00:56 +0000] [2124] [INFO] Application startup complete.
+2026-02-07T16:00:56.7091910Z [2026-02-07 16:00:56 +0000] [2125] [INFO] Started server process [2125]
+2026-02-07T16:00:56.7093632Z [2026-02-07 16:00:56 +0000] [2125] [INFO] Waiting for application startup.
+2026-02-07T16:00:56.7098853Z [2026-02-07 16:00:56 +0000] [2125] [INFO] Application startup complete.
+2026-02-07T16:01:51.5658745Z    _____                               
+2026-02-07T16:01:51.5660390Z   /  _  \ __________ _________   ____  
+2026-02-07T16:01:51.5660444Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2026-02-07T16:01:51.5660466Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2026-02-07T16:01:51.5660490Z \____|__  /_____ \____/ |__|    \___  >
+2026-02-07T16:01:51.5861619Z         \/      \/                  \/ 
+2026-02-07T16:01:51.5861697Z A P P   S E R V I C E   O N   L I N U X
+2026-02-07T16:01:51.5861720Z 
+2026-02-07T16:01:51.5861779Z Documentation    : http://aka.ms/webapp-linux
+2026-02-07T16:01:51.5861804Z Python quickstart: https://aka.ms/python-qs
+2026-02-07T16:01:51.5861941Z Python version   : 3.11.14
+2026-02-07T16:01:51.5861971Z Instance Name    : lw0sdlwk000ESS
+2026-02-07T16:01:51.5862012Z Instance Id      : b6e96858c831a75779f5b74d69e241bee2844e8469956c803745fe996c660b31
+2026-02-07T16:01:51.5862032Z 
+2026-02-07T16:01:51.5862056Z Note: Any data outside '/home' is not persisted
+2026-02-07T16:01:53.9566903Z Starting OpenBSD Secure Shell server: sshd.
+2026-02-07T16:01:54.0262158Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2026-02-07T16:01:54.1877410Z Updating certificates in /etc/ssl/certs...
+2026-02-07T16:02:44.3090663Z rehash: warning: skipping duplicate certificate in azl_Sectigo_Public_Server_Authentication_Root_R46.pem
+2026-02-07T16:02:44.3291597Z rehash: warning: skipping duplicate certificate in azl_SSL.com_TLS_RSA_Root_CA_2022.pem
+2026-02-07T16:02:44.4502595Z rehash: warning: skipping duplicate certificate in azl_SSL.com_TLS_ECC_Root_CA_2022.pem
+2026-02-07T16:02:44.5911300Z rehash: warning: skipping duplicate certificate in azl_Sectigo_Public_Server_Authentication_Root_E46.pem
+2026-02-07T16:02:44.6608276Z 4 added, 0 removed; done.
+2026-02-07T16:02:44.6895726Z Running hooks in /etc/ca-certificates/update.d...
+2026-02-07T16:02:44.6913392Z done.
+2026-02-07T16:02:44.7287611Z CA certificates copied and updated successfully.
+2026-02-07T16:02:45.0814864Z Site's appCommandLine: gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app
+2026-02-07T16:02:46.3048104Z Starting periodic command scheduler: cron.
+2026-02-07T16:02:46.3062656Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app'
+2026-02-07T16:02:46.9298491Z Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2026-02-07T16:02:47.0888699Z Build Operation ID: 2e8aedbe4666c6e3
+2026-02-07T16:02:47.0889259Z Oryx Version: 0.2.20251017.2, Commit: 482d4c55e818733ab33b9d2131f9dc485a21fd03, ReleaseTagName: 20251017.2
+2026-02-07T16:02:47.0890006Z Output is compressed. Extracting it...
+2026-02-07T16:02:47.0890052Z Extracting '/home/site/wwwroot/output.tar.gz' to directory '/tmp/8de6660f23a96f2'...
+2026-02-07T16:03:23.2665806Z App path is set to '/tmp/8de6660f23a96f2'
+2026-02-07T16:03:23.3760238Z Writing output script to '/opt/startup/startup.sh'
+2026-02-07T16:03:23.5306191Z Using packages from virtual environment antenv located at /tmp/8de6660f23a96f2/antenv.
+2026-02-07T16:03:23.5314120Z Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8de6660f23a96f2/antenv/lib/python3.11/site-packages'
+2026-02-07T16:03:24.6907489Z [2026-02-07 16:03:24 +0000] [2118] [INFO] Starting gunicorn 25.0.2
+2026-02-07T16:03:24.7280409Z [2026-02-07 16:03:24 +0000] [2118] [INFO] Listening at: http://0.0.0.0:8000 (2118)
+2026-02-07T16:03:24.7280712Z [2026-02-07 16:03:24 +0000] [2118] [INFO] Using worker: uvicorn.workers.UvicornWorker
+2026-02-07T16:03:24.7392940Z [2026-02-07 16:03:24 +0000] [2119] [INFO] Booting worker with pid: 2119
+2026-02-07T16:03:24.7890537Z [2026-02-07 16:03:24 +0000] [2120] [INFO] Booting worker with pid: 2120
+2026-02-07T16:03:24.8115562Z [2026-02-07 16:03:24 +0000] [2121] [INFO] Booting worker with pid: 2121
+2026-02-07T16:03:25.0308471Z [2026-02-07 16:03:24 +0000] [2122] [INFO] Booting worker with pid: 2122
+2026-02-07T16:04:28.2558070Z /tmp/8de6660f23a96f2/services/detection_service.py:3: FutureWarning: 
+2026-02-07T16:04:28.2563000Z 
+2026-02-07T16:04:28.2564963Z All support for the `google.generativeai` package has ended. It will no longer be receiving 
+2026-02-07T16:04:28.2565017Z updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+2026-02-07T16:04:28.2565042Z See README for more details:
+2026-02-07T16:04:28.2565062Z 
+2026-02-07T16:04:28.2565086Z https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+2026-02-07T16:04:28.2565144Z 
+2026-02-07T16:04:28.2565167Z   import google.generativeai as genai
+2026-02-07T16:04:28.2565476Z /tmp/8de6660f23a96f2/services/detection_service.py:3: FutureWarning: 
+2026-02-07T16:04:28.2565501Z 
+2026-02-07T16:04:28.2565526Z All support for the `google.generativeai` package has ended. It will no longer be receiving 
+2026-02-07T16:04:28.2565551Z updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+2026-02-07T16:04:28.2635117Z See README for more details:
+2026-02-07T16:04:28.2635152Z 
+2026-02-07T16:04:28.2635180Z https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+2026-02-07T16:04:28.2635200Z 
+2026-02-07T16:04:28.2635224Z   import google.generativeai as genai
+2026-02-07T16:04:28.2665094Z /tmp/8de6660f23a96f2/services/detection_service.py:3: FutureWarning: 
+2026-02-07T16:04:28.2665323Z 
+2026-02-07T16:04:28.2665387Z All support for the `google.generativeai` package has ended. It will no longer be receiving 
+2026-02-07T16:04:28.2665417Z updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+2026-02-07T16:04:28.2665440Z See README for more details:
+2026-02-07T16:04:28.2665460Z 
+2026-02-07T16:04:28.2665485Z https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+2026-02-07T16:04:28.2833367Z 
+2026-02-07T16:04:28.2833463Z   import google.generativeai as genai
+2026-02-07T16:04:28.2866404Z /tmp/8de6660f23a96f2/services/detection_service.py:3: FutureWarning: 
+2026-02-07T16:04:28.2866724Z 
+2026-02-07T16:04:28.2866757Z All support for the `google.generativeai` package has ended. It will no longer be receiving 
+2026-02-07T16:04:28.2866784Z updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+2026-02-07T16:04:28.2866809Z See README for more details:
+2026-02-07T16:04:28.2866828Z 
+2026-02-07T16:04:28.2866977Z https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+2026-02-07T16:04:28.2867001Z 
+2026-02-07T16:04:28.2867023Z   import google.generativeai as genai
+2026-02-07T16:04:29.4933232Z [2026-02-07 16:04:29 +0000] [2121] [INFO] Started server process [2121]
+2026-02-07T16:04:29.5105847Z [2026-02-07 16:04:29 +0000] [2121] [INFO] Waiting for application startup.
+2026-02-07T16:04:29.5106141Z [2026-02-07 16:04:29 +0000] [2119] [INFO] Started server process [2119]
+2026-02-07T16:04:29.5106209Z [2026-02-07 16:04:29 +0000] [2119] [INFO] Waiting for application startup.
+2026-02-07T16:04:29.5106235Z [2026-02-07 16:04:29 +0000] [2122] [INFO] Started server process [2122]
+2026-02-07T16:04:29.5106260Z [2026-02-07 16:04:29 +0000] [2122] [INFO] Waiting for application startup.
+2026-02-07T16:04:29.5132783Z [2026-02-07 16:04:29 +0000] [2120] [INFO] Started server process [2120]
+2026-02-07T16:04:29.5212521Z [2026-02-07 16:04:29 +0000] [2120] [INFO] Waiting for application startup.
+2026-02-07T16:04:29.5304206Z [2026-02-07 16:04:29 +0000] [2119] [INFO] Application startup complete.
+2026-02-07T16:04:29.5428551Z [2026-02-07 16:04:29 +0000] [2120] [INFO] Application startup complete.
+2026-02-07T16:04:29.5518165Z [2026-02-07 16:04:29 +0000] [2121] [INFO] Application startup complete.
+2026-02-07T16:04:29.5725134Z [2026-02-07 16:04:29 +0000] [2122] [INFO] Application startup complete.
+2026-02-07T18:18:41.7639196Z    _____                               
+2026-02-07T18:18:41.8017520Z   /  _  \ __________ _________   ____  
+2026-02-07T18:18:41.8017767Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2026-02-07T18:18:41.8017795Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2026-02-07T18:18:41.8017818Z \____|__  /_____ \____/ |__|    \___  >
+2026-02-07T18:18:41.8017853Z         \/      \/                  \/ 
+2026-02-07T18:18:41.8017875Z A P P   S E R V I C E   O N   L I N U X
+2026-02-07T18:18:41.8017896Z 
+2026-02-07T18:18:41.8017923Z Documentation    : http://aka.ms/webapp-linux
+2026-02-07T18:18:41.8017964Z Python quickstart: https://aka.ms/python-qs
+2026-02-07T18:18:41.8017985Z Python version   : 3.11.14
+2026-02-07T18:18:41.8018007Z Instance Name    : lw0sdlwk000ESS
+2026-02-07T18:18:41.8018040Z Instance Id      : b6e96858c831a75779f5b74d69e241bee2844e8469956c803745fe996c660b31
+2026-02-07T18:18:41.8018060Z 
+2026-02-07T18:18:41.8018081Z Note: Any data outside '/home' is not persisted
+2026-02-07T18:18:46.4600659Z Starting OpenBSD Secure Shell server: sshd.
+2026-02-07T18:18:46.5101526Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2026-02-07T18:18:46.6109051Z Updating certificates in /etc/ssl/certs...
+2026-02-07T18:19:18.9548390Z rehash: warning: skipping duplicate certificate in azl_Sectigo_Public_Server_Authentication_Root_R46.pem
+2026-02-07T18:19:18.9666661Z rehash: warning: skipping duplicate certificate in azl_SSL.com_TLS_RSA_Root_CA_2022.pem
+2026-02-07T18:19:19.0141974Z rehash: warning: skipping duplicate certificate in azl_SSL.com_TLS_ECC_Root_CA_2022.pem
+2026-02-07T18:19:19.0765672Z rehash: warning: skipping duplicate certificate in azl_Sectigo_Public_Server_Authentication_Root_E46.pem
+2026-02-07T18:19:19.1873052Z 4 added, 0 removed; done.
+2026-02-07T18:19:19.2055346Z Running hooks in /etc/ca-certificates/update.d...
+2026-02-07T18:19:19.2174378Z done.
+2026-02-07T18:19:19.2476537Z CA certificates copied and updated successfully.
+2026-02-07T18:19:19.5376305Z Site's appCommandLine: gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app
+2026-02-07T18:19:20.2198006Z Starting periodic command scheduler: cron.
+2026-02-07T18:19:20.2291453Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app'
+2026-02-07T18:19:20.6277390Z Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2026-02-07T18:19:20.6664171Z Output is compressed. Extracting it...
+2026-02-07T18:19:20.6779763Z Extracting '/home/site/wwwroot/output.tar.gz' to directory '/tmp/8de6660f23a96f2'...
+2026-02-07T18:19:21.4777207Z Build Operation ID: 2e8aedbe4666c6e3
+2026-02-07T18:19:21.4777459Z Oryx Version: 0.2.20251017.2, Commit: 482d4c55e818733ab33b9d2131f9dc485a21fd03, ReleaseTagName: 20251017.2
+2026-02-07T18:19:41.3925313Z App path is set to '/tmp/8de6660f23a96f2'
+2026-02-07T18:19:41.4951391Z Writing output script to '/opt/startup/startup.sh'
+2026-02-07T18:19:41.6258501Z Using packages from virtual environment antenv located at /tmp/8de6660f23a96f2/antenv.
+2026-02-07T18:19:41.6259111Z Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8de6660f23a96f2/antenv/lib/python3.11/site-packages'
+2026-02-07T18:19:42.7181026Z [2026-02-07 18:19:42 +0000] [2117] [INFO] Starting gunicorn 25.0.2
+2026-02-07T18:19:42.7193055Z [2026-02-07 18:19:42 +0000] [2117] [INFO] Listening at: http://0.0.0.0:8000 (2117)
+2026-02-07T18:19:42.7204881Z [2026-02-07 18:19:42 +0000] [2117] [INFO] Using worker: uvicorn.workers.UvicornWorker
+2026-02-07T18:19:42.7474061Z [2026-02-07 18:19:42 +0000] [2118] [INFO] Booting worker with pid: 2118
+2026-02-07T18:19:42.8000873Z [2026-02-07 18:19:42 +0000] [2119] [INFO] Booting worker with pid: 2119
+2026-02-07T18:19:42.9501724Z [2026-02-07 18:19:42 +0000] [2120] [INFO] Booting worker with pid: 2120
+2026-02-07T18:19:43.0904571Z [2026-02-07 18:19:43 +0000] [2121] [INFO] Booting worker with pid: 2121

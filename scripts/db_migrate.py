@@ -3,7 +3,14 @@ import os
 import psycopg2
 from dotenv import load_dotenv
 
-load_dotenv("backend/.env")
+# Load env robustly
+try:
+    load_dotenv("backend/.env")
+except:
+    pass
+load_dotenv(".env")
+load_dotenv("../backend/.env") # In case running from scripts dir
+
 
 # Construct DB URL
 # If DB_URL is not set, build it

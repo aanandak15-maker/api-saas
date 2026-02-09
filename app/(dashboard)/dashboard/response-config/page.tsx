@@ -3,12 +3,8 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { Check, Loader2 } from 'lucide-react'
-import { createClient } from '@supabase/supabase-js'
-
-const supabase = createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-)
+import { supabase } from '@/lib/supabase'
+import { api } from '@/lib/api-client'
 
 interface ConfigState {
     layer_scientific: boolean
@@ -21,6 +17,10 @@ interface ConfigState {
     layer_products_organic: boolean
     layer_products_chemical: boolean
     layer_products_biological: boolean
+    // Branding
+    layer_branding: boolean
+    branding_custom_text?: string
+    branding_primary_color?: string
 }
 
 const defaultConfig: ConfigState = {
@@ -34,6 +34,9 @@ const defaultConfig: ConfigState = {
     layer_products_organic: true,
     layer_products_chemical: false,
     layer_products_biological: false,
+    layer_branding: false,
+    branding_custom_text: '',
+    branding_primary_color: '#000000'
 }
 
 export default function ResponseConfigPage() {
@@ -56,31 +59,13 @@ export default function ResponseConfigPage() {
                 return
             }
 
-            // Get client's API key
-            const { data: client } = await supabase
-                .from('clients')
-                .select('api_key')
-                .eq('user_id', session.user.id)
-                .single()
+            // Fetch config using shared API client (handles auth & URL)
+            const data = await api.get('/config')
+            setConfig(data)
 
-            if (!client) {
-                setError('No client found')
-                setLoading(false)
-                return
-            }
-
-            // Fetch config from backend
-            const res = await fetch('http://localhost:8000/config', {
-                headers: { 'x-api-key': client.api_key },
-            })
-
-            if (res.ok) {
-                const data = await res.json()
-                setConfig(data)
-            }
         } catch (err: any) {
             console.error(err)
-            setError(err.message)
+            setError(err.message || 'Failed to load configuration')
         } finally {
             setLoading(false)
         }
@@ -92,35 +77,12 @@ export default function ResponseConfigPage() {
         setSaved(false)
 
         try {
-            const { data: { session } } = await supabase.auth.getSession()
-            if (!session) return
-
-            const { data: client } = await supabase
-                .from('clients')
-                .select('api_key')
-                .eq('user_id', session.user.id)
-                .single()
-
-            if (!client) return
-
-            const res = await fetch('http://localhost:8000/config', {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'x-api-key': client.api_key,
-                },
-                body: JSON.stringify(config),
-            })
-
-            if (res.ok) {
-                setSaved(true)
-                setTimeout(() => setSaved(false), 2000)
-            } else {
-                const err = await res.json()
-                setError(err.detail || 'Failed to save')
-            }
+            await api.put('/config', config)
+            setSaved(true)
+            setTimeout(() => setSaved(false), 2000)
         } catch (err: any) {
-            setError(err.message)
+            console.error(err)
+            setError(err.message || 'Failed to save configuration')
         } finally {
             setSaving(false)
         }
@@ -209,6 +171,59 @@ export default function ResponseConfigPage() {
                     <div className="space-y-3">
                         <Toggle label="Prevention & Safety" field="layer_prevention" />
                         <Toggle label="FAQ Section" field="layer_faq" />
+                    </div>
+                </section>
+
+                {/* Branding Layer */}
+                <section>
+                    <div className="flex items-center justify-between mb-4">
+                        <h2 className="text-sm font-bold uppercase text-gray-400 tracking-wider">
+                            Branding & Whitelabeling
+                        </h2>
+                        <span className="text-xs px-2 py-1 bg-blue-50 text-blue-600 rounded-md font-medium border border-blue-100">
+                            Enterprise
+                        </span>
+                    </div>
+
+                    <div className="space-y-4">
+                        <Toggle label="Enable Custom Branding" field="layer_branding" />
+
+                        {config.layer_branding && (
+                            <div className="ml-1 pl-4 border-l-2 border-gray-100 space-y-4 animate-in fade-in slide-in-from-top-2">
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                                        Custom Advisory Text
+                                    </label>
+                                    <input
+                                        type="text"
+                                        value={config.branding_custom_text || ''}
+                                        onChange={(e) => setConfig({ ...config, branding_custom_text: e.target.value })}
+                                        placeholder="e.g. Recommended by [Your Company] Experts"
+                                        className="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-black/5"
+                                    />
+                                </div>
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                                        Primary Brand Color (Hex)
+                                    </label>
+                                    <div className="flex gap-2">
+                                        <input
+                                            type="color"
+                                            value={config.branding_primary_color || '#000000'}
+                                            onChange={(e) => setConfig({ ...config, branding_primary_color: e.target.value })}
+                                            className="h-11 w-11 p-1 bg-white border border-gray-200 rounded-xl cursor-pointer"
+                                        />
+                                        <input
+                                            type="text"
+                                            value={config.branding_primary_color || ''}
+                                            onChange={(e) => setConfig({ ...config, branding_primary_color: e.target.value })}
+                                            placeholder="#000000"
+                                            className="flex-1 p-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-black/5 uppercase"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        )}
                     </div>
                 </section>
             </div>

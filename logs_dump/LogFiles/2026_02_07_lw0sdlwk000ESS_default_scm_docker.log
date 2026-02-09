@@ -1,0 +1,487 @@
+2026-02-07T15:52:21.8650524Z     __ __          __      __    _ __     
+2026-02-07T15:52:21.9065083Z    / //_/_  _ ____/ /_  __/ /   (_) /____ 
+2026-02-07T15:52:21.9065606Z   / ,< / / / / __  / / / / /   / / __/ _  
+2026-02-07T15:52:21.9065667Z  / /| / /_/ / /_/ / /_/ / /___/ / /_/  __/
+2026-02-07T15:52:21.9065746Z /_/ |_\__,_/\__,_/\__,_/_____/_/\__/\___/ 
+2026-02-07T15:52:21.9065776Z 
+2026-02-07T15:52:21.9065849Z                                           
+2026-02-07T15:52:21.9065882Z DEBUG CONSOLE | AZURE APP SERVICE ON LINUX
+2026-02-07T15:52:21.9065905Z 
+2026-02-07T15:52:21.9065938Z Documentation: http://aka.ms/webapp-linux
+2026-02-07T15:52:21.9065973Z Kudu Version : 20251023.4
+2026-02-07T15:52:21.9066013Z Commit       : a44ac6b61760b3c2e5996d5e6ddb2a908ab5733e
+2026-02-07T15:52:21.9066050Z Instance Name: lw0sdlwk000ESS
+2026-02-07T15:52:21.9066124Z Instance Id  : b6e96858c831a75779f5b74d69e241bee2844e8469956c803745fe996c660b31
+2026-02-07T15:52:21.9066148Z 
+2026-02-07T15:52:22.4580635Z chown: changing ownership of '/temp': Operation not permitted
+2026-02-07T15:52:22.5068465Z chmod: changing permissions of '/temp': Operation not permitted
+2026-02-07T15:52:27.0953786Z Restarting OpenBSD Secure Shell server: sshd.
+2026-02-07T15:52:27.2584875Z node not running, starting node /opt/webssh/index.js
+2026-02-07T15:52:38.8673809Z Sat Feb 7 15:52:38 UTC 2026 running .net core
+2026-02-07T15:52:40.4753312Z Startup : 03.52.40.435434
+2026-02-07T15:52:40.5448800Z Configure Services : 03.52.40.528078
+2026-02-07T15:52:41.3392578Z Configure : 03.52.41.338973
+2026-02-07T15:52:42.2501654Z Setting Up Routes : 03.52.42.249957
+2026-02-07T15:52:42.4128187Z Exiting Configure : 03.52.42.412668
+2026-02-07T15:52:42.7228920Z Hosting environment: Production
+2026-02-07T15:52:42.7244312Z Content root path: /opt/Kudu
+2026-02-07T15:52:42.7253143Z Now listening on: http://0.0.0.0:8181
+2026-02-07T15:52:42.7553533Z Application started. Press Ctrl+C to shut down.
+2026-02-07T15:52:48.5602332Z Deploy Async
+2026-02-07T15:52:54.1178358Z Operation performed by Microsoft Oryx, https://github.com/Microsoft/Oryx
+2026-02-07T15:52:54.1579192Z You can report issues at https://github.com/Microsoft/Oryx/issues
+2026-02-07T15:52:54.1887924Z 
+2026-02-07T15:52:54.2495895Z Oryx Version: 0.2.20251022.1+bef98bc7139feefaa74be16de9d835e2c85385d4, Commit: bef98bc7139feefaa74be16de9d835e2c85385d4, ReleaseTagName: 20251022.1
+2026-02-07T15:52:54.2799315Z 
+2026-02-07T15:52:54.3088335Z Build Operation ID: 2e8aedbe4666c6e3
+2026-02-07T15:52:54.3698933Z Repository Commit : 1e4f5f0f-ade8-404b-8f45-ee5338860ce3
+2026-02-07T15:52:54.4585366Z OS Type           : bullseye
+2026-02-07T15:52:54.6269936Z Image Type        : githubactions
+2026-02-07T15:52:54.6986010Z 
+2026-02-07T15:52:54.7371573Z Primary SDK Storage URL: https://oryx-cdn.microsoft.io
+2026-02-07T15:52:54.7979567Z Backup SDK Storage URL: 
+2026-02-07T15:52:54.8190257Z Detecting platforms...
+2026-02-07T15:52:54.8389429Z External SDK provider is enabled.
+2026-02-07T15:52:54.8655821Z Requesting metadata for platform python from external SDK provider
+2026-02-07T15:52:56.7442109Z Requesting metadata for platform python from external SDK provider
+2026-02-07T15:52:58.4432838Z Successfully requested blob for platform python, blobName defaultVersion.bullseye.txt, available at /var/OryxSdks/python/defaultVersion.bullseye.txt
+2026-02-07T15:52:58.8744834Z Detected following platforms:
+2026-02-07T15:52:59.0328188Z   python: 3.11.14
+2026-02-07T15:52:59.1636856Z Requesting metadata for platform python from external SDK provider
+2026-02-07T15:53:05.5341436Z ..
+2026-02-07T15:53:05.5341900Z Successfully requested blob for platform python, blobName python-bullseye-3.11.14.tar.gz, available at /var/OryxSdks/python/python-bullseye-3.11.14.tar.gz
+2026-02-07T15:53:06.8003564Z Version '3.11.14' of platform 'python' is not installed. Generating script to install it...
+2026-02-07T15:53:07.5130505Z 
+2026-02-07T15:53:07.8434537Z Using intermediate directory '/tmp/8de6660f23a96f2'.
+2026-02-07T15:53:07.8748444Z 
+2026-02-07T15:53:07.9104661Z Copying files to the intermediate directory...
+2026-02-07T15:53:08.5197032Z Done in 1 sec(s).
+2026-02-07T15:53:08.5197998Z 
+2026-02-07T15:53:08.5519360Z Source directory     : /tmp/8de6660f23a96f2
+2026-02-07T15:53:08.5729203Z Destination directory: /home/site/wwwroot
+2026-02-07T15:53:08.5904660Z 
+2026-02-07T15:53:08.6326476Z 
+2026-02-07T15:53:08.6730381Z Downloading and extracting 'python' version '3.11.14' to '/tmp/oryx/platforms/python/3.11.14'...
+2026-02-07T15:53:08.6996905Z Detected image debian flavor: bullseye.
+2026-02-07T15:53:08.7516236Z Skipping download of python version 3.11.14 as it is available in external sdk provider cache...
+2026-02-07T15:53:08.7807821Z Extracting contents...
+2026-02-07T15:53:31.3055975Z ..................
+2026-02-07T15:53:31.3056532Z Successfully extracted python version 3.11.14 from external sdk provider cache...
+2026-02-07T15:53:31.3663566Z Done in 23 sec(s).
+2026-02-07T15:53:31.4185277Z 
+2026-02-07T15:53:31.4880597Z image detector file exists, platform is python..
+2026-02-07T15:53:31.5488406Z OS detector file exists, OS is bullseye..
+2026-02-07T15:53:32.0201524Z Python Version: /tmp/oryx/platforms/python/3.11.14/bin/python3.11
+2026-02-07T15:53:32.0508033Z Creating directory for command manifest file if it does not exist
+2026-02-07T15:53:32.0896657Z Removing existing manifest file
+2026-02-07T15:53:32.1706444Z Python Virtual Environment: antenv
+2026-02-07T15:53:32.2220896Z Creating virtual environment...
+2026-02-07T15:53:32.2633069Z Executing: /tmp/oryx/platforms/python/3.11.14/bin/python3.11 -m venv antenv --copies --system-site-packages
+2026-02-07T15:53:48.1744914Z ...........
+2026-02-07T15:53:48.1752265Z Activating virtual environment...
+2026-02-07T15:53:48.2956667Z Running pip install...
+2026-02-07T15:55:12.2843042Z ...............................................................................
+2026-02-07T15:55:12.2850666Z [15:53:50+0000] Collecting fastapi (from -r requirements.txt (line 1))
+2026-02-07T15:55:12.3645337Z [15:53:50+0000]   Downloading fastapi-0.128.4-py3-none-any.whl.metadata (30 kB)
+2026-02-07T15:55:12.4049072Z [15:53:50+0000] Collecting uvicorn (from -r requirements.txt (line 2))
+2026-02-07T15:55:12.4440392Z [15:53:50+0000]   Downloading uvicorn-0.40.0-py3-none-any.whl.metadata (6.7 kB)
+2026-02-07T15:55:12.4828519Z [15:53:50+0000] Collecting supabase (from -r requirements.txt (line 3))
+2026-02-07T15:55:12.5024072Z [15:53:50+0000]   Downloading supabase-2.27.3-py3-none-any.whl.metadata (4.6 kB)
+2026-02-07T15:55:12.5236986Z [15:53:51+0000] Collecting pydantic (from -r requirements.txt (line 4))
+2026-02-07T15:55:12.5447285Z [15:53:51+0000]   Downloading pydantic-2.12.5-py3-none-any.whl.metadata (90 kB)
+2026-02-07T15:55:12.5855967Z [15:53:51+0000]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.6/90.6 kB 8.1 MB/s eta 0:00:00
+2026-02-07T15:55:12.6650388Z [15:53:51+0000] Collecting python-multipart (from -r requirements.txt (line 5))
+2026-02-07T15:55:12.7153421Z [15:53:51+0000]   Downloading python_multipart-0.0.22-py3-none-any.whl.metadata (1.8 kB)
+2026-02-07T15:55:12.7344279Z [15:53:51+0000] Collecting python-dotenv (from -r requirements.txt (line 6))
+2026-02-07T15:55:12.7735394Z [15:53:51+0000]   Downloading python_dotenv-1.2.1-py3-none-any.whl.metadata (25 kB)
+2026-02-07T15:55:12.7851172Z [15:53:51+0000] Collecting bcrypt (from -r requirements.txt (line 7))
+2026-02-07T15:55:12.8236544Z [15:53:51+0000]   Downloading bcrypt-5.0.0-cp39-abi3-manylinux_2_28_x86_64.whl.metadata (10 kB)
+2026-02-07T15:55:12.8440526Z [15:53:51+0000] Collecting requests (from -r requirements.txt (line 8))
+2026-02-07T15:55:12.8739972Z [15:53:51+0000]   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+2026-02-07T15:55:12.9463466Z [15:53:51+0000] Collecting google-generativeai (from -r requirements.txt (line 9))
+2026-02-07T15:55:13.0053793Z [15:53:51+0000]   Downloading google_generativeai-0.8.6-py3-none-any.whl.metadata (3.9 kB)
+2026-02-07T15:55:13.0754163Z [15:53:53+0000] Collecting cryptography (from -r requirements.txt (line 10))
+2026-02-07T15:55:13.1166504Z [15:53:53+0000]   Downloading cryptography-46.0.4-cp311-abi3-manylinux_2_28_x86_64.whl.metadata (5.7 kB)
+2026-02-07T15:55:13.1555501Z [15:53:54+0000] Collecting Pillow (from -r requirements.txt (line 11))
+2026-02-07T15:55:13.1673062Z [15:53:54+0000]   Downloading pillow-12.1.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+2026-02-07T15:55:13.1881285Z [15:53:54+0000] Collecting gunicorn (from -r requirements.txt (line 12))
+2026-02-07T15:55:13.2270208Z [15:53:54+0000]   Downloading gunicorn-25.0.2-py3-none-any.whl.metadata (5.2 kB)
+2026-02-07T15:55:13.2475306Z [15:53:54+0000] Collecting starlette<1.0.0,>=0.40.0 (from fastapi->-r requirements.txt (line 1))
+2026-02-07T15:55:13.2669441Z [15:53:54+0000]   Downloading starlette-0.52.1-py3-none-any.whl.metadata (6.3 kB)
+2026-02-07T15:55:13.3074528Z [15:53:54+0000] Collecting typing-extensions>=4.8.0 (from fastapi->-r requirements.txt (line 1))
+2026-02-07T15:55:13.3379566Z [15:53:54+0000]   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+2026-02-07T15:55:13.3670150Z [15:53:54+0000] Collecting typing-inspection>=0.4.2 (from fastapi->-r requirements.txt (line 1))
+2026-02-07T15:55:13.4170541Z [15:53:54+0000]   Downloading typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+2026-02-07T15:55:13.4288960Z [15:53:54+0000] Collecting annotated-doc>=0.0.2 (from fastapi->-r requirements.txt (line 1))
+2026-02-07T15:55:13.4485088Z [15:53:54+0000]   Downloading annotated_doc-0.0.4-py3-none-any.whl.metadata (6.6 kB)
+2026-02-07T15:55:13.4777340Z [15:53:54+0000] Collecting click>=7.0 (from uvicorn->-r requirements.txt (line 2))
+2026-02-07T15:55:13.4984487Z [15:53:54+0000]   Downloading click-8.3.1-py3-none-any.whl.metadata (2.6 kB)
+2026-02-07T15:55:13.5273320Z [15:53:54+0000] Collecting h11>=0.8 (from uvicorn->-r requirements.txt (line 2))
+2026-02-07T15:55:13.5479548Z [15:53:54+0000]   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+2026-02-07T15:55:13.5781460Z [15:53:55+0000] Collecting realtime==2.27.3 (from supabase->-r requirements.txt (line 3))
+2026-02-07T15:55:13.5985178Z [15:53:55+0000]   Downloading realtime-2.27.3-py3-none-any.whl.metadata (7.0 kB)
+2026-02-07T15:55:13.6203467Z [15:53:55+0000] Collecting supabase-functions==2.27.3 (from supabase->-r requirements.txt (line 3))
+2026-02-07T15:55:13.6494906Z [15:53:55+0000]   Downloading supabase_functions-2.27.3-py3-none-any.whl.metadata (2.4 kB)
+2026-02-07T15:55:13.6880622Z [15:53:55+0000] Collecting storage3==2.27.3 (from supabase->-r requirements.txt (line 3))
+2026-02-07T15:55:13.7087263Z [15:53:55+0000]   Downloading storage3-2.27.3-py3-none-any.whl.metadata (2.1 kB)
+2026-02-07T15:55:13.7396444Z [15:53:55+0000] Collecting supabase-auth==2.27.3 (from supabase->-r requirements.txt (line 3))
+2026-02-07T15:55:13.7609091Z [15:53:55+0000]   Downloading supabase_auth-2.27.3-py3-none-any.whl.metadata (6.4 kB)
+2026-02-07T15:55:13.7991463Z [15:53:55+0000] Collecting postgrest==2.27.3 (from supabase->-r requirements.txt (line 3))
+2026-02-07T15:55:13.8290646Z [15:53:55+0000]   Downloading postgrest-2.27.3-py3-none-any.whl.metadata (3.4 kB)
+2026-02-07T15:55:13.8504725Z [15:53:55+0000] Collecting httpx<0.29,>=0.26 (from supabase->-r requirements.txt (line 3))
+2026-02-07T15:55:13.8800456Z [15:53:55+0000]   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+2026-02-07T15:55:13.9001744Z [15:53:57+0000] Collecting yarl>=1.22.0 (from supabase->-r requirements.txt (line 3))
+2026-02-07T15:55:13.9498577Z [15:53:57+0000]   Downloading yarl-1.22.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (75 kB)
+2026-02-07T15:55:13.9714517Z [15:53:57+0000]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 75.1/75.1 kB 15.0 MB/s eta 0:00:00
+2026-02-07T15:55:14.0092605Z [15:53:57+0000] Collecting deprecation>=2.1.0 (from postgrest==2.27.3->supabase->-r requirements.txt (line 3))
+2026-02-07T15:55:14.0379432Z [15:53:57+0000]   Downloading deprecation-2.1.0-py2.py3-none-any.whl.metadata (4.6 kB)
+2026-02-07T15:55:14.0683666Z [15:53:58+0000] Collecting websockets<16,>=11 (from realtime==2.27.3->supabase->-r requirements.txt (line 3))
+2026-02-07T15:55:14.2270906Z [15:53:58+0000]   Downloading websockets-15.0.1-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+2026-02-07T15:55:14.3036545Z [15:53:58+0000] Collecting pyiceberg>=0.10.0 (from storage3==2.27.3->supabase->-r requirements.txt (line 3))
+2026-02-07T15:55:14.3334935Z [15:53:58+0000]   Downloading pyiceberg-0.10.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (4.9 kB)
+2026-02-07T15:55:14.3636387Z [15:53:59+0000] Collecting pyjwt>=2.10.1 (from pyjwt[crypto]>=2.10.1->supabase-auth==2.27.3->supabase->-r requirements.txt (line 3))
+2026-02-07T15:55:14.4834069Z [15:53:59+0000]   Downloading pyjwt-2.11.0-py3-none-any.whl.metadata (4.0 kB)
+2026-02-07T15:55:14.5643498Z [15:53:59+0000] Collecting strenum>=0.4.15 (from supabase-functions==2.27.3->supabase->-r requirements.txt (line 3))
+2026-02-07T15:55:14.6239409Z [15:53:59+0000]   Downloading StrEnum-0.4.15-py3-none-any.whl.metadata (5.3 kB)
+2026-02-07T15:55:14.6442561Z [15:53:59+0000] Collecting annotated-types>=0.6.0 (from pydantic->-r requirements.txt (line 4))
+2026-02-07T15:55:14.6654807Z [15:53:59+0000]   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+2026-02-07T15:55:14.7046179Z [15:54:05+0000] Collecting pydantic-core==2.41.5 (from pydantic->-r requirements.txt (line 4))
+2026-02-07T15:55:14.7473570Z [15:54:05+0000]   Downloading pydantic_core-2.41.5-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.3 kB)
+2026-02-07T15:55:14.7679511Z [15:54:06+0000] Collecting charset_normalizer<4,>=2 (from requests->-r requirements.txt (line 8))
+2026-02-07T15:55:14.8080109Z [15:54:06+0000]   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+2026-02-07T15:55:14.9666073Z [15:54:06+0000] Collecting idna<4,>=2.5 (from requests->-r requirements.txt (line 8))
+2026-02-07T15:55:15.0069849Z [15:54:06+0000]   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+2026-02-07T15:55:15.0871732Z [15:54:06+0000] Collecting urllib3<3,>=1.21.1 (from requests->-r requirements.txt (line 8))
+2026-02-07T15:55:15.1296272Z [15:54:06+0000]   Downloading urllib3-2.6.3-py3-none-any.whl.metadata (6.9 kB)
+2026-02-07T15:55:15.1861737Z [15:54:06+0000] Collecting certifi>=2017.4.17 (from requests->-r requirements.txt (line 8))
+2026-02-07T15:55:15.2080990Z [15:54:06+0000]   Downloading certifi-2026.1.4-py3-none-any.whl.metadata (2.5 kB)
+2026-02-07T15:55:15.2563400Z [15:54:06+0000] Collecting google-ai-generativelanguage==0.6.15 (from google-generativeai->-r requirements.txt (line 9))
+2026-02-07T15:55:15.2971296Z [15:54:06+0000]   Downloading google_ai_generativelanguage-0.6.15-py3-none-any.whl.metadata (5.7 kB)
+2026-02-07T15:55:15.3377540Z [15:54:06+0000] Collecting google-api-core (from google-generativeai->-r requirements.txt (line 9))
+2026-02-07T15:55:15.4183014Z [15:54:06+0000]   Downloading google_api_core-2.29.0-py3-none-any.whl.metadata (3.3 kB)
+2026-02-07T15:55:15.4593260Z [15:54:07+0000] Collecting google-api-python-client (from google-generativeai->-r requirements.txt (line 9))
+2026-02-07T15:55:15.5595998Z [15:54:07+0000]   Downloading google_api_python_client-2.189.0-py3-none-any.whl.metadata (7.0 kB)
+2026-02-07T15:55:15.6088719Z [15:54:07+0000] Collecting google-auth>=2.15.0 (from google-generativeai->-r requirements.txt (line 9))
+2026-02-07T15:55:15.6698722Z [15:54:07+0000]   Downloading google_auth-2.48.0-py3-none-any.whl.metadata (6.2 kB)
+2026-02-07T15:55:15.6915917Z [15:54:08+0000] Collecting protobuf (from google-generativeai->-r requirements.txt (line 9))
+2026-02-07T15:55:15.7497697Z [15:54:08+0000]   Downloading protobuf-6.33.5-cp39-abi3-manylinux2014_x86_64.whl.metadata (593 bytes)
+2026-02-07T15:55:15.8113963Z [15:54:08+0000] Collecting tqdm (from google-generativeai->-r requirements.txt (line 9))
+2026-02-07T15:55:15.8689046Z [15:54:08+0000]   Downloading tqdm-4.67.3-py3-none-any.whl.metadata (57 kB)
+2026-02-07T15:55:15.9089496Z [15:54:09+0000]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.7/57.7 kB 16.9 MB/s eta 0:00:00
+2026-02-07T15:55:15.9913631Z [15:54:09+0000] Collecting proto-plus<2.0.0dev,>=1.22.3 (from google-ai-generativelanguage==0.6.15->google-generativeai->-r requirements.txt (line 9))
+2026-02-07T15:55:16.0720129Z [15:54:09+0000]   Downloading proto_plus-1.27.1-py3-none-any.whl.metadata (2.2 kB)
+2026-02-07T15:55:16.1512972Z [15:54:09+0000] Collecting protobuf (from google-generativeai->-r requirements.txt (line 9))
+2026-02-07T15:55:16.2218216Z [15:54:09+0000]   Downloading protobuf-5.29.6-cp38-abi3-manylinux2014_x86_64.whl.metadata (592 bytes)
+2026-02-07T15:55:16.2610481Z [15:54:10+0000] Collecting cffi>=2.0.0 (from cryptography->-r requirements.txt (line 10))
+2026-02-07T15:55:16.3628202Z [15:54:10+0000]   Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+2026-02-07T15:55:16.4233412Z [15:54:10+0000] Collecting packaging (from gunicorn->-r requirements.txt (line 12))
+2026-02-07T15:55:16.4626810Z [15:54:10+0000]   Downloading packaging-26.0-py3-none-any.whl.metadata (3.3 kB)
+2026-02-07T15:55:16.4842674Z [15:54:10+0000] Collecting pycparser (from cffi>=2.0.0->cryptography->-r requirements.txt (line 10))
+2026-02-07T15:55:16.5239422Z [15:54:10+0000]   Downloading pycparser-3.0-py3-none-any.whl.metadata (8.2 kB)
+2026-02-07T15:55:16.6033053Z [15:54:10+0000] Collecting googleapis-common-protos<2.0.0,>=1.56.2 (from google-api-core->google-generativeai->-r requirements.txt (line 9))
+2026-02-07T15:55:16.6452167Z [15:54:10+0000]   Downloading googleapis_common_protos-1.72.0-py3-none-any.whl.metadata (9.4 kB)
+2026-02-07T15:55:16.6848630Z [15:54:11+0000] Collecting pyasn1-modules>=0.2.1 (from google-auth>=2.15.0->google-generativeai->-r requirements.txt (line 9))
+2026-02-07T15:55:16.7243372Z [15:54:11+0000]   Downloading pyasn1_modules-0.4.2-py3-none-any.whl.metadata (3.5 kB)
+2026-02-07T15:55:16.7452265Z [15:54:11+0000] Collecting rsa<5,>=3.1.4 (from google-auth>=2.15.0->google-generativeai->-r requirements.txt (line 9))
+2026-02-07T15:55:16.8033466Z [15:54:11+0000]   Downloading rsa-4.9.1-py3-none-any.whl.metadata (5.6 kB)
+2026-02-07T15:55:16.9155760Z [15:54:11+0000] Collecting anyio (from httpx<0.29,>=0.26->supabase->-r requirements.txt (line 3))
+2026-02-07T15:55:17.0145421Z [15:54:11+0000]   Downloading anyio-4.12.1-py3-none-any.whl.metadata (4.3 kB)
+2026-02-07T15:55:17.0447040Z [15:54:11+0000] Collecting httpcore==1.* (from httpx<0.29,>=0.26->supabase->-r requirements.txt (line 3))
+2026-02-07T15:55:17.1280236Z [15:54:11+0000]   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+2026-02-07T15:55:17.2263961Z [15:54:14+0000] Collecting multidict>=4.0 (from yarl>=1.22.0->supabase->-r requirements.txt (line 3))
+2026-02-07T15:55:17.2879162Z [15:54:14+0000]   Downloading multidict-6.7.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+2026-02-07T15:55:17.3481374Z [15:54:14+0000] Collecting propcache>=0.2.1 (from yarl>=1.22.0->supabase->-r requirements.txt (line 3))
+2026-02-07T15:55:17.3691320Z [15:54:14+0000]   Downloading propcache-0.4.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (13 kB)
+2026-02-07T15:55:17.3888584Z [15:54:14+0000] Collecting httplib2<1.0.0,>=0.19.0 (from google-api-python-client->google-generativeai->-r requirements.txt (line 9))
+2026-02-07T15:55:17.4293624Z [15:54:14+0000]   Downloading httplib2-0.31.2-py3-none-any.whl.metadata (2.2 kB)
+2026-02-07T15:55:17.4780637Z [15:54:14+0000] Collecting google-auth-httplib2<1.0.0,>=0.2.0 (from google-api-python-client->google-generativeai->-r requirements.txt (line 9))
+2026-02-07T15:55:17.5593768Z [15:54:14+0000]   Downloading google_auth_httplib2-0.3.0-py3-none-any.whl.metadata (3.1 kB)
+2026-02-07T15:55:17.5975015Z [15:54:14+0000] Collecting uritemplate<5,>=3.0.1 (from google-api-python-client->google-generativeai->-r requirements.txt (line 9))
+2026-02-07T15:55:17.6095558Z [15:54:14+0000]   Downloading uritemplate-4.2.0-py3-none-any.whl.metadata (2.6 kB)
+2026-02-07T15:55:17.6679407Z [15:54:18+0000] Collecting grpcio<2.0.0,>=1.33.2 (from google-api-core[grpc]!=2.0.*,!=2.1.*,!=2.10.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,!=2.8.*,!=2.9.*,<3.0.0dev,>=1.34.1->google-ai-generativelanguage==0.6.15->google-generativeai->-r requirements.txt (line 9))
+2026-02-07T15:55:17.7088268Z [15:54:18+0000]   Downloading grpcio-1.78.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.8 kB)
+2026-02-07T15:55:17.7486002Z [15:54:18+0000] Collecting grpcio-status<2.0.0,>=1.33.2 (from google-api-core[grpc]!=2.0.*,!=2.1.*,!=2.10.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,!=2.8.*,!=2.9.*,<3.0.0dev,>=1.34.1->google-ai-generativelanguage==0.6.15->google-generativeai->-r requirements.txt (line 9))
+2026-02-07T15:55:17.7603497Z [15:54:18+0000]   Downloading grpcio_status-1.78.0-py3-none-any.whl.metadata (1.3 kB)
+2026-02-07T15:55:17.8089457Z [15:54:19+0000] Collecting pyparsing<4,>=3.1 (from httplib2<1.0.0,>=0.19.0->google-api-python-client->google-generativeai->-r requirements.txt (line 9))
+2026-02-07T15:55:17.8607102Z [15:54:19+0000]   Downloading pyparsing-3.3.2-py3-none-any.whl.metadata (5.8 kB)
+2026-02-07T15:55:17.9500638Z [15:54:19+0000] Collecting h2<5,>=3 (from httpx[http2]<0.29,>=0.26->postgrest==2.27.3->supabase->-r requirements.txt (line 3))
+2026-02-07T15:55:17.9711859Z [15:54:19+0000]   Downloading h2-4.3.0-py3-none-any.whl.metadata (5.1 kB)
+2026-02-07T15:55:18.0193371Z [15:54:19+0000] Collecting pyasn1<0.7.0,>=0.6.1 (from pyasn1-modules>=0.2.1->google-auth>=2.15.0->google-generativeai->-r requirements.txt (line 9))
+2026-02-07T15:55:18.0320095Z [15:54:19+0000]   Downloading pyasn1-0.6.2-py3-none-any.whl.metadata (8.4 kB)
+2026-02-07T15:55:18.0701874Z [15:54:20+0000] Collecting cachetools<7.0,>=5.5 (from pyiceberg>=0.10.0->storage3==2.27.3->supabase->-r requirements.txt (line 3))
+2026-02-07T15:55:18.0902424Z [15:54:20+0000]   Downloading cachetools-6.2.6-py3-none-any.whl.metadata (5.6 kB)
+2026-02-07T15:55:18.1602291Z [15:54:20+0000] Collecting fsspec>=2023.1.0 (from pyiceberg>=0.10.0->storage3==2.27.3->supabase->-r requirements.txt (line 3))
+2026-02-07T15:55:18.5118869Z [15:54:20+0000]   Downloading fsspec-2026.2.0-py3-none-any.whl.metadata (10 kB)
+2026-02-07T15:55:18.5119737Z [15:54:20+0000] Collecting mmh3<6.0.0,>=4.0.0 (from pyiceberg>=0.10.0->storage3==2.27.3->supabase->-r requirements.txt (line 3))
+2026-02-07T15:55:18.5119763Z [15:54:20+0000]   Downloading mmh3-5.2.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (14 kB)
+2026-02-07T15:55:18.5119780Z [15:54:20+0000] Collecting pyroaring<2.0.0,>=1.0.0 (from pyiceberg>=0.10.0->storage3==2.27.3->supabase->-r requirements.txt (line 3))
+2026-02-07T15:55:18.5335855Z [15:54:20+0000]   Downloading pyroaring-1.0.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (10 kB)
+2026-02-07T15:55:18.5821545Z [15:54:21+0000] Collecting rich<15.0.0,>=10.11.0 (from pyiceberg>=0.10.0->storage3==2.27.3->supabase->-r requirements.txt (line 3))
+2026-02-07T15:55:18.6445843Z [15:54:21+0000]   Downloading rich-14.3.2-py3-none-any.whl.metadata (18 kB)
+2026-02-07T15:55:18.7026924Z [15:54:21+0000] Collecting sortedcontainers==2.4.0 (from pyiceberg>=0.10.0->storage3==2.27.3->supabase->-r requirements.txt (line 3))
+2026-02-07T15:55:18.7260900Z [15:54:21+0000]   Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl.metadata (10 kB)
+2026-02-07T15:55:18.8562915Z [15:54:21+0000] Collecting strictyaml<2.0.0,>=1.7.0 (from pyiceberg>=0.10.0->storage3==2.27.3->supabase->-r requirements.txt (line 3))
+2026-02-07T15:55:18.8963826Z [15:54:21+0000]   Downloading strictyaml-1.7.3-py3-none-any.whl.metadata (11 kB)
+2026-02-07T15:55:18.9658485Z [15:54:21+0000] Collecting tenacity<10.0.0,>=8.2.3 (from pyiceberg>=0.10.0->storage3==2.27.3->supabase->-r requirements.txt (line 3))
+2026-02-07T15:55:19.0663221Z [15:54:21+0000]   Downloading tenacity-9.1.4-py3-none-any.whl.metadata (1.2 kB)
+2026-02-07T15:55:19.1252416Z [15:54:22+0000] INFO: pip is looking at multiple versions of grpcio-status to determine which version is compatible with other requirements. This could take a while.
+2026-02-07T15:55:19.1472731Z [15:54:22+0000] Collecting grpcio-status<2.0.0,>=1.33.2 (from google-api-core[grpc]!=2.0.*,!=2.1.*,!=2.10.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,!=2.8.*,!=2.9.*,<3.0.0dev,>=1.34.1->google-ai-generativelanguage==0.6.15->google-generativeai->-r requirements.txt (line 9))
+2026-02-07T15:55:19.2249390Z [15:54:22+0000]   Downloading grpcio_status-1.76.0-py3-none-any.whl.metadata (1.1 kB)
+2026-02-07T15:55:19.2641533Z [15:54:22+0000]   Downloading grpcio_status-1.75.1-py3-none-any.whl.metadata (1.1 kB)
+2026-02-07T15:55:19.2937206Z [15:54:22+0000]   Downloading grpcio_status-1.75.0-py3-none-any.whl.metadata (1.1 kB)
+2026-02-07T15:55:19.3512579Z [15:54:22+0000]   Downloading grpcio_status-1.74.0-py3-none-any.whl.metadata (1.1 kB)
+2026-02-07T15:55:19.4347241Z [15:54:22+0000]   Downloading grpcio_status-1.73.1-py3-none-any.whl.metadata (1.1 kB)
+2026-02-07T15:55:19.5223940Z [15:54:23+0000]   Downloading grpcio_status-1.73.0-py3-none-any.whl.metadata (1.1 kB)
+2026-02-07T15:55:19.5853670Z [15:54:23+0000]   Downloading grpcio_status-1.72.2-py3-none-any.whl.metadata (1.1 kB)
+2026-02-07T15:55:19.6145717Z [15:54:23+0000] INFO: pip is still looking at multiple versions of grpcio-status to determine which version is compatible with other requirements. This could take a while.
+2026-02-07T15:55:19.6630228Z [15:54:23+0000]   Downloading grpcio_status-1.72.1-py3-none-any.whl.metadata (1.1 kB)
+2026-02-07T15:55:19.7442857Z [15:54:23+0000]   Downloading grpcio_status-1.71.2-py3-none-any.whl.metadata (1.1 kB)
+2026-02-07T15:55:19.7860289Z [15:54:23+0000] Collecting hyperframe<7,>=6.1 (from h2<5,>=3->httpx[http2]<0.29,>=0.26->postgrest==2.27.3->supabase->-r requirements.txt (line 3))
+2026-02-07T15:55:19.8663709Z [15:54:23+0000]   Downloading hyperframe-6.1.0-py3-none-any.whl.metadata (4.3 kB)
+2026-02-07T15:55:19.9255156Z [15:54:23+0000] Collecting hpack<5,>=4.1 (from h2<5,>=3->httpx[http2]<0.29,>=0.26->postgrest==2.27.3->supabase->-r requirements.txt (line 3))
+2026-02-07T15:55:19.9664597Z [15:54:23+0000]   Downloading hpack-4.1.0-py3-none-any.whl.metadata (4.6 kB)
+2026-02-07T15:55:20.0148887Z [15:54:24+0000] Collecting markdown-it-py>=2.2.0 (from rich<15.0.0,>=10.11.0->pyiceberg>=0.10.0->storage3==2.27.3->supabase->-r requirements.txt (line 3))
+2026-02-07T15:55:20.0452524Z [15:54:24+0000]   Downloading markdown_it_py-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+2026-02-07T15:55:20.0850284Z [15:54:24+0000] Collecting pygments<3.0.0,>=2.13.0 (from rich<15.0.0,>=10.11.0->pyiceberg>=0.10.0->storage3==2.27.3->supabase->-r requirements.txt (line 3))
+2026-02-07T15:55:20.1258817Z [15:54:24+0000]   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+2026-02-07T15:55:20.1554707Z [15:54:24+0000] Collecting python-dateutil>=2.6.0 (from strictyaml<2.0.0,>=1.7.0->pyiceberg>=0.10.0->storage3==2.27.3->supabase->-r requirements.txt (line 3))
+2026-02-07T15:55:20.1859933Z [15:54:24+0000]   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+2026-02-07T15:55:20.2080340Z [15:54:24+0000] Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich<15.0.0,>=10.11.0->pyiceberg>=0.10.0->storage3==2.27.3->supabase->-r requirements.txt (line 3))
+2026-02-07T15:55:20.2460678Z [15:54:24+0000]   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+2026-02-07T15:55:20.2575708Z [15:54:24+0000] Collecting six>=1.5 (from python-dateutil>=2.6.0->strictyaml<2.0.0,>=1.7.0->pyiceberg>=0.10.0->storage3==2.27.3->supabase->-r requirements.txt (line 3))
+2026-02-07T15:55:20.3065781Z [15:54:25+0000]   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+2026-02-07T15:55:20.3486852Z [15:54:25+0000] Downloading fastapi-0.128.4-py3-none-any.whl (103 kB)
+2026-02-07T15:55:20.3870946Z [15:54:25+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.7/103.7 kB 5.6 MB/s eta 0:00:00
+2026-02-07T15:55:20.3994956Z [15:54:25+0000] Downloading uvicorn-0.40.0-py3-none-any.whl (68 kB)
+2026-02-07T15:55:20.4473463Z [15:54:25+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 68.5/68.5 kB 22.9 MB/s eta 0:00:00
+2026-02-07T15:55:20.4597219Z [15:54:25+0000] Downloading supabase-2.27.3-py3-none-any.whl (16 kB)
+2026-02-07T15:55:20.4893405Z [15:54:25+0000] Downloading postgrest-2.27.3-py3-none-any.whl (22 kB)
+2026-02-07T15:55:20.5468970Z [15:54:25+0000] Downloading realtime-2.27.3-py3-none-any.whl (22 kB)
+2026-02-07T15:55:20.6486085Z [15:54:25+0000] Downloading storage3-2.27.3-py3-none-any.whl (27 kB)
+2026-02-07T15:55:20.7385842Z [15:54:25+0000] Downloading supabase_auth-2.27.3-py3-none-any.whl (48 kB)
+2026-02-07T15:55:20.7807565Z [15:54:25+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.5/48.5 kB 4.7 MB/s eta 0:00:00
+2026-02-07T15:55:20.8599931Z [15:54:25+0000] Downloading supabase_functions-2.27.3-py3-none-any.whl (8.8 kB)
+2026-02-07T15:55:20.9517108Z [15:54:25+0000] Downloading pydantic-2.12.5-py3-none-any.whl (463 kB)
+2026-02-07T15:55:21.1450458Z [15:54:25+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 463.6/463.6 kB 47.8 MB/s eta 0:00:00
+2026-02-07T15:55:21.2496897Z [15:54:25+0000] Downloading pydantic_core-2.41.5-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+2026-02-07T15:55:21.3232270Z [15:54:25+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 46.2 MB/s eta 0:00:00
+2026-02-07T15:55:21.3600625Z [15:54:25+0000] Downloading python_multipart-0.0.22-py3-none-any.whl (24 kB)
+2026-02-07T15:55:21.4303100Z [15:54:25+0000] Downloading python_dotenv-1.2.1-py3-none-any.whl (21 kB)
+2026-02-07T15:55:21.4896947Z [15:54:25+0000] Downloading bcrypt-5.0.0-cp39-abi3-manylinux_2_28_x86_64.whl (278 kB)
+2026-02-07T15:55:21.5301995Z [15:54:25+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 278.7/278.7 kB 25.9 MB/s eta 0:00:00
+2026-02-07T15:55:21.5903805Z [15:54:25+0000] Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+2026-02-07T15:55:21.6524404Z [15:54:25+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 9.6 MB/s eta 0:00:00
+2026-02-07T15:55:21.7520751Z [15:54:25+0000] Downloading google_generativeai-0.8.6-py3-none-any.whl (155 kB)
+2026-02-07T15:55:21.8003815Z [15:54:25+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 155.1/155.1 kB 23.1 MB/s eta 0:00:00
+2026-02-07T15:55:21.8411243Z [15:54:25+0000] Downloading google_ai_generativelanguage-0.6.15-py3-none-any.whl (1.3 MB)
+2026-02-07T15:55:21.8715641Z [15:54:25+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 47.1 MB/s eta 0:00:00
+2026-02-07T15:55:21.9209108Z [15:54:25+0000] Downloading cryptography-46.0.4-cp311-abi3-manylinux_2_28_x86_64.whl (4.5 MB)
+2026-02-07T15:55:21.9615283Z [15:54:25+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 13.0 MB/s eta 0:00:00
+2026-02-07T15:55:22.0022708Z [15:54:25+0000] Downloading pillow-12.1.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+2026-02-07T15:55:22.0329861Z [15:54:26+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 30.6 MB/s eta 0:00:00
+2026-02-07T15:55:22.0629654Z [15:54:26+0000] Downloading gunicorn-25.0.2-py3-none-any.whl (171 kB)
+2026-02-07T15:55:22.1435501Z [15:54:26+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 171.7/171.7 kB 17.0 MB/s eta 0:00:00
+2026-02-07T15:55:22.1850416Z [15:54:26+0000] Downloading annotated_doc-0.0.4-py3-none-any.whl (5.3 kB)
+2026-02-07T15:55:22.2241047Z [15:54:26+0000] Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+2026-02-07T15:55:22.2628986Z [15:54:26+0000] Downloading certifi-2026.1.4-py3-none-any.whl (152 kB)
+2026-02-07T15:55:22.3039604Z [15:54:26+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 152.9/152.9 kB 16.2 MB/s eta 0:00:00
+2026-02-07T15:55:22.3833240Z [15:54:26+0000] Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (215 kB)
+2026-02-07T15:55:22.4745973Z [15:54:26+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 215.6/215.6 kB 9.5 MB/s eta 0:00:00
+2026-02-07T15:55:22.5562813Z [15:54:26+0000] Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+2026-02-07T15:55:22.5856306Z [15:54:26+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 19.3 MB/s eta 0:00:00
+2026-02-07T15:55:22.6145706Z [15:54:26+0000] Downloading click-8.3.1-py3-none-any.whl (108 kB)
+2026-02-07T15:55:22.6675990Z [15:54:26+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 108.3/108.3 kB 34.2 MB/s eta 0:00:00
+2026-02-07T15:55:22.7453317Z [15:54:26+0000] Downloading google_api_core-2.29.0-py3-none-any.whl (173 kB)
+2026-02-07T15:55:22.7671839Z [15:54:26+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 173.9/173.9 kB 46.8 MB/s eta 0:00:00
+2026-02-07T15:55:22.8081491Z [15:54:26+0000] Downloading google_auth-2.48.0-py3-none-any.whl (236 kB)
+2026-02-07T15:55:22.8362176Z [15:54:26+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 236.5/236.5 kB 22.9 MB/s eta 0:00:00
+2026-02-07T15:55:22.8685468Z [15:54:26+0000] Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+2026-02-07T15:55:22.9175490Z [15:54:26+0000] Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+2026-02-07T15:55:22.9386164Z [15:54:26+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.5/73.5 kB 7.3 MB/s eta 0:00:00
+2026-02-07T15:55:22.9962419Z [15:54:26+0000] Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+2026-02-07T15:55:23.0087388Z [15:54:26+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.8/78.8 kB 8.2 MB/s eta 0:00:00
+2026-02-07T15:55:23.0381048Z [15:54:26+0000] Downloading idna-3.11-py3-none-any.whl (71 kB)
+2026-02-07T15:55:23.0565599Z [15:54:26+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 24.8 MB/s eta 0:00:00
+2026-02-07T15:55:23.0675469Z [15:54:26+0000] Downloading protobuf-5.29.6-cp38-abi3-manylinux2014_x86_64.whl (320 kB)
+2026-02-07T15:55:23.0789525Z [15:54:26+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 320.5/320.5 kB 28.7 MB/s eta 0:00:00
+2026-02-07T15:55:23.0896414Z [15:54:26+0000] Downloading starlette-0.52.1-py3-none-any.whl (74 kB)
+2026-02-07T15:55:23.0998509Z [15:54:26+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 74.3/74.3 kB 26.2 MB/s eta 0:00:00
+2026-02-07T15:55:23.1093420Z [15:54:26+0000] Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+2026-02-07T15:55:23.1308703Z [15:54:26+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 5.2 MB/s eta 0:00:00
+2026-02-07T15:55:23.1477482Z [15:54:26+0000] Downloading typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+2026-02-07T15:55:23.1518353Z [15:54:26+0000] Downloading urllib3-2.6.3-py3-none-any.whl (131 kB)
+2026-02-07T15:55:23.1615377Z [15:54:26+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 131.6/131.6 kB 19.3 MB/s eta 0:00:00
+2026-02-07T15:55:23.1875990Z [15:54:26+0000] Downloading yarl-1.22.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (365 kB)
+2026-02-07T15:55:23.2184125Z [15:54:26+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 365.8/365.8 kB 7.2 MB/s eta 0:00:00
+2026-02-07T15:55:23.2489470Z [15:54:26+0000] Downloading google_api_python_client-2.189.0-py3-none-any.whl (14.5 MB)
+2026-02-07T15:55:23.2782366Z [15:54:27+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.5/14.5 MB 34.0 MB/s eta 0:00:00
+2026-02-07T15:55:23.2994790Z [15:54:27+0000] Downloading packaging-26.0-py3-none-any.whl (74 kB)
+2026-02-07T15:55:23.3488330Z [15:54:27+0000]    ━━━━━━━━━━━━━━━━━━━━━━━���━━━━━━━━━━━━━━━━ 74.4/74.4 kB 3.4 MB/s eta 0:00:00
+2026-02-07T15:55:23.3687269Z [15:54:27+0000] Downloading tqdm-4.67.3-py3-none-any.whl (78 kB)
+2026-02-07T15:55:23.3803177Z [15:54:27+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.4/78.4 kB 2.4 MB/s eta 0:00:00
+2026-02-07T15:55:23.4000138Z [15:54:27+0000] Downloading anyio-4.12.1-py3-none-any.whl (113 kB)
+2026-02-07T15:55:23.4199327Z [15:54:27+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.6/113.6 kB 37.1 MB/s eta 0:00:00
+2026-02-07T15:55:23.4304555Z [15:54:27+0000] Downloading deprecation-2.1.0-py2.py3-none-any.whl (11 kB)
+2026-02-07T15:55:23.4589287Z [15:54:27+0000] Downloading google_auth_httplib2-0.3.0-py3-none-any.whl (9.5 kB)
+2026-02-07T15:55:23.4791214Z [15:54:27+0000] Downloading googleapis_common_protos-1.72.0-py3-none-any.whl (297 kB)
+2026-02-07T15:55:23.5091954Z [15:54:27+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 297.5/297.5 kB 26.7 MB/s eta 0:00:00
+2026-02-07T15:55:23.5294097Z [15:54:27+0000] Downloading httplib2-0.31.2-py3-none-any.whl (91 kB)
+2026-02-07T15:55:23.5504267Z [15:54:27+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.1/91.1 kB 30.4 MB/s eta 0:00:00
+2026-02-07T15:55:23.5715665Z [15:54:27+0000] Downloading multidict-6.7.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (246 kB)
+2026-02-07T15:55:23.5996833Z [15:54:27+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 246.3/246.3 kB 68.3 MB/s eta 0:00:00
+2026-02-07T15:55:23.6125517Z [15:54:27+0000] Downloading propcache-0.4.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (210 kB)
+2026-02-07T15:55:23.6513430Z [15:54:27+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 210.0/210.0 kB 18.0 MB/s eta 0:00:00
+2026-02-07T15:55:23.6810100Z [15:54:27+0000] Downloading proto_plus-1.27.1-py3-none-any.whl (50 kB)
+2026-02-07T15:55:23.7101382Z [15:54:27+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.5/50.5 kB 16.3 MB/s eta 0:00:00
+2026-02-07T15:55:23.7485180Z [15:54:27+0000] Downloading pyasn1_modules-0.4.2-py3-none-any.whl (181 kB)
+2026-02-07T15:55:23.8455835Z [15:54:27+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 181.3/181.3 kB 54.9 MB/s eta 0:00:00
+2026-02-07T15:55:23.8671139Z [15:54:27+0000] Downloading pyiceberg-0.10.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.1 MB)
+2026-02-07T15:55:23.9067276Z [15:54:27+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 47.2 MB/s eta 0:00:00
+2026-02-07T15:55:23.9476957Z [15:54:27+0000] Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+2026-02-07T15:55:24.0057565Z [15:54:27+0000] Downloading pyjwt-2.11.0-py3-none-any.whl (28 kB)
+2026-02-07T15:55:24.1072683Z [15:54:27+0000] Downloading rsa-4.9.1-py3-none-any.whl (34 kB)
+2026-02-07T15:55:24.1993302Z [15:54:27+0000] Downloading StrEnum-0.4.15-py3-none-any.whl (8.9 kB)
+2026-02-07T15:55:24.2584460Z [15:54:27+0000] Downloading uritemplate-4.2.0-py3-none-any.whl (11 kB)
+2026-02-07T15:55:24.3000361Z [15:54:27+0000] Downloading websockets-15.0.1-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (182 kB)
+2026-02-07T15:55:24.3974524Z [15:54:27+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 182.3/182.3 kB 11.3 MB/s eta 0:00:00
+2026-02-07T15:55:24.6209339Z [15:54:27+0000] Downloading pycparser-3.0-py3-none-any.whl (48 kB)
+2026-02-07T15:55:24.7800308Z [15:54:27+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.2/48.2 kB 15.1 MB/s eta 0:00:00
+2026-02-07T15:55:24.9206008Z [15:54:27+0000] Downloading cachetools-6.2.6-py3-none-any.whl (11 kB)
+2026-02-07T15:55:25.0020498Z [15:54:27+0000] Downloading fsspec-2026.2.0-py3-none-any.whl (202 kB)
+2026-02-07T15:55:25.0825138Z [15:54:27+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 202.5/202.5 kB 4.8 MB/s eta 0:00:00
+2026-02-07T15:55:25.1119482Z [15:54:27+0000] Downloading grpcio-1.78.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (6.7 MB)
+2026-02-07T15:55:25.2228703Z [15:54:27+0000]    ━━━━━━━━━━━━━━━━━━━━━━━��━━━━━━━━━━━━━━━━ 6.7/6.7 MB 37.3 MB/s eta 0:00:00
+2026-02-07T15:55:25.3035900Z [15:54:27+0000] Downloading grpcio_status-1.71.2-py3-none-any.whl (14 kB)
+2026-02-07T15:55:25.4627582Z [15:54:27+0000] Downloading h2-4.3.0-py3-none-any.whl (61 kB)
+2026-02-07T15:55:25.5440585Z [15:54:27+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.8/61.8 kB 21.6 MB/s eta 0:00:00
+2026-02-07T15:55:25.6234264Z [15:54:27+0000] Downloading mmh3-5.2.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (103 kB)
+2026-02-07T15:55:25.6564044Z [15:54:27+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.1/103.1 kB 35.6 MB/s eta 0:00:00
+2026-02-07T15:55:25.7243522Z [15:54:27+0000] Downloading pyasn1-0.6.2-py3-none-any.whl (83 kB)
+2026-02-07T15:55:25.7638105Z [15:54:27+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 83.4/83.4 kB 30.7 MB/s eta 0:00:00
+2026-02-07T15:55:25.8045043Z [15:54:27+0000] Downloading pyparsing-3.3.2-py3-none-any.whl (122 kB)
+2026-02-07T15:55:25.8555283Z [15:54:27+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 122.8/122.8 kB 44.3 MB/s eta 0:00:00
+2026-02-07T15:55:25.9267569Z [15:54:27+0000] Downloading pyroaring-1.0.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+2026-02-07T15:55:26.0457794Z [15:54:28+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 35.3 MB/s eta 0:00:00
+2026-02-07T15:55:26.0857014Z [15:54:28+0000] Downloading rich-14.3.2-py3-none-any.whl (309 kB)
+2026-02-07T15:55:26.1273618Z [15:54:28+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 310.0/310.0 kB 30.8 MB/s eta 0:00:00
+2026-02-07T15:55:26.1688686Z [15:54:28+0000] Downloading strictyaml-1.7.3-py3-none-any.whl (123 kB)
+2026-02-07T15:55:26.2465026Z [15:54:28+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 123.9/123.9 kB 39.3 MB/s eta 0:00:00
+2026-02-07T15:55:26.4491401Z [15:54:28+0000] Downloading tenacity-9.1.4-py3-none-any.whl (28 kB)
+2026-02-07T15:55:26.5695360Z [15:54:28+0000] Downloading hpack-4.1.0-py3-none-any.whl (34 kB)
+2026-02-07T15:55:26.6088675Z [15:54:28+0000] Downloading hyperframe-6.1.0-py3-none-any.whl (13 kB)
+2026-02-07T15:55:26.7106525Z [15:54:28+0000] Downloading markdown_it_py-4.0.0-py3-none-any.whl (87 kB)
+2026-02-07T15:55:26.7693780Z [15:54:28+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.3/87.3 kB 12.6 MB/s eta 0:00:00
+2026-02-07T15:55:26.8195374Z [15:54:28+0000] Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+2026-02-07T15:55:26.9107992Z [15:54:28+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 40.2 MB/s eta 0:00:00
+2026-02-07T15:55:26.9718344Z [15:54:28+0000] Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+2026-02-07T15:55:27.0118372Z [15:54:28+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 22.3 MB/s eta 0:00:00
+2026-02-07T15:55:27.0617747Z [15:54:28+0000] Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+2026-02-07T15:55:27.1208429Z [15:54:28+0000] Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+2026-02-07T15:55:27.1414613Z [15:54:30+0000] Installing collected packages: strenum, sortedcontainers, pyroaring, websockets, urllib3, uritemplate, typing-extensions, tqdm, tenacity, six, python-multipart, python-dotenv, pyparsing, pyjwt, pygments, pycparser, pyasn1, protobuf, propcache, Pillow, packaging, multidict, mmh3, mdurl, idna, hyperframe, hpack, h11, fsspec, click, charset_normalizer, certifi, cachetools, bcrypt, annotated-types, annotated-doc, yarl, uvicorn, typing-inspection, rsa, requests, python-dateutil, pydantic-core, pyasn1-modules, proto-plus, markdown-it-py, httplib2, httpcore, h2, gunicorn, grpcio, googleapis-common-protos, deprecation, cffi, anyio, strictyaml, starlette, rich, pydantic, httpx, grpcio-status, cryptography, realtime, pyiceberg, google-auth, fastapi, supabase-functions, supabase-auth, storage3, postgrest, google-auth-httplib2, google-api-core, supabase, google-api-python-client, google-ai-generativelanguage, google-generativeai
+2026-02-07T15:55:27.1818279Z [15:55:05+0000] Successfully installed Pillow-12.1.0 annotated-doc-0.0.4 annotated-types-0.7.0 anyio-4.12.1 bcrypt-5.0.0 cachetools-6.2.6 certifi-2026.1.4 cffi-2.0.0 charset_normalizer-3.4.4 click-8.3.1 cryptography-46.0.4 deprecation-2.1.0 fastapi-0.128.4 fsspec-2026.2.0 google-ai-generativelanguage-0.6.15 google-api-core-2.29.0 google-api-python-client-2.189.0 google-auth-2.48.0 google-auth-httplib2-0.3.0 google-generativeai-0.8.6 googleapis-common-protos-1.72.0 grpcio-1.78.0 grpcio-status-1.71.2 gunicorn-25.0.2 h11-0.16.0 h2-4.3.0 hpack-4.1.0 httpcore-1.0.9 httplib2-0.31.2 httpx-0.28.1 hyperframe-6.1.0 idna-3.11 markdown-it-py-4.0.0 mdurl-0.1.2 mmh3-5.2.0 multidict-6.7.1 packaging-26.0 postgrest-2.27.3 propcache-0.4.1 proto-plus-1.27.1 protobuf-5.29.6 pyasn1-0.6.2 pyasn1-modules-0.4.2 pycparser-3.0 pydantic-2.12.5 pydantic-core-2.41.5 pygments-2.19.2 pyiceberg-0.10.0 pyjwt-2.11.0 pyparsing-3.3.2 pyroaring-1.0.3 python-dateutil-2.9.0.post0 python-dotenv-1.2.1 python-multipart-0.0.22 realtime-2.27.3 requests-2.32.5 rich-14.3.2 rsa-4.9.1 six-1.17.0 sortedcontainers-2.4.0 starlette-0.52.1 storage3-2.27.3 strenum-0.4.15 strictyaml-1.7.3 supabase-2.27.3 supabase-auth-2.27.3 supabase-functions-2.27.3 tenacity-9.1.4 tqdm-4.67.3 typing-extensions-4.15.0 typing-inspection-0.4.2 uritemplate-4.2.0 urllib3-2.6.3 uvicorn-0.40.0 websockets-15.0.1 yarl-1.22.0
+2026-02-07T15:55:27.2115803Z 
+2026-02-07T15:55:27.2428135Z [notice] A new release of pip is available: 24.0 -> 26.0.1
+2026-02-07T15:55:27.2818581Z [notice] To update, run: pip install --upgrade pip
+2026-02-07T15:55:27.3022595Z Not a vso image, so not writing build commands
+2026-02-07T15:55:27.3323723Z Preparing output...
+2026-02-07T15:55:27.4138143Z 
+2026-02-07T15:55:27.4539377Z Copying files to destination directory '/tmp/_preCompressedDestinationDir'...
+2026-02-07T15:55:37.0625383Z .....
+2026-02-07T15:55:37.0625800Z Done in 25 sec(s).
+2026-02-07T15:55:37.1121722Z Compressing content of directory '/tmp/_preCompressedDestinationDir'...
+2026-02-07T15:56:59.3550889Z .............................................................................
+2026-02-07T15:56:59.3556042Z Copied the compressed output to '/home/site/wwwroot'
+2026-02-07T15:56:59.4268693Z 
+2026-02-07T15:56:59.4452943Z Removing existing manifest file
+2026-02-07T15:56:59.4639853Z Creating a manifest file...
+2026-02-07T15:56:59.5144528Z Manifest file created.
+2026-02-07T15:56:59.5271724Z Copying .ostype to manifest output directory.
+2026-02-07T15:56:59.5586473Z 
+2026-02-07T15:56:59.5965930Z Done in 232 sec(s).
+2026-02-07T15:59:00.4245294Z     __ __          __      __    _ __     
+2026-02-07T15:59:00.4345135Z    / //_/_  _ ____/ /_  __/ /   (_) /____ 
+2026-02-07T15:59:00.4345335Z   / ,< / / / / __  / / / / /   / / __/ _  
+2026-02-07T15:59:00.4345392Z  / /| / /_/ / /_/ / /_/ / /___/ / /_/  __/
+2026-02-07T15:59:00.4345411Z /_/ |_\__,_/\__,_/\__,_/_____/_/\__/\___/ 
+2026-02-07T15:59:00.4345456Z 
+2026-02-07T15:59:00.4345509Z                                           
+2026-02-07T15:59:00.4345530Z DEBUG CONSOLE | AZURE APP SERVICE ON LINUX
+2026-02-07T15:59:00.4345548Z 
+2026-02-07T15:59:00.4845119Z Documentation: http://aka.ms/webapp-linux
+2026-02-07T15:59:00.4845294Z Kudu Version : 20251023.4
+2026-02-07T15:59:00.4845317Z Commit       : a44ac6b61760b3c2e5996d5e6ddb2a908ab5733e
+2026-02-07T15:59:00.4845338Z Instance Name: lw0sdlwk000ESS
+2026-02-07T15:59:00.4845396Z Instance Id  : b6e96858c831a75779f5b74d69e241bee2844e8469956c803745fe996c660b31
+2026-02-07T15:59:00.4845414Z 
+2026-02-07T15:59:01.8115330Z chown: changing ownership of '/temp': Operation not permitted
+2026-02-07T15:59:01.8515112Z chmod: changing permissions of '/temp': Operation not permitted
+2026-02-07T15:59:07.7165816Z Restarting OpenBSD Secure Shell server: sshd.
+2026-02-07T15:59:07.9761333Z node not running, starting node /opt/webssh/index.js
+2026-02-07T15:59:32.5731223Z Sat Feb 7 15:59:32 UTC 2026 running .net core
+2026-02-07T15:59:40.5930528Z Startup : 03.59.40.513873
+2026-02-07T15:59:42.0518064Z Configure Services : 03.59.40.895705
+2026-02-07T15:59:42.2736891Z Configure : 03.59.42.273492
+2026-02-07T15:59:43.8703049Z Setting Up Routes : 03.59.43.870123
+2026-02-07T15:59:44.7391750Z Exiting Configure : 03.59.44.739020
+2026-02-07T15:59:45.5611044Z Hosting environment: Production
+2026-02-07T15:59:45.5612574Z Content root path: /opt/Kudu
+2026-02-07T15:59:45.5614583Z Now listening on: http://0.0.0.0:8181
+2026-02-07T15:59:45.5615001Z Application started. Press Ctrl+C to shut down.
+2026-02-07T16:01:46.9031837Z     __ __          __      __    _ __     
+2026-02-07T16:01:46.9033495Z    / //_/_  _ ____/ /_  __/ /   (_) /____ 
+2026-02-07T16:01:46.9033546Z   / ,< / / / / __  / / / / /   / / __/ _  
+2026-02-07T16:01:46.9033565Z  / /| / /_/ / /_/ / /_/ / /___/ / /_/  __/
+2026-02-07T16:01:46.9033582Z /_/ |_\__,_/\__,_/\__,_/_____/_/\__/\___/ 
+2026-02-07T16:01:46.9033601Z 
+2026-02-07T16:01:46.9033624Z                                           
+2026-02-07T16:01:46.9033641Z DEBUG CONSOLE | AZURE APP SERVICE ON LINUX
+2026-02-07T16:01:46.9033676Z 
+2026-02-07T16:01:46.9033697Z Documentation: http://aka.ms/webapp-linux
+2026-02-07T16:01:46.9033716Z Kudu Version : 20251023.4
+2026-02-07T16:01:46.9033735Z Commit       : a44ac6b61760b3c2e5996d5e6ddb2a908ab5733e
+2026-02-07T16:01:46.9033753Z Instance Name: lw0sdlwk000ESS
+2026-02-07T16:01:46.9033785Z Instance Id  : b6e96858c831a75779f5b74d69e241bee2844e8469956c803745fe996c660b31
+2026-02-07T16:01:46.9033801Z 
+2026-02-07T16:01:47.4392914Z chown: changing ownership of '/temp': Operation not permitted
+2026-02-07T16:01:48.6609650Z chmod: changing permissions of '/temp': Operation not permitted
+2026-02-07T16:01:50.3193067Z Restarting OpenBSD Secure Shell server: sshd.
+2026-02-07T16:01:50.6304990Z node not running, starting node /opt/webssh/index.js
+2026-02-07T16:02:16.3170388Z Sat Feb 7 16:02:16 UTC 2026 running .net core
+2026-02-07T16:02:22.5051553Z Startup : 04.02.22.163233
+2026-02-07T16:02:22.9768098Z Configure Services : 04.02.22.907810
+2026-02-07T16:02:26.1523532Z Configure : 04.02.26.152179
+2026-02-07T16:02:29.5515085Z Setting Up Routes : 04.02.29.551330
+2026-02-07T16:02:33.5270687Z Exiting Configure : 04.02.33.526678
+2026-02-07T16:02:37.0037757Z Hosting environment: Production
+2026-02-07T16:02:37.0038145Z Content root path: /opt/Kudu
+2026-02-07T16:02:37.0038177Z Now listening on: http://0.0.0.0:8181
+2026-02-07T16:02:37.0038218Z Application started. Press Ctrl+C to shut down.
+2026-02-07T18:18:41.8217525Z     __ __          __      __    _ __     
+2026-02-07T18:18:41.8218595Z    / //_/_  _ ____/ /_  __/ /   (_) /____ 
+2026-02-07T18:18:41.8218628Z   / ,< / / / / __  / / / / /   / / __/ _  
+2026-02-07T18:18:41.8218692Z  / /| / /_/ / /_/ / /_/ / /___/ / /_/  __/
+2026-02-07T18:18:41.8218710Z /_/ |_\__,_/\__,_/\__,_/_____/_/\__/\___/ 
+2026-02-07T18:18:41.8218732Z 
+2026-02-07T18:18:41.8218751Z                                           
+2026-02-07T18:18:41.8218768Z DEBUG CONSOLE | AZURE APP SERVICE ON LINUX
+2026-02-07T18:18:41.8218784Z 
+2026-02-07T18:18:41.8218804Z Documentation: http://aka.ms/webapp-linux
+2026-02-07T18:18:41.8218821Z Kudu Version : 20251023.4
+2026-02-07T18:18:41.8218860Z Commit       : a44ac6b61760b3c2e5996d5e6ddb2a908ab5733e
+2026-02-07T18:18:41.8218879Z Instance Name: lw0sdlwk000ESS
+2026-02-07T18:18:41.8218900Z Instance Id  : b6e96858c831a75779f5b74d69e241bee2844e8469956c803745fe996c660b31
+2026-02-07T18:18:41.8218916Z 
+2026-02-07T18:18:43.4333888Z chown: changing ownership of '/temp': Operation not permitted
+2026-02-07T18:18:43.4509114Z chmod: changing permissions of '/temp': Operation not permitted
+2026-02-07T18:18:47.2645348Z Restarting OpenBSD Secure Shell server: sshd.
+2026-02-07T18:18:47.4547256Z node not running, starting node /opt/webssh/index.js
+2026-02-07T18:19:08.3480299Z Sat Feb 7 18:19:08 UTC 2026 running .net core
+2026-02-07T18:19:16.5237028Z Startup : 06.19.16.381584
+2026-02-07T18:19:16.8934509Z Configure Services : 06.19.16.892847
+2026-02-07T18:19:19.2977361Z Configure : 06.19.19.297464
+2026-02-07T18:19:20.9169118Z Setting Up Routes : 06.19.20.916716
+2026-02-07T18:19:21.7208757Z Exiting Configure : 06.19.21.720731
+2026-02-07T18:19:22.2435533Z Hosting environment: Production
+2026-02-07T18:19:22.2624600Z Content root path: /opt/Kudu
+2026-02-07T18:19:22.2808374Z Now listening on: http://0.0.0.0:8181
+2026-02-07T18:19:22.2808455Z Application started. Press Ctrl+C to shut down.
