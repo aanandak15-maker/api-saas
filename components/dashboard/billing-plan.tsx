@@ -18,6 +18,7 @@ export function BillingPlan() {
                 // Get current user email from Supabase session
                 const { data: { session } } = await supabase.auth.getSession()
                 if (session?.user?.email) {
+                    // Using specific fetch because bootstrap session doesn't use API key yet
                     const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/client/profile`, {
                         headers: {
                             'Authorization': `Bearer ${session.access_token}`

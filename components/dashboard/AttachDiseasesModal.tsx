@@ -2,6 +2,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import { X, Search, Check, Loader2, Save } from 'lucide-react';
 import { supabase } from '@/lib/supabase';
+import { api } from '@/lib/api-client';
 
 interface Product {
     id: string;
@@ -77,14 +78,12 @@ export function AttachDiseasesModal({ isOpen, onClose, product, onSuccess }: Att
             const headers = { 'x-api-key': client.api_key };
 
             // 1. Fetch all diseases
-            const diseaseRes = await fetch('http://localhost:8000/diseases/list', { headers });
-            const diseaseData = await diseaseRes.json();
+            const diseaseData = await api.get('/diseases/list');
             const allDiseases: Disease[] = diseaseData.diseases;
             setDiseases(allDiseases);
 
             // 2. Fetch existing mappings
-            const mappingRes = await fetch('http://localhost:8000/mappings', { headers });
-            const mappingData = await mappingRes.json();
+            const mappingData = await api.get('/mappings');
 
             // Filter mappings for THIS product
             // mappings return: { disease_id: UUID, product_id: UUID, ... }
@@ -144,8 +143,7 @@ export function AttachDiseasesModal({ isOpen, onClose, product, onSuccess }: Att
             // querying mappings to find UUIDs to delete is hard because local state track string IDs.
             // So we need to re-fetch or track mapping UUIDs.
             // Simplified approach: Fetch all mappings again to get their IDs.
-            const mappingRes = await fetch('http://localhost:8000/mappings', { headers });
-            const mappingData = await mappingRes.json();
+            const mappingData = await api.get('/mappings');
 
             // Map String ID -> Mapping UUID for this product
             // Need UUID of disease first.
@@ -157,20 +155,16 @@ export function AttachDiseasesModal({ isOpen, onClose, product, onSuccess }: Att
             );
 
             await Promise.all(mappingsToDelete.map((m: any) =>
-                fetch(`http://localhost:8000/mappings/${m.id}`, { method: 'DELETE', headers })
+                api.delete(`/mappings/${m.id}`)
             ));
 
             // 2. Add new mappings
             await Promise.all(toAdd.map(diseaseId =>
-                fetch('http://localhost:8000/mappings', {
-                    method: 'POST',
-                    headers,
-                    body: JSON.stringify({
-                        disease_id: diseaseId,
-                        product_id: product.id,
-                        treatment_type: treatmentType,
-                        priority: 1
-                    })
+                api.post('/mappings', {
+                    disease_id: diseaseId,
+                    product_id: product.id,
+                    treatment_type: treatmentType,
+                    priority: 1
                 })
             ));
 
