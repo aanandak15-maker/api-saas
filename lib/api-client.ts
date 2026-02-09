@@ -37,9 +37,12 @@ export async function getAuthHeaders() {
                     'X-API-Key': cachedApiKey
                 }
             }
+        } else {
+            const err = await res.text()
+            console.error(`Bootstrap Error (${res.status}): ${err}`)
         }
     } catch (e) {
-        console.error("Failed to fetch API key", e)
+        console.error("Failed to fetch API key (Bootstrap Exception)", e)
     }
     return null
 }

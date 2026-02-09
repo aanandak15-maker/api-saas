@@ -1,12 +1,7 @@
 
 import { useState, useEffect, useMemo } from 'react';
 import { X, Search, Check, Loader2, Save } from 'lucide-react';
-import { createClient } from '@supabase/supabase-js';
-
-const supabase = createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-);
+import { supabase } from '@/lib/supabase';
 
 interface Product {
     id: string;
