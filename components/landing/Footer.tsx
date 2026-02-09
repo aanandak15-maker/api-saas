@@ -83,7 +83,7 @@ export function Footer() {
                     <div className="col-span-2 md:col-span-4 bg-gray-50 rounded-2xl p-6 border border-gray-100">
                         <h4 className="font-bold text-gray-900 mb-4">Contact Sales</h4>
                         <p className="text-sm text-gray-500 mb-4">
-                            Need a custom enterprise plan? We'd love to help.
+                            Need a custom enterprise plan? We&apos;d love to help.
                         </p>
                         <a href="mailto:plantsaathiai@gmail.com" className="text-sm font-bold text-gray-900 hover:text-[#13ec13] block mb-2">
                             plantsaathiai@gmail.com
