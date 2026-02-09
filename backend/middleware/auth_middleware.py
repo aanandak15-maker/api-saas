@@ -79,7 +79,9 @@ def require_api_key(func):
             else:
                 daily_limit = max(10, int(monthly_limit / 30)) # at least 10/day even for small plans
 
-            if daily_limit != -1:
+            # ONLY enforce rate limit for /detect (actual scans)
+            # Dashboard metadata calls should be free
+            if daily_limit != -1 and request.url.path == "/detect":
                 today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
                 
                 # Count calls today
@@ -87,13 +89,14 @@ def require_api_key(func):
                 count_res = supabase_admin.table("api_logs") \
                     .select("*", count="exact") \
                     .eq("client_id", client["id"]) \
+                    .eq("endpoint", "/detect") \
                     .gte("timestamp", today_str) \
                     .execute()
                 
                 calls_today = count_res.count if count_res.count is not None else 0
                 
                 if calls_today >= daily_limit:
-                    print(f"Rate limit exceeded for client {client['id']}")
+                    print(f"Rate limit exceeded for client {client['id']} on /detect")
                     return CorsResponse({
                         "error": f"Daily rate limit exceeded ({daily_limit} calls). Upgrade your plan."
                     }, status=429)

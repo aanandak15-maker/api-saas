@@ -18,6 +18,22 @@ PLAN_LIMITS = {
             "advisory": "Essential Advisory"
         }
     },
+    "starter": {
+        "max_products": -1,
+        "max_recs_per_disease": 1,
+        "max_scans_per_month": 1000,
+        "advisory_level": "essential",
+        "branding_enabled": False,
+        "analytics_level": "basic",
+        "priority_queue": False,
+        "display_labels": {
+            "usage": "Starter Usage Capacity",
+            "analytics": "Basic Insights",
+            "support": "Email Support",
+            "branding": "Platform Branding",
+            "advisory": "Essential Advisory"
+        }
+    },
     "cultivation": {
         "max_products": -1, # Unlimited
         "max_recs_per_disease": 3,
