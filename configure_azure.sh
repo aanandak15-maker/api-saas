@@ -12,7 +12,7 @@ az webapp config appsettings set --resource-group plantdiseaseapi --name plantdi
   SUPABASE_URL="https://ygoiinepwvafcimnerhm.supabase.co" \
   SUPABASE_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inlnb2lpbmVwd3ZhZmNpbW5lcmhtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAzNzMzMjYsImV4cCI6MjA4NTk0OTMyNn0.aha0XQuQIShSWFCl53bOLW-Hyud1w6PPiZ8A0yj45Ts" \
   SUPABASE_SERVICE_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inlnb2lpbmVwd3ZhZmNpbW5lcmhtIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3MDM3MzMyNiwiZXhwIjoyMDg1OTQ5MzI2fQ.PvrwHRPSibSGxG7nGHLjmRxbH7LE00XPglBQcMaLAyQ" \
-  GEMINI_API_KEY="AIzaSyDqlx6VyVGySBM7XTTbCiyPa7Gqur4gpSg" \
+  GEMINI_API_KEY="AIzaSyD1hXcvWsdAM_zuVfCTx7XGQqSr5Yxf0dI" \
   SCM_DO_BUILD_DURING_DEPLOYMENT=true
 
 echo "Configuration complete. Web app should restart automatically."
